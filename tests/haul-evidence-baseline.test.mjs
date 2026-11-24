@@ -10,7 +10,7 @@ import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const pins = Object.freeze({
-  ".github/workflows/check.yml": "c6aeba19f0375ca717e5f144d502baa2c4cda4851165acbedf5301f2e08e70dd",
+  ".github/workflows/check.yml": "edc0b37b7dd32ddb4e9eaa38315ae4e5a912aed7fb963d4169365c2eeaeb0b99",
   "START.bat": "07c1a54be2b3f8a0643cf2b578e963a61d357db1c1378fdb82e60719ad0dd101",
   "apps/api/network-registry.mjs": "29e36ac3f3d1c7770906d1263e6d77a00b5c9adef4767522bd11ce40147839ae",
   "apps/api/optimize-worker.mjs": "d83fe45ab5dc404cc524a323de207289644005f22e7ccda87b47f2b89c1d8f58",
