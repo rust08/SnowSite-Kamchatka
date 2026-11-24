@@ -21,7 +21,7 @@ jobs:
           python-version: '3.13'
       - run: python -m pip install -r workers/milp-python/requirements.txt -r tools/contract-requirements.txt
       - run: python tools/acceptance.py --mode core --output runtime/acceptance-core
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: acceptance-core-${{ matrix.os }}
@@ -48,7 +48,7 @@ jobs:
       - if: runner.os == 'Windows'
         run: python -m playwright install chromium
       - run: python tools/acceptance.py --mode browser --output runtime/acceptance-browser
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: acceptance-browser-${{ matrix.os }}
