@@ -1,5 +1,7 @@
 # SnowSite — оптимизация размещения снегоприёмных площадок
 
+[![CI](https://github.com/rust08/SnowSite-Kamchatka/actions/workflows/check.yml/badge.svg)](https://github.com/rust08/SnowSite-Kamchatka/actions/workflows/check.yml)
+
 Самостоятельный локальный продукт: выбор площадок из конечного каталога, целочисленное распределение снега, проверяемый пробег и альтернативы. Не реестр действующих полигонов, не правовое заключение, не VRP/расписание парка. Все входные объёмы/площадки демо синтетические; сеть Камчатки — фиксированный снимок OSM. **«Север» не нужен для запуска.**
 
 **v4.10.1 (стабилизация R01–R05; математическое ядро без изменений)** · API JSON v1.0 · Node.js 22+ · Python 3.13 + SciPy. [Статус](docs/STATUS.md) · [Архитектура репозитория](docs/ARCHITECTURE.md) · [API](docs/API.md) · [Алгоритм](docs/ALGORITHM.md) · [История](CHANGELOG.md) · [Handoff](docs/HANDOFF.md) · [Актуальный план и блокеры](docs/07_IMPLEMENTATION_PLAN.md).
