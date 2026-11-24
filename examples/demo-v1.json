@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "networkId": "pkgo",
+  "networkVersion": "pkgo-27233df581c6",
+  "networkHash": "0e0a464f7d92057fa5bbad634c083ad0c1923294597d989ead386b393acf7ad2",
+  "scenario": {
+    "id": "demo-2026-11-20",
+    "name": "Учебный сценарий — логистика снеговывоза (НЕ реальные полигоны)",
+    "mode": "scenario_only",
+    "provenance": "Синтетические точки и объёмы; узлы привязаны к OSM-графу 2026-11-19. Ни один объект не подтверждён как снегоприёмная площадка.",
+    "truck": {
+      "bodyM3": 10,
+      "payloadKg": 5000,
+      "driveKmh": 20,
+      "rateRubPerHour": 2100,
+      "snowDensityKgM3": 500
+    },
+    "closedEdgeIds": [],
+    "demands": [
+      {
+        "id": "D1",
+        "name": "Учебный источник снега 1",
+        "nodeId": "12829246567",
+        "volumeM3": 46,
+        "sourceStatus": "synthetic"
+      },
+      {
+        "id": "D2",
+        "name": "Учебный источник снега 2",
+        "nodeId": "12816085894",
+        "volumeM3": 43,
+        "sourceStatus": "synthetic"
+      },
+      {
+        "id": "D3",
+        "name": "Учебный источник снега 3",
+        "nodeId": "5830714828",
+        "volumeM3": 50,
+        "sourceStatus": "synthetic"
+      },
+      {
+        "id": "D4",
+        "name": "Учебный источник снега 4",
+        "nodeId": "5517236826",
+        "volumeM3": 54,
+        "sourceStatus": "synthetic"
+      },
+      {
+        "id": "D5",
+        "name": "Учебный источник снега 5",
+        "nodeId": "346952107",
+        "volumeM3": 35,
+        "sourceStatus": "synthetic"
+      }
+    ],
+    "sites": [
+      {
+        "id": "S0",
+        "name": "Базовая площадка A — сценарий",
+        "accessNodeId": "2415413202",
+        "availableCapacityM3": 150,
+        "origin": "existing",
+        "role": "fixed",
+        "screening": {
+          "status": "unknown"
+        }
+      },
+      {
+        "id": "S1",
+        "name": "Базовая площадка B — сценарий",
+        "accessNodeId": "2024634569",
+        "availableCapacityM3": 130,
+        "origin": "existing",
+        "role": "fixed",
+        "screening": {
+          "status": "unknown"
+        }
+      },
+      {
+        "id": "C1",
+        "name": "Кандидат C — сценарий",
+        "accessNodeId": "13610177839",
+        "availableCapacityM3": 100,
+        "origin": "candidate",
+        "role": "optional",
+        "screening": {
+          "status": "unknown"
+        }
+      },
+      {
+        "id": "C2",
+        "name": "Кандидат D — сценарий",
+        "accessNodeId": "5883116640",
+        "availableCapacityM3": 100,
+        "origin": "candidate",
+        "role": "optional",
+        "screening": {
+          "status": "unknown"
+        }
+      }
+    ],
+    "horizon": {
+      "type": "event",
+      "label": "Учебный снегопад"
+    }
+  },
+  "policy": {
+    "mode": "add",
+    "exactNewSites": 2,
+    "topK": 5,
+    "excludedSiteIds": [],
+    "excludedConfigurations": [],
+    "screeningPolicy": "exploratory",
+    "objective": "min_unserved_then_distance",
+    "timeLimitMs": 10000
+  }
+}

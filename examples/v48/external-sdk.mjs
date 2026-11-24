@@ -1,0 +1,11 @@
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import {optimize,safeRequest} from 'snowsite-kamchatka';
+import {loadNetwork} from 'snowsite-kamchatka/network-file';
+import * as catalog from 'snowsite-kamchatka/catalog';
+assert.equal(typeof catalog.adaptSiteRecord,'function');
+const {network,networkMeta}=loadNetwork(new URL('./network.json',import.meta.url),'synthetic-v43');
+const request=safeRequest(JSON.parse(readFileSync(new URL('./request.json',import.meta.url),'utf8')));
+const result=await optimize(network,request,{networkMeta});
+assert.equal(result.search.rankingStatus,'exact_top_k');
+console.log(JSON.stringify({schemaVersion:result.schemaVersion,networkHash:result.networkHash,scenarioHash:result.scenarioHash,rankingStatus:result.search.rankingStatus,baseline:result.baseline.transportDistanceMm,alternatives:result.alternatives.map(a=>({ids:a.activeSiteIds,U:a.unservedM3,L:a.transportDistanceMm}))},null,2));

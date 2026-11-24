@@ -1,0 +1,166 @@
+{
+  "note": "Hand-authored partial semantic oracle, not executed production acceptance. Sorting unspecified here; compare structured keys.",
+  "asOf": "2026-01-05T00:00:00Z",
+  "rawCounts": {
+    "carrier": 16,
+    "receiver": 13
+  },
+  "visibleCounts": {
+    "carrier": 15,
+    "receiver": 13
+  },
+  "duplicates": {
+    "carrier": 1,
+    "receiver": 0
+  },
+  "pairCounts": {
+    "matched_records": 4,
+    "not_observed_in_source": 2,
+    "quantity_mismatch": 1,
+    "both_cancelled": 1,
+    "review_history": 2,
+    "scope_mismatch": 1
+  },
+  "keyResults": [
+    {
+      "series": "A",
+      "ticket": "T1",
+      "carrierState": "active",
+      "receiverState": "active",
+      "pairStatus": "matched_records",
+      "carrierQuantity": "12",
+      "receiverQuantity": "12",
+      "matchedQuantity": "12",
+      "namespace": "DEMO"
+    },
+    {
+      "series": "A",
+      "ticket": "T2",
+      "carrierState": "active",
+      "receiverState": "not_observed",
+      "pairStatus": "not_observed_in_source",
+      "carrierQuantity": "7",
+      "receiverQuantity": null,
+      "matchedQuantity": null,
+      "namespace": "DEMO"
+    },
+    {
+      "series": "A",
+      "ticket": "T3",
+      "carrierState": "active",
+      "receiverState": "active",
+      "pairStatus": "quantity_mismatch",
+      "carrierQuantity": "8",
+      "receiverQuantity": "9",
+      "matchedQuantity": null,
+      "namespace": "DEMO"
+    },
+    {
+      "series": "A",
+      "ticket": "T4",
+      "carrierState": "cancelled",
+      "receiverState": "cancelled",
+      "pairStatus": "both_cancelled",
+      "carrierQuantity": null,
+      "receiverQuantity": null,
+      "matchedQuantity": null,
+      "namespace": "DEMO"
+    },
+    {
+      "series": "A",
+      "ticket": "T5",
+      "carrierState": "history_conflict",
+      "receiverState": "active",
+      "pairStatus": "review_history",
+      "carrierQuantity": null,
+      "receiverQuantity": "10",
+      "matchedQuantity": null,
+      "namespace": "DEMO"
+    },
+    {
+      "series": "A",
+      "ticket": "T6",
+      "carrierState": "active",
+      "receiverState": "active",
+      "pairStatus": "matched_records",
+      "carrierQuantity": "5",
+      "receiverQuantity": "5",
+      "matchedQuantity": "5",
+      "namespace": "DEMO"
+    },
+    {
+      "series": "B",
+      "ticket": "T1",
+      "carrierState": "active",
+      "receiverState": "active",
+      "pairStatus": "matched_records",
+      "carrierQuantity": "3",
+      "receiverQuantity": "3",
+      "matchedQuantity": "3",
+      "namespace": "DEMO"
+    },
+    {
+      "series": "A",
+      "ticket": "T7",
+      "carrierState": "active",
+      "receiverState": "active",
+      "pairStatus": "matched_records",
+      "carrierQuantity": "0",
+      "receiverQuantity": "0",
+      "matchedQuantity": "0",
+      "namespace": "DEMO"
+    },
+    {
+      "series": "A",
+      "ticket": "T8",
+      "carrierState": "active",
+      "receiverState": "active",
+      "pairStatus": "scope_mismatch",
+      "carrierQuantity": "4",
+      "receiverQuantity": "4",
+      "matchedQuantity": null,
+      "namespace": "DEMO"
+    },
+    {
+      "series": "A",
+      "ticket": "T9",
+      "carrierState": "invalid",
+      "receiverState": "active",
+      "pairStatus": "review_history",
+      "carrierQuantity": null,
+      "receiverQuantity": "2",
+      "matchedQuantity": null,
+      "namespace": "DEMO"
+    },
+    {
+      "series": "A",
+      "ticket": "T10",
+      "carrierState": "not_observed",
+      "receiverState": "active",
+      "pairStatus": "not_observed_in_source",
+      "carrierQuantity": null,
+      "receiverQuantity": "6",
+      "matchedQuantity": null,
+      "namespace": "DEMO"
+    }
+  ],
+  "groupedKnownActiveTotals": {
+    "carrier": {
+      "C1/S1/m3/nominal": "39"
+    },
+    "receiver": {
+      "C1/S1/m3/nominal": "47",
+      "C1/S2/m3/nominal": "4"
+    }
+  },
+  "groupedMatchedTotals": {
+    "C1/S1/m3/nominal": "20"
+  },
+  "comparableActiveDifference": {
+    "C1/S1/m3/nominal": "-1"
+  },
+  "lateReceiptDiagnostic": {
+    "carrier": 1,
+    "receiver": 0
+  }
+}

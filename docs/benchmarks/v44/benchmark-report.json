@@ -1,0 +1,216 @@
+{
+  "seed": 719,
+  "node": "v22.16.0",
+  "platform": "linux",
+  "release": "6.18.57",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "logicalCpus": 5,
+  "totalMemoryBytes": 6236844032,
+  "cases": [
+    {
+      "name": "small",
+      "originalInputHash": "af8baf5f7562acc21b1df4f1582380a183a14485779e3e198d2a8f907956f391",
+      "timeLimitMs": 30000,
+      "methods": [
+        {
+          "strategy": "enumeration",
+          "scenarioHash": "4ad52b0e73b4a96ca5ec34e7e29c1bb44ca93cea91a60a1f6f161cec28b75c70",
+          "matrixHash": "493ef6980452d5f885350578ae25fcee99315c15da067cb9ecb44daae5d37d7b",
+          "rankingStatus": "exact_top_k",
+          "counterScope": "configurations",
+          "evaluated": 15,
+          "proven": 15,
+          "total": 15,
+          "topK": 3,
+          "wallMs": 974.5164299999999,
+          "matrixMs": 1.3071280000000058,
+          "nodeRssBeforeBytes": 64942080,
+          "nodeRssAfterBytes": 68349952,
+          "responseBytes": 8796,
+          "solverVersion": "1.17.0",
+          "scores": [
+            [
+              "[\"C1\",\"C2\",\"E1\",\"E2\"]",
+              0,
+              56000000
+            ],
+            [
+              "[\"C1\",\"C3\",\"E1\",\"E2\"]",
+              0,
+              56000000
+            ],
+            [
+              "[\"C1\",\"C4\",\"E1\",\"E2\"]",
+              0,
+              56000000
+            ]
+          ]
+        },
+        {
+          "strategy": "unified_milp",
+          "scenarioHash": "c4355afc19d574a320359ceb18a9b79c0ce886d59213e43505825d087123d541",
+          "matrixHash": "493ef6980452d5f885350578ae25fcee99315c15da067cb9ecb44daae5d37d7b",
+          "rankingStatus": "exact_top_k",
+          "counterScope": "rank_attempts_and_proven_ranks",
+          "evaluated": 3,
+          "proven": 3,
+          "total": null,
+          "topK": 3,
+          "wallMs": 826.9832590000001,
+          "matrixMs": 0.23414299999990362,
+          "nodeRssBeforeBytes": 68349952,
+          "nodeRssAfterBytes": 68874240,
+          "responseBytes": 9100,
+          "solverVersion": "1.17.0",
+          "scores": [
+            [
+              "[\"C1\",\"C2\",\"E1\",\"E2\"]",
+              0,
+              56000000
+            ],
+            [
+              "[\"C1\",\"C3\",\"E1\",\"E2\"]",
+              0,
+              56000000
+            ],
+            [
+              "[\"C1\",\"C4\",\"E1\",\"E2\"]",
+              0,
+              56000000
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "city",
+      "originalInputHash": "47085091891c85c0c36fe1772cd76220ce24d427adcd5b1f5eab6bc3a539119b",
+      "timeLimitMs": 10000,
+      "methods": [
+        {
+          "strategy": "enumeration",
+          "scenarioHash": "79db56c1766d26a5c2bd517c48b8488475e468b34938d57cc326f3e844bc77fc",
+          "matrixHash": "0778d5b5fcd5f6096523e344930cceade71e4992c3eaf8309f52a9f807d8bdf4",
+          "rankingStatus": "exact_top_k",
+          "counterScope": "configurations",
+          "evaluated": 1,
+          "proven": 1,
+          "total": 1,
+          "topK": 1,
+          "wallMs": 911.065814,
+          "matrixMs": 118.66451400000005,
+          "nodeRssBeforeBytes": 69005312,
+          "nodeRssAfterBytes": 92188672,
+          "responseBytes": 6549,
+          "solverVersion": "1.17.0",
+          "scores": [
+            [
+              "[\"C1\",\"C2\",\"S0\",\"S1\"]",
+              0,
+              92228770
+            ]
+          ]
+        },
+        {
+          "strategy": "unified_milp",
+          "scenarioHash": "065f9731afdf8d77e85cf795015046b291c9111202259bc91ddf0ca68cc4745e",
+          "matrixHash": "0778d5b5fcd5f6096523e344930cceade71e4992c3eaf8309f52a9f807d8bdf4",
+          "rankingStatus": "exact_top_k",
+          "counterScope": "rank_attempts_and_proven_ranks",
+          "evaluated": 2,
+          "proven": 1,
+          "total": null,
+          "topK": 1,
+          "wallMs": 943.8750829999999,
+          "matrixMs": 118.04332000000022,
+          "nodeRssBeforeBytes": 92188672,
+          "nodeRssAfterBytes": 103002112,
+          "responseBytes": 6524,
+          "solverVersion": "1.17.0",
+          "scores": [
+            [
+              "[\"C1\",\"C2\",\"S0\",\"S1\"]",
+              0,
+              92228770
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "large",
+      "originalInputHash": "6d645dc7f842020658359df71b39ddf9e8eeafe27b8e2f8e166bca07eb073893",
+      "timeLimitMs": 5000,
+      "methods": [
+        {
+          "strategy": "enumeration",
+          "scenarioHash": "05eaa2f0ca320cb5f6d200a84a4644ffbc5792c11ecf8e2e7e95f63a4126720b",
+          "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+          "rankingStatus": "provisional",
+          "counterScope": "configurations",
+          "evaluated": 17,
+          "proven": 16,
+          "total": 378,
+          "topK": 5,
+          "wallMs": 4978.0129019999995,
+          "matrixMs": 2.063586000000214,
+          "nodeRssBeforeBytes": 103002112,
+          "nodeRssAfterBytes": 107532288,
+          "responseBytes": 35114,
+          "solverVersion": "1.17.0",
+          "scores": [
+            [
+              "[\"S00\",\"S01\",\"S25\",\"S26\"]",
+              0,
+              119000000
+            ],
+            [
+              "[\"S00\",\"S01\",\"S24\",\"S26\"]",
+              0,
+              119200000
+            ],
+            [
+              "[\"S00\",\"S01\",\"S26\",\"S27\"]",
+              0,
+              120200000
+            ],
+            [
+              "[\"S00\",\"S01\",\"S26\",\"S28\"]",
+              0,
+              120400000
+            ],
+            [
+              "[\"S00\",\"S01\",\"S24\",\"S28\"]",
+              0,
+              120600000
+            ]
+          ]
+        },
+        {
+          "strategy": "unified_milp",
+          "scenarioHash": "d5381456eb8c8888b4153fca6cc3f88f19af7aba610ff87fd8bec1cf392f1ae0",
+          "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+          "rankingStatus": "provisional",
+          "counterScope": "rank_attempts_and_proven_ranks",
+          "evaluated": 1,
+          "proven": 0,
+          "total": null,
+          "topK": 1,
+          "wallMs": 4867.202820999999,
+          "matrixMs": 6.1157769999990705,
+          "nodeRssBeforeBytes": 107532288,
+          "nodeRssAfterBytes": 54009856,
+          "responseBytes": 12054,
+          "solverVersion": "1.17.0",
+          "scores": [
+            [
+              "[\"S00\",\"S01\",\"S05\",\"S09\"]",
+              0,
+              74200000
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

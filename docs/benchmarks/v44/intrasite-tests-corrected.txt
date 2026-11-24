@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: intra-site length reverses ranking; exactly once per trip in both selection strategies
+ok 1 - intra-site length reverses ranking; exactly once per trip in both selection strategies
+  ---
+  duration_ms: 2675.19484
+  type: 'test'
+  ...
+# Subtest: same-node with positive internal distance; unknown, cache invalidation and route closure
+ok 2 - same-node with positive internal distance; unknown, cache invalidation and route closure
+  ---
+  duration_ms: 839.039271
+  type: 'test'
+  ...
+# Subtest: distance evidence validates basis, horizon, network, truck and directional profile; legacy fingerprint preserved
+ok 3 - distance evidence validates basis, horizon, network, truck and directional profile; legacy fingerprint preserved
+  ---
+  duration_ms: 3.067364
+  type: 'test'
+  ...
+# Subtest: independent serialized checker rejects altered internal distance and forged road legs
+ok 4 - independent serialized checker rejects altered internal distance and forged road legs
+  ---
+  duration_ms: 786.616401
+  type: 'test'
+  ...
+# Subtest: strict adapter requires explicit roundtrip basis and matching scoped evidence for positive distance
+ok 5 - strict adapter requires explicit roundtrip basis and matching scoped evidence for positive distance
+  ---
+  duration_ms: 8.390282
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4395.679372

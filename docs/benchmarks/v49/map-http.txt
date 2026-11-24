@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: v4.9 map editor builds safe add/relocate/greenfield policies and preserves explicit constraints
+ok 1 - v4.9 map editor builds safe add/relocate/greenfield policies and preserves explicit constraints
+  ---
+  duration_ms: 56.310392
+  type: 'test'
+  ...
+# Subtest: v4.9 map JSON import preserves settings and constraints; does not silently downgrade advanced v1
+ok 2 - v4.9 map JSON import preserves settings and constraints; does not silently downgrade advanced v1
+  ---
+  duration_ms: 2.553964
+  type: 'test'
+  ...
+# Subtest: v4.9 exact display does not expand trip rows or mislabel partial/no-baseline output
+ok 3 - v4.9 exact display does not expand trip rows or mislabel partial/no-baseline output
+  ---
+  duration_ms: 0.4784
+  type: 'test'
+  ...
+# Subtest: v4.9 actual map-generated HTTP requests: city Top-K, geometry, exclusion lineage, relocation and greenfield
+ok 4 - v4.9 actual map-generated HTTP requests: city Top-K, geometry, exclusion lineage, relocation and greenfield
+  ---
+  duration_ms: 6689.673329
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7033.34281

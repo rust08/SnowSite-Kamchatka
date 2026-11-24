@@ -1,0 +1,186 @@
+[
+  {
+    "sites": [
+      "S0",
+      "S1"
+    ],
+    "unservedM3": 0,
+    "transportKm": 159.42599,
+    "trips": 25,
+    "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "allocation": [
+      {
+        "demand": "D1",
+        "site": "S0",
+        "m3": 16,
+        "trips": 2
+      },
+      {
+        "demand": "D1",
+        "site": "S1",
+        "m3": 30,
+        "trips": 3
+      },
+      {
+        "demand": "D2",
+        "site": "S1",
+        "m3": 43,
+        "trips": 5
+      },
+      {
+        "demand": "D3",
+        "site": "S0",
+        "m3": 50,
+        "trips": 5
+      },
+      {
+        "demand": "D4",
+        "site": "S1",
+        "m3": 54,
+        "trips": 6
+      },
+      {
+        "demand": "D5",
+        "site": "S0",
+        "m3": 35,
+        "trips": 4
+      }
+    ]
+  },
+  {
+    "sites": [
+      "S0",
+      "S1",
+      "C1"
+    ],
+    "unservedM3": 0,
+    "transportKm": 108.55635,
+    "trips": 25,
+    "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "allocation": [
+      {
+        "demand": "D1",
+        "site": "C1",
+        "m3": 46,
+        "trips": 5
+      },
+      {
+        "demand": "D2",
+        "site": "S1",
+        "m3": 24,
+        "trips": 3
+      },
+      {
+        "demand": "D2",
+        "site": "C1",
+        "m3": 19,
+        "trips": 2
+      },
+      {
+        "demand": "D3",
+        "site": "S0",
+        "m3": 50,
+        "trips": 5
+      },
+      {
+        "demand": "D4",
+        "site": "S1",
+        "m3": 54,
+        "trips": 6
+      },
+      {
+        "demand": "D5",
+        "site": "C1",
+        "m3": 35,
+        "trips": 4
+      }
+    ]
+  },
+  {
+    "sites": [
+      "S0",
+      "S1",
+      "C2"
+    ],
+    "unservedM3": 0,
+    "transportKm": 122.64832,
+    "trips": 25,
+    "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "allocation": [
+      {
+        "demand": "D1",
+        "site": "C2",
+        "m3": 46,
+        "trips": 5
+      },
+      {
+        "demand": "D2",
+        "site": "S1",
+        "m3": 43,
+        "trips": 5
+      },
+      {
+        "demand": "D3",
+        "site": "S0",
+        "m3": 50,
+        "trips": 5
+      },
+      {
+        "demand": "D4",
+        "site": "S1",
+        "m3": 54,
+        "trips": 6
+      },
+      {
+        "demand": "D5",
+        "site": "C2",
+        "m3": 35,
+        "trips": 4
+      }
+    ]
+  },
+  {
+    "sites": [
+      "S0",
+      "S1",
+      "C1",
+      "C2"
+    ],
+    "unservedM3": 0,
+    "transportKm": 92.22877,
+    "trips": 25,
+    "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "allocation": [
+      {
+        "demand": "D1",
+        "site": "C1",
+        "m3": 46,
+        "trips": 5
+      },
+      {
+        "demand": "D2",
+        "site": "C1",
+        "m3": 43,
+        "trips": 5
+      },
+      {
+        "demand": "D3",
+        "site": "S0",
+        "m3": 50,
+        "trips": 5
+      },
+      {
+        "demand": "D4",
+        "site": "S1",
+        "m3": 54,
+        "trips": 6
+      },
+      {
+        "demand": "D5",
+        "site": "C2",
+        "m3": 35,
+        "trips": 4
+      }
+    ]
+  }
+]

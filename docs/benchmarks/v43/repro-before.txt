@@ -1,0 +1,10 @@
+ADD optional old: [
+  { ids: [ 'new', 'old' ], km: 2, unserved: 0 },
+  { ids: [ 'new' ], km: 2, unserved: 0 }
+]
+ZERO: [
+  { ids: [ 'old', 'zero' ], km: 0, sameNode: true },
+  { ids: [ 'next', 'old' ], km: 2, sameNode: false }
+]
+STRICT invalid review date accepted: true
+Invalid decision runtime accepted: true

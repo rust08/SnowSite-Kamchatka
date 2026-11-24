@@ -1,0 +1,2486 @@
+{
+  "schemaVersion": "1.0",
+  "scenarioHash": "98107c5d16698b72b97e5d0a362594ee45322a801c62927271b9ef62bdde054e",
+  "inputFingerprint": "4bb54d2a8e88db80dc70c0dd2b3a029b32a1e0fbd40c9f151681324a4bd4b6b2",
+  "lineageStatus": "root",
+  "networkId": "benchmark-v43",
+  "networkVersion": "grid-719-v1",
+  "networkHash": "109218839f211770d9e787af284f84662e47abdc5e4568488004f9e4a4c4cff9",
+  "solver": {
+    "name": "SciPy/HiGHS MILP",
+    "version": "1.17.0",
+    "status": "optimal",
+    "stages": [
+      {
+        "name": "unservedM3",
+        "status": "optimal",
+        "bound": 0,
+        "value": 0,
+        "gap": 0
+      },
+      {
+        "name": "transportDistanceMm",
+        "status": "optimal",
+        "bound": 81800000,
+        "value": 81800000,
+        "gap": 0
+      }
+    ],
+    "stageScope": "last evaluated configuration of primary ranking; individual solutions carry their own stages",
+    "timeMs": 1958.9819589999997,
+    "limits": {
+      "timeLimitMs": 5000,
+      "maxConfigurations": 1000,
+      "maxEnumerationNodes": 100000
+    }
+  },
+  "matrixMs": 0.6246599999999489,
+  "matrixMetrics": {
+    "cacheHit": true,
+    "routeStarts": 0
+  },
+  "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+  "baseline": {
+    "configurationId": "[\"S00\",\"S01\"]",
+    "activeSiteIds": [
+      "S00",
+      "S01"
+    ],
+    "newSiteIds": [],
+    "relocatedGroups": [],
+    "status": "optimal",
+    "servedM3": 157,
+    "unservedM3": 11,
+    "transportDistanceMm": 135000000,
+    "transportKm": 135,
+    "trips": 21,
+    "assignments": [
+      {
+        "demandId": "D0",
+        "siteId": "S00",
+        "volumeM3": 12,
+        "trips": 2,
+        "tripCapacityM3": 10,
+        "roundtripMm": 2400000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n0",
+          "to": "n20"
+        },
+        "loadedDistanceMm": 1200000,
+        "emptyDistanceMm": 1200000
+      },
+      {
+        "demandId": "D2",
+        "siteId": "S01",
+        "volumeM3": 6,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 4600000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n2",
+          "to": "n21"
+        },
+        "loadedDistanceMm": 2300000,
+        "emptyDistanceMm": 2300000
+      },
+      {
+        "demandId": "D3",
+        "siteId": "S01",
+        "volumeM3": 10,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 5200000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n3",
+          "to": "n21"
+        },
+        "loadedDistanceMm": 2600000,
+        "emptyDistanceMm": 2600000
+      },
+      {
+        "demandId": "D4",
+        "siteId": "S01",
+        "volumeM3": 8,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 6200000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n4",
+          "to": "n21"
+        },
+        "loadedDistanceMm": 3100000,
+        "emptyDistanceMm": 3100000
+      },
+      {
+        "demandId": "D5",
+        "siteId": "S00",
+        "volumeM3": 10,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 8000000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n5",
+          "to": "n20"
+        },
+        "loadedDistanceMm": 4000000,
+        "emptyDistanceMm": 4000000
+      },
+      {
+        "demandId": "D5",
+        "siteId": "S01",
+        "volumeM3": 7,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 7800000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n5",
+          "to": "n21"
+        },
+        "loadedDistanceMm": 3900000,
+        "emptyDistanceMm": 3900000
+      },
+      {
+        "demandId": "D6",
+        "siteId": "S01",
+        "volumeM3": 10,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 9000000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n6",
+          "to": "n21"
+        },
+        "loadedDistanceMm": 4500000,
+        "emptyDistanceMm": 4500000
+      },
+      {
+        "demandId": "D8",
+        "siteId": "S00",
+        "volumeM3": 8,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 11600000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n8",
+          "to": "n20"
+        },
+        "loadedDistanceMm": 5800000,
+        "emptyDistanceMm": 5800000
+      },
+      {
+        "demandId": "D8",
+        "siteId": "S01",
+        "volumeM3": 10,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 11400000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n8",
+          "to": "n21"
+        },
+        "loadedDistanceMm": 5700000,
+        "emptyDistanceMm": 5700000
+      },
+      {
+        "demandId": "D10",
+        "siteId": "S00",
+        "volumeM3": 14,
+        "trips": 2,
+        "tripCapacityM3": 10,
+        "roundtripMm": 1600000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n10",
+          "to": "n20"
+        },
+        "loadedDistanceMm": 800000,
+        "emptyDistanceMm": 800000
+      },
+      {
+        "demandId": "D11",
+        "siteId": "S01",
+        "volumeM3": 3,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 2000000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n11",
+          "to": "n21"
+        },
+        "loadedDistanceMm": 1000000,
+        "emptyDistanceMm": 1000000
+      },
+      {
+        "demandId": "D12",
+        "siteId": "S00",
+        "volumeM3": 4,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 3200000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n12",
+          "to": "n20"
+        },
+        "loadedDistanceMm": 1600000,
+        "emptyDistanceMm": 1600000
+      },
+      {
+        "demandId": "D13",
+        "siteId": "S00",
+        "volumeM3": 10,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 4200000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n13",
+          "to": "n20"
+        },
+        "loadedDistanceMm": 2100000,
+        "emptyDistanceMm": 2100000
+      },
+      {
+        "demandId": "D13",
+        "siteId": "S01",
+        "volumeM3": 5,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 4000000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n13",
+          "to": "n21"
+        },
+        "loadedDistanceMm": 2000000,
+        "emptyDistanceMm": 2000000
+      },
+      {
+        "demandId": "D15",
+        "siteId": "S01",
+        "volumeM3": 9,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 7200000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n15",
+          "to": "n21"
+        },
+        "loadedDistanceMm": 3600000,
+        "emptyDistanceMm": 3600000
+      },
+      {
+        "demandId": "D16",
+        "siteId": "S01",
+        "volumeM3": 10,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 8800000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n16",
+          "to": "n21"
+        },
+        "loadedDistanceMm": 4400000,
+        "emptyDistanceMm": 4400000
+      },
+      {
+        "demandId": "D18",
+        "siteId": "S00",
+        "volumeM3": 16,
+        "trips": 2,
+        "tripCapacityM3": 10,
+        "roundtripMm": 11400000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n18",
+          "to": "n20"
+        },
+        "loadedDistanceMm": 5700000,
+        "emptyDistanceMm": 5700000
+      },
+      {
+        "demandId": "D19",
+        "siteId": "S00",
+        "volumeM3": 5,
+        "trips": 1,
+        "tripCapacityM3": 10,
+        "roundtripMm": 11000000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n19",
+          "to": "n20"
+        },
+        "loadedDistanceMm": 5500000,
+        "emptyDistanceMm": 5500000
+      }
+    ],
+    "siteUtilization": [
+      {
+        "siteId": "S00",
+        "capacityM3": 79,
+        "usedM3": 79,
+        "usedTrips": 11,
+        "maxTripsDuringHorizon": null,
+        "tripLimitBinding": false
+      },
+      {
+        "siteId": "S01",
+        "capacityM3": 78,
+        "usedM3": 78,
+        "usedTrips": 10,
+        "maxTripsDuringHorizon": null,
+        "tripLimitBinding": false
+      }
+    ],
+    "unservedReasons": [
+      {
+        "demandId": "D1",
+        "unservedM3": 1,
+        "code": "capacity_or_allocation_constraint"
+      },
+      {
+        "demandId": "D3",
+        "unservedM3": 1,
+        "code": "capacity_or_allocation_constraint"
+      },
+      {
+        "demandId": "D6",
+        "unservedM3": 2,
+        "code": "capacity_or_allocation_constraint"
+      },
+      {
+        "demandId": "D7",
+        "unservedM3": 1,
+        "code": "capacity_or_allocation_constraint"
+      },
+      {
+        "demandId": "D9",
+        "unservedM3": 3,
+        "code": "capacity_or_allocation_constraint"
+      },
+      {
+        "demandId": "D14",
+        "unservedM3": 2,
+        "code": "capacity_or_allocation_constraint"
+      },
+      {
+        "demandId": "D17",
+        "unservedM3": 1,
+        "code": "capacity_or_allocation_constraint"
+      }
+    ],
+    "estimatedDriveMinutes": 405,
+    "estimatedDriveCostRub": null,
+    "screeningStatus": "not_assessed",
+    "unresolvedChecks": [
+      {
+        "siteId": "S00",
+        "status": "needs_review"
+      },
+      {
+        "siteId": "S01",
+        "status": "needs_review"
+      }
+    ],
+    "solverStages": [
+      {
+        "name": "unservedM3",
+        "status": "optimal",
+        "bound": 11,
+        "value": 11,
+        "gap": 0
+      },
+      {
+        "name": "transportDistanceMm",
+        "status": "optimal",
+        "bound": 135000000,
+        "value": 135000000,
+        "gap": 0
+      }
+    ]
+  },
+  "baselineStatus": "optimal",
+  "search": {
+    "catalogSize": 30,
+    "eligibleSize": 30,
+    "configurationsTotal": 378,
+    "enumerated": 378,
+    "evaluated": 16,
+    "proven": 16,
+    "prunedByBound": 362,
+    "strategy": "bounded_enumeration",
+    "requestedStrategy": "bounded_enumeration",
+    "counterScope": "configurations",
+    "topKRequested": 5,
+    "topKReturned": 5,
+    "rankingStatus": "exact_top_k",
+    "coverage": "finite_catalogue",
+    "reason": null
+  },
+  "alternatives": [
+    {
+      "configurationId": "[\"S00\",\"S01\",\"S05\",\"S09\"]",
+      "activeSiteIds": [
+        "S00",
+        "S01",
+        "S05",
+        "S09"
+      ],
+      "newSiteIds": [
+        "S05",
+        "S09"
+      ],
+      "relocatedGroups": [],
+      "status": "optimal",
+      "servedM3": 168,
+      "unservedM3": 0,
+      "transportDistanceMm": 74200000,
+      "transportKm": 74.2,
+      "trips": 28,
+      "assignments": [
+        {
+          "demandId": "D0",
+          "siteId": "S00",
+          "volumeM3": 12,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n20"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        },
+        {
+          "demandId": "D1",
+          "siteId": "S01",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n1",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D2",
+          "siteId": "S01",
+          "volumeM3": 6,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n2",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 2300000,
+          "emptyDistanceMm": 2300000
+        },
+        {
+          "demandId": "D3",
+          "siteId": "S01",
+          "volumeM3": 9,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 5200000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n3",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 2600000,
+          "emptyDistanceMm": 2600000
+        },
+        {
+          "demandId": "D3",
+          "siteId": "S05",
+          "volumeM3": 2,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n3",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 2300000,
+          "emptyDistanceMm": 2300000
+        },
+        {
+          "demandId": "D4",
+          "siteId": "S05",
+          "volumeM3": 8,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n4",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1800000,
+          "emptyDistanceMm": 1800000
+        },
+        {
+          "demandId": "D5",
+          "siteId": "S05",
+          "volumeM3": 17,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n5",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D6",
+          "siteId": "S05",
+          "volumeM3": 12,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3200000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n6",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1600000,
+          "emptyDistanceMm": 1600000
+        },
+        {
+          "demandId": "D7",
+          "siteId": "S09",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n7",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1700000,
+          "emptyDistanceMm": 1700000
+        },
+        {
+          "demandId": "D8",
+          "siteId": "S09",
+          "volumeM3": 18,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n8",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1300000,
+          "emptyDistanceMm": 1300000
+        },
+        {
+          "demandId": "D9",
+          "siteId": "S09",
+          "volumeM3": 3,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n9",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D10",
+          "siteId": "S00",
+          "volumeM3": 14,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n10",
+            "to": "n20"
+          },
+          "loadedDistanceMm": 800000,
+          "emptyDistanceMm": 800000
+        },
+        {
+          "demandId": "D11",
+          "siteId": "S01",
+          "volumeM3": 3,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n11",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D12",
+          "siteId": "S01",
+          "volumeM3": 4,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n12",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D13",
+          "siteId": "S01",
+          "volumeM3": 15,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n13",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 2000000,
+          "emptyDistanceMm": 2000000
+        },
+        {
+          "demandId": "D14",
+          "siteId": "S05",
+          "volumeM3": 2,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n14",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        },
+        {
+          "demandId": "D15",
+          "siteId": "S05",
+          "volumeM3": 9,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n15",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 200000,
+          "emptyDistanceMm": 200000
+        },
+        {
+          "demandId": "D16",
+          "siteId": "S05",
+          "volumeM3": 10,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n16",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D17",
+          "siteId": "S09",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2800000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n17",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1400000,
+          "emptyDistanceMm": 1400000
+        },
+        {
+          "demandId": "D18",
+          "siteId": "S09",
+          "volumeM3": 16,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n18",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 800000,
+          "emptyDistanceMm": 800000
+        },
+        {
+          "demandId": "D19",
+          "siteId": "S09",
+          "volumeM3": 5,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n19",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 200000,
+          "emptyDistanceMm": 200000
+        }
+      ],
+      "siteUtilization": [
+        {
+          "siteId": "S00",
+          "capacityM3": 79,
+          "usedM3": 26,
+          "usedTrips": 4,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S01",
+          "capacityM3": 78,
+          "usedM3": 38,
+          "usedTrips": 7,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S05",
+          "capacityM3": 60,
+          "usedM3": 60,
+          "usedTrips": 9,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S09",
+          "capacityM3": 58,
+          "usedM3": 44,
+          "usedTrips": 8,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        }
+      ],
+      "unservedReasons": [],
+      "estimatedDriveMinutes": 222.6,
+      "estimatedDriveCostRub": null,
+      "screeningStatus": "not_assessed",
+      "unresolvedChecks": [
+        {
+          "siteId": "S00",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S01",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S05",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S09",
+          "status": "needs_review"
+        }
+      ],
+      "solverStages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 74200000,
+          "value": 74200000,
+          "gap": 0
+        }
+      ],
+      "comparableToBaseline": false,
+      "deltaKm": null,
+      "deltaKmPercent": null
+    },
+    {
+      "configurationId": "[\"S00\",\"S01\",\"S05\",\"S08\"]",
+      "activeSiteIds": [
+        "S00",
+        "S01",
+        "S05",
+        "S08"
+      ],
+      "newSiteIds": [
+        "S05",
+        "S08"
+      ],
+      "relocatedGroups": [],
+      "status": "optimal",
+      "servedM3": 168,
+      "unservedM3": 0,
+      "transportDistanceMm": 79600000,
+      "transportKm": 79.6,
+      "trips": 28,
+      "assignments": [
+        {
+          "demandId": "D0",
+          "siteId": "S00",
+          "volumeM3": 12,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n20"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        },
+        {
+          "demandId": "D1",
+          "siteId": "S01",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n1",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D2",
+          "siteId": "S01",
+          "volumeM3": 6,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n2",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 2300000,
+          "emptyDistanceMm": 2300000
+        },
+        {
+          "demandId": "D3",
+          "siteId": "S05",
+          "volumeM3": 11,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n3",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 2300000,
+          "emptyDistanceMm": 2300000
+        },
+        {
+          "demandId": "D4",
+          "siteId": "S05",
+          "volumeM3": 8,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n4",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1800000,
+          "emptyDistanceMm": 1800000
+        },
+        {
+          "demandId": "D5",
+          "siteId": "S05",
+          "volumeM3": 17,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n5",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D6",
+          "siteId": "S05",
+          "volumeM3": 12,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3200000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n6",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1600000,
+          "emptyDistanceMm": 1600000
+        },
+        {
+          "demandId": "D7",
+          "siteId": "S08",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n7",
+            "to": "n28"
+          },
+          "loadedDistanceMm": 2200000,
+          "emptyDistanceMm": 2200000
+        },
+        {
+          "demandId": "D8",
+          "siteId": "S08",
+          "volumeM3": 18,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n8",
+            "to": "n28"
+          },
+          "loadedDistanceMm": 1800000,
+          "emptyDistanceMm": 1800000
+        },
+        {
+          "demandId": "D9",
+          "siteId": "S08",
+          "volumeM3": 3,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n9",
+            "to": "n28"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D10",
+          "siteId": "S00",
+          "volumeM3": 14,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n10",
+            "to": "n20"
+          },
+          "loadedDistanceMm": 800000,
+          "emptyDistanceMm": 800000
+        },
+        {
+          "demandId": "D11",
+          "siteId": "S01",
+          "volumeM3": 3,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n11",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D12",
+          "siteId": "S01",
+          "volumeM3": 4,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n12",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D13",
+          "siteId": "S01",
+          "volumeM3": 15,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n13",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 2000000,
+          "emptyDistanceMm": 2000000
+        },
+        {
+          "demandId": "D14",
+          "siteId": "S05",
+          "volumeM3": 2,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n14",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        },
+        {
+          "demandId": "D15",
+          "siteId": "S05",
+          "volumeM3": 9,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n15",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 200000,
+          "emptyDistanceMm": 200000
+        },
+        {
+          "demandId": "D16",
+          "siteId": "S08",
+          "volumeM3": 10,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n16",
+            "to": "n28"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        },
+        {
+          "demandId": "D17",
+          "siteId": "S08",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n17",
+            "to": "n28"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D18",
+          "siteId": "S08",
+          "volumeM3": 16,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1800000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n18",
+            "to": "n28"
+          },
+          "loadedDistanceMm": 900000,
+          "emptyDistanceMm": 900000
+        },
+        {
+          "demandId": "D19",
+          "siteId": "S08",
+          "volumeM3": 5,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n19",
+            "to": "n28"
+          },
+          "loadedDistanceMm": 700000,
+          "emptyDistanceMm": 700000
+        }
+      ],
+      "siteUtilization": [
+        {
+          "siteId": "S00",
+          "capacityM3": 79,
+          "usedM3": 26,
+          "usedTrips": 4,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S01",
+          "capacityM3": 78,
+          "usedM3": 29,
+          "usedTrips": 6,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S05",
+          "capacityM3": 60,
+          "usedM3": 59,
+          "usedTrips": 9,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S08",
+          "capacityM3": 66,
+          "usedM3": 54,
+          "usedTrips": 9,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        }
+      ],
+      "unservedReasons": [],
+      "estimatedDriveMinutes": 238.79999999999998,
+      "estimatedDriveCostRub": null,
+      "screeningStatus": "not_assessed",
+      "unresolvedChecks": [
+        {
+          "siteId": "S00",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S01",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S05",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S08",
+          "status": "needs_review"
+        }
+      ],
+      "solverStages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 79600000,
+          "value": 79600000,
+          "gap": 0
+        }
+      ],
+      "comparableToBaseline": false,
+      "deltaKm": null,
+      "deltaKmPercent": null
+    },
+    {
+      "configurationId": "[\"S00\",\"S01\",\"S09\",\"S13\"]",
+      "activeSiteIds": [
+        "S00",
+        "S01",
+        "S09",
+        "S13"
+      ],
+      "newSiteIds": [
+        "S09",
+        "S13"
+      ],
+      "relocatedGroups": [],
+      "status": "optimal",
+      "servedM3": 168,
+      "unservedM3": 0,
+      "transportDistanceMm": 80600000,
+      "transportKm": 80.6,
+      "trips": 28,
+      "assignments": [
+        {
+          "demandId": "D0",
+          "siteId": "S00",
+          "volumeM3": 12,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n20"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        },
+        {
+          "demandId": "D1",
+          "siteId": "S01",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n1",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D2",
+          "siteId": "S13",
+          "volumeM3": 6,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n2",
+            "to": "n33"
+          },
+          "loadedDistanceMm": 2000000,
+          "emptyDistanceMm": 2000000
+        },
+        {
+          "demandId": "D3",
+          "siteId": "S13",
+          "volumeM3": 11,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n3",
+            "to": "n33"
+          },
+          "loadedDistanceMm": 1700000,
+          "emptyDistanceMm": 1700000
+        },
+        {
+          "demandId": "D4",
+          "siteId": "S13",
+          "volumeM3": 8,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3800000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n4",
+            "to": "n33"
+          },
+          "loadedDistanceMm": 1900000,
+          "emptyDistanceMm": 1900000
+        },
+        {
+          "demandId": "D5",
+          "siteId": "S13",
+          "volumeM3": 17,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4800000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n5",
+            "to": "n33"
+          },
+          "loadedDistanceMm": 2400000,
+          "emptyDistanceMm": 2400000
+        },
+        {
+          "demandId": "D6",
+          "siteId": "S09",
+          "volumeM3": 4,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 5000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n6",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 2500000,
+          "emptyDistanceMm": 2500000
+        },
+        {
+          "demandId": "D6",
+          "siteId": "S13",
+          "volumeM3": 8,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 6000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n6",
+            "to": "n33"
+          },
+          "loadedDistanceMm": 3000000,
+          "emptyDistanceMm": 3000000
+        },
+        {
+          "demandId": "D7",
+          "siteId": "S09",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n7",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1700000,
+          "emptyDistanceMm": 1700000
+        },
+        {
+          "demandId": "D8",
+          "siteId": "S09",
+          "volumeM3": 18,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n8",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1300000,
+          "emptyDistanceMm": 1300000
+        },
+        {
+          "demandId": "D9",
+          "siteId": "S09",
+          "volumeM3": 3,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n9",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D10",
+          "siteId": "S00",
+          "volumeM3": 14,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n10",
+            "to": "n20"
+          },
+          "loadedDistanceMm": 800000,
+          "emptyDistanceMm": 800000
+        },
+        {
+          "demandId": "D11",
+          "siteId": "S01",
+          "volumeM3": 3,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n11",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D12",
+          "siteId": "S13",
+          "volumeM3": 4,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2800000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n12",
+            "to": "n33"
+          },
+          "loadedDistanceMm": 1400000,
+          "emptyDistanceMm": 1400000
+        },
+        {
+          "demandId": "D13",
+          "siteId": "S13",
+          "volumeM3": 15,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1800000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n13",
+            "to": "n33"
+          },
+          "loadedDistanceMm": 900000,
+          "emptyDistanceMm": 900000
+        },
+        {
+          "demandId": "D14",
+          "siteId": "S13",
+          "volumeM3": 2,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n14",
+            "to": "n33"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        },
+        {
+          "demandId": "D15",
+          "siteId": "S13",
+          "volumeM3": 9,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3200000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n15",
+            "to": "n33"
+          },
+          "loadedDistanceMm": 1600000,
+          "emptyDistanceMm": 1600000
+        },
+        {
+          "demandId": "D16",
+          "siteId": "S09",
+          "volumeM3": 10,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n16",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1700000,
+          "emptyDistanceMm": 1700000
+        },
+        {
+          "demandId": "D17",
+          "siteId": "S09",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2800000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n17",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1400000,
+          "emptyDistanceMm": 1400000
+        },
+        {
+          "demandId": "D18",
+          "siteId": "S09",
+          "volumeM3": 16,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n18",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 800000,
+          "emptyDistanceMm": 800000
+        },
+        {
+          "demandId": "D19",
+          "siteId": "S09",
+          "volumeM3": 5,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n19",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 200000,
+          "emptyDistanceMm": 200000
+        }
+      ],
+      "siteUtilization": [
+        {
+          "siteId": "S00",
+          "capacityM3": 79,
+          "usedM3": 26,
+          "usedTrips": 4,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S01",
+          "capacityM3": 78,
+          "usedM3": 4,
+          "usedTrips": 2,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S09",
+          "capacityM3": 58,
+          "usedM3": 58,
+          "usedTrips": 10,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S13",
+          "capacityM3": 80,
+          "usedM3": 80,
+          "usedTrips": 12,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        }
+      ],
+      "unservedReasons": [],
+      "estimatedDriveMinutes": 241.79999999999995,
+      "estimatedDriveCostRub": null,
+      "screeningStatus": "not_assessed",
+      "unresolvedChecks": [
+        {
+          "siteId": "S00",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S01",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S09",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S13",
+          "status": "needs_review"
+        }
+      ],
+      "solverStages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 80600000,
+          "value": 80600000,
+          "gap": 0
+        }
+      ],
+      "comparableToBaseline": false,
+      "deltaKm": null,
+      "deltaKmPercent": null
+    },
+    {
+      "configurationId": "[\"S00\",\"S01\",\"S05\",\"S07\"]",
+      "activeSiteIds": [
+        "S00",
+        "S01",
+        "S05",
+        "S07"
+      ],
+      "newSiteIds": [
+        "S05",
+        "S07"
+      ],
+      "relocatedGroups": [],
+      "status": "optimal",
+      "servedM3": 168,
+      "unservedM3": 0,
+      "transportDistanceMm": 81800000,
+      "transportKm": 81.8,
+      "trips": 28,
+      "assignments": [
+        {
+          "demandId": "D0",
+          "siteId": "S00",
+          "volumeM3": 12,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n20"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        },
+        {
+          "demandId": "D1",
+          "siteId": "S01",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n1",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D2",
+          "siteId": "S01",
+          "volumeM3": 6,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n2",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 2300000,
+          "emptyDistanceMm": 2300000
+        },
+        {
+          "demandId": "D3",
+          "siteId": "S05",
+          "volumeM3": 11,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n3",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 2300000,
+          "emptyDistanceMm": 2300000
+        },
+        {
+          "demandId": "D4",
+          "siteId": "S05",
+          "volumeM3": 8,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n4",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1800000,
+          "emptyDistanceMm": 1800000
+        },
+        {
+          "demandId": "D5",
+          "siteId": "S05",
+          "volumeM3": 17,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n5",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D6",
+          "siteId": "S05",
+          "volumeM3": 12,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3200000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n6",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1600000,
+          "emptyDistanceMm": 1600000
+        },
+        {
+          "demandId": "D7",
+          "siteId": "S07",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n7",
+            "to": "n27"
+          },
+          "loadedDistanceMm": 1700000,
+          "emptyDistanceMm": 1700000
+        },
+        {
+          "demandId": "D8",
+          "siteId": "S07",
+          "volumeM3": 18,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4200000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n8",
+            "to": "n27"
+          },
+          "loadedDistanceMm": 2100000,
+          "emptyDistanceMm": 2100000
+        },
+        {
+          "demandId": "D9",
+          "siteId": "S07",
+          "volumeM3": 3,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n9",
+            "to": "n27"
+          },
+          "loadedDistanceMm": 2000000,
+          "emptyDistanceMm": 2000000
+        },
+        {
+          "demandId": "D10",
+          "siteId": "S00",
+          "volumeM3": 14,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n10",
+            "to": "n20"
+          },
+          "loadedDistanceMm": 800000,
+          "emptyDistanceMm": 800000
+        },
+        {
+          "demandId": "D11",
+          "siteId": "S01",
+          "volumeM3": 3,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n11",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D12",
+          "siteId": "S01",
+          "volumeM3": 4,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n12",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D13",
+          "siteId": "S01",
+          "volumeM3": 15,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n13",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 2000000,
+          "emptyDistanceMm": 2000000
+        },
+        {
+          "demandId": "D14",
+          "siteId": "S05",
+          "volumeM3": 2,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n14",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        },
+        {
+          "demandId": "D15",
+          "siteId": "S05",
+          "volumeM3": 9,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n15",
+            "to": "n25"
+          },
+          "loadedDistanceMm": 200000,
+          "emptyDistanceMm": 200000
+        },
+        {
+          "demandId": "D16",
+          "siteId": "S07",
+          "volumeM3": 10,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n16",
+            "to": "n27"
+          },
+          "loadedDistanceMm": 700000,
+          "emptyDistanceMm": 700000
+        },
+        {
+          "demandId": "D17",
+          "siteId": "S07",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n17",
+            "to": "n27"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D18",
+          "siteId": "S07",
+          "volumeM3": 16,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2800000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n18",
+            "to": "n27"
+          },
+          "loadedDistanceMm": 1400000,
+          "emptyDistanceMm": 1400000
+        },
+        {
+          "demandId": "D19",
+          "siteId": "S07",
+          "volumeM3": 5,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n19",
+            "to": "n27"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        }
+      ],
+      "siteUtilization": [
+        {
+          "siteId": "S00",
+          "capacityM3": 79,
+          "usedM3": 26,
+          "usedTrips": 4,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S01",
+          "capacityM3": 78,
+          "usedM3": 29,
+          "usedTrips": 6,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S05",
+          "capacityM3": 60,
+          "usedM3": 59,
+          "usedTrips": 9,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S07",
+          "capacityM3": 56,
+          "usedM3": 54,
+          "usedTrips": 9,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        }
+      ],
+      "unservedReasons": [],
+      "estimatedDriveMinutes": 245.39999999999998,
+      "estimatedDriveCostRub": null,
+      "screeningStatus": "not_assessed",
+      "unresolvedChecks": [
+        {
+          "siteId": "S00",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S01",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S05",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S07",
+          "status": "needs_review"
+        }
+      ],
+      "solverStages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 81800000,
+          "value": 81800000,
+          "gap": 0
+        }
+      ],
+      "comparableToBaseline": false,
+      "deltaKm": null,
+      "deltaKmPercent": null
+    },
+    {
+      "configurationId": "[\"S00\",\"S01\",\"S06\",\"S09\"]",
+      "activeSiteIds": [
+        "S00",
+        "S01",
+        "S06",
+        "S09"
+      ],
+      "newSiteIds": [
+        "S06",
+        "S09"
+      ],
+      "relocatedGroups": [],
+      "status": "optimal",
+      "servedM3": 168,
+      "unservedM3": 0,
+      "transportDistanceMm": 81800000,
+      "transportKm": 81.8,
+      "trips": 28,
+      "assignments": [
+        {
+          "demandId": "D0",
+          "siteId": "S00",
+          "volumeM3": 12,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n20"
+          },
+          "loadedDistanceMm": 1200000,
+          "emptyDistanceMm": 1200000
+        },
+        {
+          "demandId": "D1",
+          "siteId": "S01",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n1",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D2",
+          "siteId": "S01",
+          "volumeM3": 6,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n2",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 2300000,
+          "emptyDistanceMm": 2300000
+        },
+        {
+          "demandId": "D3",
+          "siteId": "S01",
+          "volumeM3": 11,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 5200000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n3",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 2600000,
+          "emptyDistanceMm": 2600000
+        },
+        {
+          "demandId": "D4",
+          "siteId": "S01",
+          "volumeM3": 8,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 6200000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n4",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 3100000,
+          "emptyDistanceMm": 3100000
+        },
+        {
+          "demandId": "D5",
+          "siteId": "S06",
+          "volumeM3": 17,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n5",
+            "to": "n26"
+          },
+          "loadedDistanceMm": 1700000,
+          "emptyDistanceMm": 1700000
+        },
+        {
+          "demandId": "D6",
+          "siteId": "S06",
+          "volumeM3": 2,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2200000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n6",
+            "to": "n26"
+          },
+          "loadedDistanceMm": 1100000,
+          "emptyDistanceMm": 1100000
+        },
+        {
+          "demandId": "D6",
+          "siteId": "S09",
+          "volumeM3": 10,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 5000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n6",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 2500000,
+          "emptyDistanceMm": 2500000
+        },
+        {
+          "demandId": "D7",
+          "siteId": "S09",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n7",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1700000,
+          "emptyDistanceMm": 1700000
+        },
+        {
+          "demandId": "D8",
+          "siteId": "S09",
+          "volumeM3": 18,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n8",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1300000,
+          "emptyDistanceMm": 1300000
+        },
+        {
+          "demandId": "D9",
+          "siteId": "S09",
+          "volumeM3": 3,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n9",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D10",
+          "siteId": "S00",
+          "volumeM3": 14,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n10",
+            "to": "n20"
+          },
+          "loadedDistanceMm": 800000,
+          "emptyDistanceMm": 800000
+        },
+        {
+          "demandId": "D11",
+          "siteId": "S01",
+          "volumeM3": 3,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n11",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D12",
+          "siteId": "S01",
+          "volumeM3": 4,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 3000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n12",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 1500000,
+          "emptyDistanceMm": 1500000
+        },
+        {
+          "demandId": "D13",
+          "siteId": "S01",
+          "volumeM3": 15,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n13",
+            "to": "n21"
+          },
+          "loadedDistanceMm": 2000000,
+          "emptyDistanceMm": 2000000
+        },
+        {
+          "demandId": "D14",
+          "siteId": "S06",
+          "volumeM3": 2,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 4000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n14",
+            "to": "n26"
+          },
+          "loadedDistanceMm": 2000000,
+          "emptyDistanceMm": 2000000
+        },
+        {
+          "demandId": "D15",
+          "siteId": "S06",
+          "volumeM3": 9,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n15",
+            "to": "n26"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D16",
+          "siteId": "S06",
+          "volumeM3": 10,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n16",
+            "to": "n26"
+          },
+          "loadedDistanceMm": 200000,
+          "emptyDistanceMm": 200000
+        },
+        {
+          "demandId": "D17",
+          "siteId": "S06",
+          "volumeM3": 1,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n17",
+            "to": "n26"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "D18",
+          "siteId": "S09",
+          "volumeM3": 16,
+          "trips": 2,
+          "tripCapacityM3": 10,
+          "roundtripMm": 1600000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n18",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 800000,
+          "emptyDistanceMm": 800000
+        },
+        {
+          "demandId": "D19",
+          "siteId": "S09",
+          "volumeM3": 5,
+          "trips": 1,
+          "tripCapacityM3": 10,
+          "roundtripMm": 400000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n19",
+            "to": "n29"
+          },
+          "loadedDistanceMm": 200000,
+          "emptyDistanceMm": 200000
+        }
+      ],
+      "siteUtilization": [
+        {
+          "siteId": "S00",
+          "capacityM3": 79,
+          "usedM3": 26,
+          "usedTrips": 4,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S01",
+          "capacityM3": 78,
+          "usedM3": 48,
+          "usedTrips": 9,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S06",
+          "capacityM3": 46,
+          "usedM3": 41,
+          "usedTrips": 7,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "S09",
+          "capacityM3": 58,
+          "usedM3": 53,
+          "usedTrips": 8,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        }
+      ],
+      "unservedReasons": [],
+      "estimatedDriveMinutes": 245.39999999999998,
+      "estimatedDriveCostRub": null,
+      "screeningStatus": "not_assessed",
+      "unresolvedChecks": [
+        {
+          "siteId": "S00",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S01",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S06",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "S09",
+          "status": "needs_review"
+        }
+      ],
+      "solverStages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 81800000,
+          "value": 81800000,
+          "gap": 0
+        }
+      ],
+      "comparableToBaseline": false,
+      "deltaKm": null,
+      "deltaKmPercent": null
+    }
+  ],
+  "excludedSites": [],
+  "excludedConfigurations": [],
+  "assumptions": [
+    "scenario_only: no real site or capacity verification",
+    "loaded and empty use identical road access profile",
+    "distance only; no queue/loading/CAPEX/OPEX",
+    "mass_not_checked"
+  ],
+  "warnings": [
+    {
+      "code": "legal_not_assessed",
+      "message": "Screening is supplied evidence, not legal approval."
+    },
+    {
+      "code": "trip_limit_unknown",
+      "message": "Missing receiving trip limits: no time feasibility claim."
+    },
+    {
+      "code": "snow_type_unknown",
+      "message": "Unknown acceptance compatibility is not verified."
+    }
+  ]
+}

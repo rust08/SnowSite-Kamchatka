@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "networkHash": "95069828541211729dca12b0343650e068b086a9820b3a14b5135ba3a3af1fac",
+  "scenarioHash": "c4355afc19d574a320359ceb18a9b79c0ce886d59213e43505825d087123d541",
+  "rankingStatus": "exact_top_k",
+  "baseline": 16000000,
+  "alternatives": [
+    {
+      "ids": [
+        "C1",
+        "C2",
+        "E1",
+        "E2"
+      ],
+      "U": 0,
+      "L": 56000000
+    },
+    {
+      "ids": [
+        "C1",
+        "C3",
+        "E1",
+        "E2"
+      ],
+      "U": 0,
+      "L": 56000000
+    },
+    {
+      "ids": [
+        "C1",
+        "C4",
+        "E1",
+        "E2"
+      ],
+      "U": 0,
+      "L": 56000000
+    }
+  ]
+}

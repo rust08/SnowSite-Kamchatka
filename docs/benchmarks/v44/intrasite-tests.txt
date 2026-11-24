@@ -1,0 +1,57 @@
+TAP version 13
+# Subtest: intra-site length reverses ranking; exactly once per trip in both selection strategies
+ok 1 - intra-site length reverses ranking; exactly once per trip in both selection strategies
+  ---
+  duration_ms: 2471.937043
+  type: 'test'
+  ...
+# Subtest: same-node with positive internal distance; unknown, cache invalidation and route closure
+ok 2 - same-node with positive internal distance; unknown, cache invalidation and route closure
+  ---
+  duration_ms: 740.432187
+  type: 'test'
+  ...
+# Subtest: distance evidence validates basis, horizon, network, truck and directional profile; legacy fingerprint preserved
+not ok 3 - distance evidence validates basis, horizon, network, truck and directional profile; legacy fingerprint preserved
+  ---
+  duration_ms: 2.29308
+  type: 'test'
+  location: '/mnt/data/nextwork/SnowSite-Kamchatka/tests/v44-intrasite.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception (DomainError).'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    name: 'DomainError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/nextwork/SnowSite-Kamchatka/tests/v44-intrasite.test.mjs:12:894)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: independent serialized checker rejects altered internal distance and forged road legs
+ok 4 - independent serialized checker rejects altered internal distance and forged road legs
+  ---
+  duration_ms: 693.659512
+  type: 'test'
+  ...
+# Subtest: strict adapter requires explicit roundtrip basis and matching scoped evidence for positive distance
+ok 5 - strict adapter requires explicit roundtrip basis and matching scoped evidence for positive distance
+  ---
+  duration_ms: 2.498556
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 4
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3997.834273

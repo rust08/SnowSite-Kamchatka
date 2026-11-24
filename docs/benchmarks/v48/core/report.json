@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "scope": "core",
+  "startedAt": "2026-11-21T07:41:46.598832+00:00",
+  "platform": {
+    "system": "Linux",
+    "release": "6.18.57",
+    "machine": "x86_64",
+    "python": "3.13.5",
+    "node": "v22.16.0",
+    "scipy": "1.17.0",
+    "numpy": "2.3.5",
+    "jsonschema": "4.26.0",
+    "playwright": "1.57.0"
+  },
+  "gitHead": "e45bb8ebd2143707dcfc909bf2ab5ac4909dbb13",
+  "gates": [
+    {
+      "name": "manifest",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "manifest.txt",
+      "elapsedSeconds": 0.167
+    },
+    {
+      "name": "graph",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "graph.txt",
+      "elapsedSeconds": 0.215
+    },
+    {
+      "name": "tests",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "tests.txt",
+      "elapsedSeconds": 41.075
+    },
+    {
+      "name": "contracts",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "contracts.txt",
+      "elapsedSeconds": 5.492
+    },
+    {
+      "name": "browser",
+      "status": "not_run"
+    }
+  ],
+  "status": "pass",
+  "finishedAt": "2026-11-21T07:42:33.565339+00:00"
+}

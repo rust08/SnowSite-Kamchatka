@@ -1,0 +1,3 @@
+# Task proposal — fill before GO
+ID / role / parent archive SHA / objective & actual user decision / hypothesis & evidence / non-goals / allowed exact paths and operations (ADD EDIT DELETE) / contracts and ADR / input-output / oracle prepared independently / acceptance commands & limits / rollback / stop condition / privacy / owner GO (quote and source reference, not invented).
+Default status PROPOSED, no code. `state/task.json` is machine-readable mirror; no wildcard paths. Freeze accepted bytes and candidate before tests. If ambiguity changes semantics, STOP. Owner GO must match task ID/base/allowlist; a JSON field is not cryptographic proof of authorization.

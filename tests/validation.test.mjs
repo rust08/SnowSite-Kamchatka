@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import {compareSites} from '../src/optimizer.mjs';import {createRouteEngine} from '../src/routing.mjs';
+const f=JSON.parse(readFileSync(new URL('../docs/backend-review-2026-11-21/audit/counterexamples.jsonl',import.meta.url),'utf8').trim().split('\n')[0]);
+test('S0 F01–04 reject invalid or excessive legacy input',()=>{for(const mutate of [s=>s.sites[0].kind='typo',s=>s.closedEdgeIds=['unknown'],s=>s.truck.driveKmh=Number.MIN_VALUE,s=>{s.demands[0].volumeM3=1e6;s.truck.bodyM3=1},s=>s.snowDensityKgM3=500,s=>s.sites[0].id=s.demands[0].id]){const s=structuredClone(f.scenario);mutate(s);assert.throws(()=>compareSites(f.graph,s),{name:'DomainError'});}});
+test('S0 malformed graph rejected',()=>{const g=structuredClone(f.graph);g.edges[0].km='1';assert.throws(()=>createRouteEngine(g),{name:'DomainError'});});

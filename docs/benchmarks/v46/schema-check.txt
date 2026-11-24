@@ -1,0 +1,10 @@
+PASS schema network-registry-v1.schema.json
+PASS schema optimize-request-v1.schema.json
+PASS schema optimize-response-v1.schema.json
+PASS schema scenario.schema.json
+PASS schema site-evidence-v1.schema.json
+PASS schema site-record-v1.schema.json
+PASS examples/demo-v1.json
+PASS /tmp/v46-demo.json
+PASS examples/v44/registry.json
+PASS data/evidence/pkgo-history.json

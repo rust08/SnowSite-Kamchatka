@@ -1,0 +1,609 @@
+{
+  "schemaVersion": "1.0",
+  "scenarioHash": "af8baf5f7562acc21b1df4f1582380a183a14485779e3e198d2a8f907956f391",
+  "inputFingerprint": "6ab4025f84ff84b6753f31e77f033b22fc912a41bf2a8c546668efd943585db6",
+  "lineageStatus": "root",
+  "networkId": "synthetic-v43",
+  "networkVersion": "synthetic-v43.1",
+  "networkHash": "95069828541211729dca12b0343650e068b086a9820b3a14b5135ba3a3af1fac",
+  "solver": {
+    "name": "SciPy/HiGHS MILP",
+    "version": "1.17.0",
+    "status": "optimal",
+    "stages": [
+      {
+        "name": "unservedM3",
+        "status": "optimal",
+        "bound": 0,
+        "value": 0,
+        "gap": 0
+      },
+      {
+        "name": "transportDistanceMm",
+        "status": "optimal",
+        "bound": 56000000,
+        "value": 56000000,
+        "gap": 0
+      }
+    ],
+    "stageScope": "last evaluated configuration of primary ranking; individual solutions carry their own stages",
+    "timeMs": 795.071038,
+    "limits": {
+      "timeLimitMs": 30000,
+      "maxConfigurations": 1000,
+      "maxEnumerationNodes": 100000
+    }
+  },
+  "matrixMs": 0.1163050000000112,
+  "matrixMetrics": {
+    "cacheHit": false,
+    "routeStarts": 2,
+    "startSide": "demands"
+  },
+  "matrixHash": "493ef6980452d5f885350578ae25fcee99315c15da067cb9ecb44daae5d37d7b",
+  "baseline": {
+    "configurationId": "[\"E1\",\"E2\"]",
+    "activeSiteIds": [
+      "E1",
+      "E2"
+    ],
+    "newSiteIds": [],
+    "relocatedGroups": [],
+    "status": "optimal",
+    "servedM3": 6,
+    "unservedM3": 3,
+    "transportDistanceMm": 16000000,
+    "transportKm": 16,
+    "trips": 4,
+    "assignments": [
+      {
+        "demandId": "d",
+        "siteId": "E1",
+        "volumeM3": 3,
+        "trips": 2,
+        "tripCapacityM3": 2,
+        "roundtripMm": 2000000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n0",
+          "to": "n1"
+        },
+        "loadedDistanceMm": 1000000,
+        "emptyDistanceMm": 1000000
+      },
+      {
+        "demandId": "d",
+        "siteId": "E2",
+        "volumeM3": 3,
+        "trips": 2,
+        "tripCapacityM3": 2,
+        "roundtripMm": 6000000,
+        "sameNode": false,
+        "routeRef": {
+          "from": "n0",
+          "to": "n2"
+        },
+        "loadedDistanceMm": 3000000,
+        "emptyDistanceMm": 3000000
+      }
+    ],
+    "siteUtilization": [
+      {
+        "siteId": "E1",
+        "capacityM3": 3,
+        "usedM3": 3,
+        "usedTrips": 2,
+        "maxTripsDuringHorizon": null,
+        "tripLimitBinding": false
+      },
+      {
+        "siteId": "E2",
+        "capacityM3": 3,
+        "usedM3": 3,
+        "usedTrips": 2,
+        "maxTripsDuringHorizon": null,
+        "tripLimitBinding": false
+      }
+    ],
+    "unservedReasons": [
+      {
+        "demandId": "d",
+        "unservedM3": 3,
+        "code": "capacity_or_allocation_constraint"
+      }
+    ],
+    "estimatedDriveMinutes": 48,
+    "estimatedDriveCostRub": null,
+    "screeningStatus": "not_assessed",
+    "unresolvedChecks": [
+      {
+        "siteId": "E1",
+        "status": "needs_review"
+      },
+      {
+        "siteId": "E2",
+        "status": "needs_review"
+      }
+    ],
+    "solverStages": [
+      {
+        "name": "unservedM3",
+        "status": "optimal",
+        "bound": 3,
+        "value": 3,
+        "gap": 0
+      },
+      {
+        "name": "transportDistanceMm",
+        "status": "optimal",
+        "bound": 16000000,
+        "value": 16000000,
+        "gap": 0
+      }
+    ]
+  },
+  "baselineStatus": "optimal",
+  "search": {
+    "catalogSize": 8,
+    "eligibleSize": 8,
+    "configurationsTotal": 15,
+    "enumerated": 15,
+    "evaluated": 15,
+    "proven": 15,
+    "topKRequested": 3,
+    "topKReturned": 3,
+    "rankingStatus": "exact_top_k",
+    "coverage": "finite_catalogue",
+    "reason": null
+  },
+  "alternatives": [
+    {
+      "configurationId": "[\"C1\",\"C2\",\"E1\",\"E2\"]",
+      "activeSiteIds": [
+        "C1",
+        "C2",
+        "E1",
+        "E2"
+      ],
+      "newSiteIds": [
+        "C1",
+        "C2"
+      ],
+      "relocatedGroups": [],
+      "status": "optimal",
+      "servedM3": 9,
+      "unservedM3": 0,
+      "transportDistanceMm": 56000000,
+      "transportKm": 56,
+      "trips": 6,
+      "assignments": [
+        {
+          "demandId": "d",
+          "siteId": "C1",
+          "volumeM3": 3,
+          "trips": 2,
+          "tripCapacityM3": 2,
+          "roundtripMm": 20000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n4"
+          },
+          "loadedDistanceMm": 10000000,
+          "emptyDistanceMm": 10000000
+        },
+        {
+          "demandId": "d",
+          "siteId": "E1",
+          "volumeM3": 3,
+          "trips": 2,
+          "tripCapacityM3": 2,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n1"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "d",
+          "siteId": "E2",
+          "volumeM3": 3,
+          "trips": 2,
+          "tripCapacityM3": 2,
+          "roundtripMm": 6000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n2"
+          },
+          "loadedDistanceMm": 3000000,
+          "emptyDistanceMm": 3000000
+        }
+      ],
+      "siteUtilization": [
+        {
+          "siteId": "C1",
+          "capacityM3": 3,
+          "usedM3": 3,
+          "usedTrips": 2,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "C2",
+          "capacityM3": 3,
+          "usedM3": 0,
+          "usedTrips": 0,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "E1",
+          "capacityM3": 3,
+          "usedM3": 3,
+          "usedTrips": 2,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "E2",
+          "capacityM3": 3,
+          "usedM3": 3,
+          "usedTrips": 2,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        }
+      ],
+      "unservedReasons": [],
+      "estimatedDriveMinutes": 168,
+      "estimatedDriveCostRub": null,
+      "screeningStatus": "not_assessed",
+      "unresolvedChecks": [
+        {
+          "siteId": "C1",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "C2",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "E1",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "E2",
+          "status": "needs_review"
+        }
+      ],
+      "solverStages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 56000000,
+          "value": 56000000,
+          "gap": 0
+        }
+      ],
+      "comparableToBaseline": false,
+      "deltaKm": null,
+      "deltaKmPercent": null
+    },
+    {
+      "configurationId": "[\"C1\",\"C3\",\"E1\",\"E2\"]",
+      "activeSiteIds": [
+        "C1",
+        "C3",
+        "E1",
+        "E2"
+      ],
+      "newSiteIds": [
+        "C1",
+        "C3"
+      ],
+      "relocatedGroups": [],
+      "status": "optimal",
+      "servedM3": 9,
+      "unservedM3": 0,
+      "transportDistanceMm": 56000000,
+      "transportKm": 56,
+      "trips": 6,
+      "assignments": [
+        {
+          "demandId": "d",
+          "siteId": "C1",
+          "volumeM3": 3,
+          "trips": 2,
+          "tripCapacityM3": 2,
+          "roundtripMm": 20000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n4"
+          },
+          "loadedDistanceMm": 10000000,
+          "emptyDistanceMm": 10000000
+        },
+        {
+          "demandId": "d",
+          "siteId": "E1",
+          "volumeM3": 3,
+          "trips": 2,
+          "tripCapacityM3": 2,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n1"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "d",
+          "siteId": "E2",
+          "volumeM3": 3,
+          "trips": 2,
+          "tripCapacityM3": 2,
+          "roundtripMm": 6000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n2"
+          },
+          "loadedDistanceMm": 3000000,
+          "emptyDistanceMm": 3000000
+        }
+      ],
+      "siteUtilization": [
+        {
+          "siteId": "C1",
+          "capacityM3": 3,
+          "usedM3": 3,
+          "usedTrips": 2,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "C3",
+          "capacityM3": 3,
+          "usedM3": 0,
+          "usedTrips": 0,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "E1",
+          "capacityM3": 3,
+          "usedM3": 3,
+          "usedTrips": 2,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "E2",
+          "capacityM3": 3,
+          "usedM3": 3,
+          "usedTrips": 2,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        }
+      ],
+      "unservedReasons": [],
+      "estimatedDriveMinutes": 168,
+      "estimatedDriveCostRub": null,
+      "screeningStatus": "not_assessed",
+      "unresolvedChecks": [
+        {
+          "siteId": "C1",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "C3",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "E1",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "E2",
+          "status": "needs_review"
+        }
+      ],
+      "solverStages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 56000000,
+          "value": 56000000,
+          "gap": 0
+        }
+      ],
+      "comparableToBaseline": false,
+      "deltaKm": null,
+      "deltaKmPercent": null
+    },
+    {
+      "configurationId": "[\"C1\",\"C4\",\"E1\",\"E2\"]",
+      "activeSiteIds": [
+        "C1",
+        "C4",
+        "E1",
+        "E2"
+      ],
+      "newSiteIds": [
+        "C1",
+        "C4"
+      ],
+      "relocatedGroups": [],
+      "status": "optimal",
+      "servedM3": 9,
+      "unservedM3": 0,
+      "transportDistanceMm": 56000000,
+      "transportKm": 56,
+      "trips": 6,
+      "assignments": [
+        {
+          "demandId": "d",
+          "siteId": "C1",
+          "volumeM3": 3,
+          "trips": 2,
+          "tripCapacityM3": 2,
+          "roundtripMm": 20000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n4"
+          },
+          "loadedDistanceMm": 10000000,
+          "emptyDistanceMm": 10000000
+        },
+        {
+          "demandId": "d",
+          "siteId": "E1",
+          "volumeM3": 3,
+          "trips": 2,
+          "tripCapacityM3": 2,
+          "roundtripMm": 2000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n1"
+          },
+          "loadedDistanceMm": 1000000,
+          "emptyDistanceMm": 1000000
+        },
+        {
+          "demandId": "d",
+          "siteId": "E2",
+          "volumeM3": 3,
+          "trips": 2,
+          "tripCapacityM3": 2,
+          "roundtripMm": 6000000,
+          "sameNode": false,
+          "routeRef": {
+            "from": "n0",
+            "to": "n2"
+          },
+          "loadedDistanceMm": 3000000,
+          "emptyDistanceMm": 3000000
+        }
+      ],
+      "siteUtilization": [
+        {
+          "siteId": "C1",
+          "capacityM3": 3,
+          "usedM3": 3,
+          "usedTrips": 2,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "C4",
+          "capacityM3": 3,
+          "usedM3": 0,
+          "usedTrips": 0,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "E1",
+          "capacityM3": 3,
+          "usedM3": 3,
+          "usedTrips": 2,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        },
+        {
+          "siteId": "E2",
+          "capacityM3": 3,
+          "usedM3": 3,
+          "usedTrips": 2,
+          "maxTripsDuringHorizon": null,
+          "tripLimitBinding": false
+        }
+      ],
+      "unservedReasons": [],
+      "estimatedDriveMinutes": 168,
+      "estimatedDriveCostRub": null,
+      "screeningStatus": "not_assessed",
+      "unresolvedChecks": [
+        {
+          "siteId": "C1",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "C4",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "E1",
+          "status": "needs_review"
+        },
+        {
+          "siteId": "E2",
+          "status": "needs_review"
+        }
+      ],
+      "solverStages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 56000000,
+          "value": 56000000,
+          "gap": 0
+        }
+      ],
+      "comparableToBaseline": false,
+      "deltaKm": null,
+      "deltaKmPercent": null
+    }
+  ],
+  "excludedSites": [],
+  "excludedConfigurations": [],
+  "assumptions": [
+    "scenario_only: no real site or capacity verification",
+    "loaded and empty use identical road access profile",
+    "distance only; no queue/loading/CAPEX/OPEX",
+    "mass_not_checked"
+  ],
+  "warnings": [
+    {
+      "code": "legal_not_assessed",
+      "message": "Screening is supplied evidence, not legal approval."
+    },
+    {
+      "code": "trip_limit_unknown",
+      "message": "Missing receiving trip limits: no time feasibility claim."
+    },
+    {
+      "code": "snow_type_unknown",
+      "message": "Unknown acceptance compatibility is not verified."
+    }
+  ]
+}

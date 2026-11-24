@@ -1,0 +1,111 @@
+{
+  "id": "synthetic-v43",
+  "version": "synthetic-v43.1",
+  "nodes": {
+    "n0": [
+      0,
+      0
+    ],
+    "n1": [
+      1,
+      0
+    ],
+    "n2": [
+      2,
+      0
+    ],
+    "n3": [
+      3,
+      0
+    ],
+    "n4": [
+      4,
+      0
+    ],
+    "n5": [
+      5,
+      0
+    ],
+    "n6": [
+      6,
+      0
+    ],
+    "n7": [
+      7,
+      0
+    ],
+    "n8": [
+      8,
+      0
+    ],
+    "n9": [
+      9,
+      0
+    ]
+  },
+  "edges": [
+    {
+      "id": "e0",
+      "from": "n0",
+      "to": "n1",
+      "km": 1,
+      "oneway": false
+    },
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "km": 2,
+      "oneway": false
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "km": 3,
+      "oneway": false
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "km": 4,
+      "oneway": false
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n5",
+      "km": 5,
+      "oneway": false
+    },
+    {
+      "id": "e5",
+      "from": "n5",
+      "to": "n6",
+      "km": 6,
+      "oneway": false
+    },
+    {
+      "id": "e6",
+      "from": "n6",
+      "to": "n7",
+      "km": 7,
+      "oneway": false
+    },
+    {
+      "id": "e7",
+      "from": "n7",
+      "to": "n8",
+      "km": 8,
+      "oneway": false
+    },
+    {
+      "id": "e8",
+      "from": "n8",
+      "to": "n9",
+      "km": 9,
+      "oneway": false
+    }
+  ]
+}

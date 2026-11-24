@@ -1,0 +1,3 @@
+# Private SciPy MILP runtime
+
+`worker.py` reads newline-delimited JSON from stdin and writes responses/checkpoints to stdout. The Node adapter in `exact-adapter.mjs` owns timeouts, cancellation, protocol errors and the child lifecycle. No network service. `packages/optimization` consumes the adapter; Python does not import Node packages or read scenario files. Install Python dependencies using `python -m pip install -r workers/milp-python/requirements.txt` (legacy solver/requirements.txt delegates). See docs/ALGORITHM.md and API.md. Tests include independent integer oracle and fixtures for deadlines/cancel/malformed frames. This migration changes file paths only, not the objective or engine.

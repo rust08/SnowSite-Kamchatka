@@ -1,0 +1,39 @@
+{
+  "schema": "snowcontrol.agent-state.v1",
+  "generation": 2,
+  "baseline": {
+    "archive": "SnowSite-v4.10.1_H01-A4_Standalone.zip",
+    "sha256": "104af1aac54a8ed971fc4a44bc4a45a46369f27abc74258268838708a9ae1265",
+    "files": 404,
+    "manifest_entries": 403
+  },
+  "phase": "H01_TECHNICALLY_CLOSED",
+  "review": "ACCEPTED_TECHNICAL_HTTP_DOM_SCOPE",
+  "owner_closeout": "ACKNOWLEDGED_IN_PRIOR_CHAT_PER_RECOVERED_CONTEXT; original closeout file predates acknowledgement",
+  "implementation_authorized": false,
+  "active_task": "AO01",
+  "next": "AO01_WAIT_OWNER_GO",
+  "open": [
+    "BROWSER_UNVERIFIED",
+    "WINDOWS_CI_PAUSED",
+    "R06_OPEN",
+    "R07_OPEN",
+    "LOCAL_TICKET_FORMAT_UNKNOWN",
+    "ADOPTION_UNVALIDATED",
+    "TEAM_HEAD_UNKNOWN"
+  ],
+  "historical_checks": {
+    "npm_test": "165/165 exit 0",
+    "manifest": "403/403",
+    "patch_replays": "404/404 each",
+    "top5": "exact historical fixture",
+    "demo_export": "byte-exact"
+  },
+  "notes": "Owner requests migration and agent workflow; no H02, PR, pilot, production or product code GO. UX observation: product launched, user did not understand interface; screenshots not supplied. UX appended to roadmap, candidate not implemented. Owner decision 2026-11-22: AgentOps first, H02 Discovery second, common Product Design & UI/UX after functional tasks. Local task-specific usability remains required. AO01 proposed standalone organizational work copy only; release baseline frozen. No native hook activation.",
+  "roadmap_order": [
+    "AO01_AGENTOPS_ADOPTION",
+    "H02_DISCOVERY",
+    "H03_H06_DISCOVERY_AND_APPROVED_FUNCTIONAL_TASKS",
+    "FINAL_PRODUCT_DESIGN_UI_UX"
+  ]
+}

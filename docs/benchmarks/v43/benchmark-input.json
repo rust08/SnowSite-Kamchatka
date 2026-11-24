@@ -1,0 +1,1257 @@
+{
+  "seed": 719,
+  "graph": {
+    "id": "benchmark-v43",
+    "version": "grid-719-v1",
+    "nodes": {
+      "n0": [
+        0,
+        0
+      ],
+      "n1": [
+        1,
+        0
+      ],
+      "n2": [
+        2,
+        0
+      ],
+      "n3": [
+        3,
+        0
+      ],
+      "n4": [
+        4,
+        0
+      ],
+      "n5": [
+        5,
+        0
+      ],
+      "n6": [
+        6,
+        0
+      ],
+      "n7": [
+        7,
+        0
+      ],
+      "n8": [
+        8,
+        0
+      ],
+      "n9": [
+        9,
+        0
+      ],
+      "n10": [
+        0,
+        1
+      ],
+      "n11": [
+        1,
+        1
+      ],
+      "n12": [
+        2,
+        1
+      ],
+      "n13": [
+        3,
+        1
+      ],
+      "n14": [
+        4,
+        1
+      ],
+      "n15": [
+        5,
+        1
+      ],
+      "n16": [
+        6,
+        1
+      ],
+      "n17": [
+        7,
+        1
+      ],
+      "n18": [
+        8,
+        1
+      ],
+      "n19": [
+        9,
+        1
+      ],
+      "n20": [
+        0,
+        2
+      ],
+      "n21": [
+        1,
+        2
+      ],
+      "n22": [
+        2,
+        2
+      ],
+      "n23": [
+        3,
+        2
+      ],
+      "n24": [
+        4,
+        2
+      ],
+      "n25": [
+        5,
+        2
+      ],
+      "n26": [
+        6,
+        2
+      ],
+      "n27": [
+        7,
+        2
+      ],
+      "n28": [
+        8,
+        2
+      ],
+      "n29": [
+        9,
+        2
+      ],
+      "n30": [
+        0,
+        3
+      ],
+      "n31": [
+        1,
+        3
+      ],
+      "n32": [
+        2,
+        3
+      ],
+      "n33": [
+        3,
+        3
+      ],
+      "n34": [
+        4,
+        3
+      ],
+      "n35": [
+        5,
+        3
+      ],
+      "n36": [
+        6,
+        3
+      ],
+      "n37": [
+        7,
+        3
+      ],
+      "n38": [
+        8,
+        3
+      ],
+      "n39": [
+        9,
+        3
+      ],
+      "n40": [
+        0,
+        4
+      ],
+      "n41": [
+        1,
+        4
+      ],
+      "n42": [
+        2,
+        4
+      ],
+      "n43": [
+        3,
+        4
+      ],
+      "n44": [
+        4,
+        4
+      ],
+      "n45": [
+        5,
+        4
+      ],
+      "n46": [
+        6,
+        4
+      ],
+      "n47": [
+        7,
+        4
+      ],
+      "n48": [
+        8,
+        4
+      ],
+      "n49": [
+        9,
+        4
+      ]
+    },
+    "edges": [
+      {
+        "id": "e0-1",
+        "from": "n0",
+        "to": "n1",
+        "km": 0.7,
+        "oneway": false
+      },
+      {
+        "id": "e0-10",
+        "from": "n0",
+        "to": "n10",
+        "km": 0.4,
+        "oneway": false
+      },
+      {
+        "id": "e1-2",
+        "from": "n1",
+        "to": "n2",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e1-11",
+        "from": "n1",
+        "to": "n11",
+        "km": 0.5,
+        "oneway": false
+      },
+      {
+        "id": "e2-3",
+        "from": "n2",
+        "to": "n3",
+        "km": 0.3,
+        "oneway": false
+      },
+      {
+        "id": "e2-12",
+        "from": "n2",
+        "to": "n12",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e3-4",
+        "from": "n3",
+        "to": "n4",
+        "km": 0.5,
+        "oneway": false
+      },
+      {
+        "id": "e3-13",
+        "from": "n3",
+        "to": "n13",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e4-5",
+        "from": "n4",
+        "to": "n5",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e4-14",
+        "from": "n4",
+        "to": "n14",
+        "km": 0.7,
+        "oneway": false
+      },
+      {
+        "id": "e5-6",
+        "from": "n5",
+        "to": "n6",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e5-15",
+        "from": "n5",
+        "to": "n15",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e6-7",
+        "from": "n6",
+        "to": "n7",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e6-16",
+        "from": "n6",
+        "to": "n16",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e7-8",
+        "from": "n7",
+        "to": "n8",
+        "km": 0.4,
+        "oneway": false
+      },
+      {
+        "id": "e7-17",
+        "from": "n7",
+        "to": "n17",
+        "km": 0.7,
+        "oneway": false
+      },
+      {
+        "id": "e8-9",
+        "from": "n8",
+        "to": "n9",
+        "km": 0.3,
+        "oneway": false
+      },
+      {
+        "id": "e8-18",
+        "from": "n8",
+        "to": "n18",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e9-19",
+        "from": "n9",
+        "to": "n19",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e10-11",
+        "from": "n10",
+        "to": "n11",
+        "km": 0.3,
+        "oneway": false
+      },
+      {
+        "id": "e10-20",
+        "from": "n10",
+        "to": "n20",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e11-12",
+        "from": "n11",
+        "to": "n12",
+        "km": 0.5,
+        "oneway": false
+      },
+      {
+        "id": "e11-21",
+        "from": "n11",
+        "to": "n21",
+        "km": 1,
+        "oneway": false
+      },
+      {
+        "id": "e12-13",
+        "from": "n12",
+        "to": "n13",
+        "km": 0.5,
+        "oneway": false
+      },
+      {
+        "id": "e12-22",
+        "from": "n12",
+        "to": "n22",
+        "km": 0.7,
+        "oneway": false
+      },
+      {
+        "id": "e13-14",
+        "from": "n13",
+        "to": "n14",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e13-23",
+        "from": "n13",
+        "to": "n23",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e14-15",
+        "from": "n14",
+        "to": "n15",
+        "km": 1,
+        "oneway": false
+      },
+      {
+        "id": "e14-24",
+        "from": "n14",
+        "to": "n24",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e15-16",
+        "from": "n15",
+        "to": "n16",
+        "km": 1,
+        "oneway": false
+      },
+      {
+        "id": "e15-25",
+        "from": "n15",
+        "to": "n25",
+        "km": 0.2,
+        "oneway": false
+      },
+      {
+        "id": "e16-17",
+        "from": "n16",
+        "to": "n17",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e16-26",
+        "from": "n16",
+        "to": "n26",
+        "km": 0.2,
+        "oneway": false
+      },
+      {
+        "id": "e17-18",
+        "from": "n17",
+        "to": "n18",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e17-27",
+        "from": "n17",
+        "to": "n27",
+        "km": 1,
+        "oneway": false
+      },
+      {
+        "id": "e18-19",
+        "from": "n18",
+        "to": "n19",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e18-28",
+        "from": "n18",
+        "to": "n28",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e19-29",
+        "from": "n19",
+        "to": "n29",
+        "km": 0.2,
+        "oneway": false
+      },
+      {
+        "id": "e20-21",
+        "from": "n20",
+        "to": "n21",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e20-30",
+        "from": "n20",
+        "to": "n30",
+        "km": 0.2,
+        "oneway": false
+      },
+      {
+        "id": "e21-22",
+        "from": "n21",
+        "to": "n22",
+        "km": 1,
+        "oneway": false
+      },
+      {
+        "id": "e21-31",
+        "from": "n21",
+        "to": "n31",
+        "km": 0.5,
+        "oneway": false
+      },
+      {
+        "id": "e22-23",
+        "from": "n22",
+        "to": "n23",
+        "km": 0.7,
+        "oneway": false
+      },
+      {
+        "id": "e22-32",
+        "from": "n22",
+        "to": "n32",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e23-24",
+        "from": "n23",
+        "to": "n24",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e23-33",
+        "from": "n23",
+        "to": "n33",
+        "km": 0.3,
+        "oneway": false
+      },
+      {
+        "id": "e24-25",
+        "from": "n24",
+        "to": "n25",
+        "km": 1,
+        "oneway": false
+      },
+      {
+        "id": "e24-34",
+        "from": "n24",
+        "to": "n34",
+        "km": 0.2,
+        "oneway": false
+      },
+      {
+        "id": "e25-26",
+        "from": "n25",
+        "to": "n26",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e25-35",
+        "from": "n25",
+        "to": "n35",
+        "km": 1,
+        "oneway": false
+      },
+      {
+        "id": "e26-27",
+        "from": "n26",
+        "to": "n27",
+        "km": 0.5,
+        "oneway": false
+      },
+      {
+        "id": "e26-36",
+        "from": "n26",
+        "to": "n36",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e27-28",
+        "from": "n27",
+        "to": "n28",
+        "km": 0.5,
+        "oneway": false
+      },
+      {
+        "id": "e27-37",
+        "from": "n27",
+        "to": "n37",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e28-29",
+        "from": "n28",
+        "to": "n29",
+        "km": 0.5,
+        "oneway": false
+      },
+      {
+        "id": "e28-38",
+        "from": "n28",
+        "to": "n38",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e29-39",
+        "from": "n29",
+        "to": "n39",
+        "km": 1,
+        "oneway": false
+      },
+      {
+        "id": "e30-31",
+        "from": "n30",
+        "to": "n31",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e30-40",
+        "from": "n30",
+        "to": "n40",
+        "km": 0.3,
+        "oneway": false
+      },
+      {
+        "id": "e31-32",
+        "from": "n31",
+        "to": "n32",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e31-41",
+        "from": "n31",
+        "to": "n41",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e32-33",
+        "from": "n32",
+        "to": "n33",
+        "km": 0.7,
+        "oneway": false
+      },
+      {
+        "id": "e32-42",
+        "from": "n32",
+        "to": "n42",
+        "km": 0.4,
+        "oneway": false
+      },
+      {
+        "id": "e33-34",
+        "from": "n33",
+        "to": "n34",
+        "km": 0.2,
+        "oneway": false
+      },
+      {
+        "id": "e33-43",
+        "from": "n33",
+        "to": "n43",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e34-35",
+        "from": "n34",
+        "to": "n35",
+        "km": 0.7,
+        "oneway": false
+      },
+      {
+        "id": "e34-44",
+        "from": "n34",
+        "to": "n44",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e35-36",
+        "from": "n35",
+        "to": "n36",
+        "km": 1,
+        "oneway": false
+      },
+      {
+        "id": "e35-45",
+        "from": "n35",
+        "to": "n45",
+        "km": 0.2,
+        "oneway": false
+      },
+      {
+        "id": "e36-37",
+        "from": "n36",
+        "to": "n37",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e36-46",
+        "from": "n36",
+        "to": "n46",
+        "km": 0.4,
+        "oneway": false
+      },
+      {
+        "id": "e37-38",
+        "from": "n37",
+        "to": "n38",
+        "km": 0.2,
+        "oneway": false
+      },
+      {
+        "id": "e37-47",
+        "from": "n37",
+        "to": "n47",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e38-39",
+        "from": "n38",
+        "to": "n39",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e38-48",
+        "from": "n38",
+        "to": "n48",
+        "km": 0.8,
+        "oneway": false
+      },
+      {
+        "id": "e39-49",
+        "from": "n39",
+        "to": "n49",
+        "km": 0.9,
+        "oneway": false
+      },
+      {
+        "id": "e40-41",
+        "from": "n40",
+        "to": "n41",
+        "km": 0.2,
+        "oneway": false
+      },
+      {
+        "id": "e41-42",
+        "from": "n41",
+        "to": "n42",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e42-43",
+        "from": "n42",
+        "to": "n43",
+        "km": 0.5,
+        "oneway": false
+      },
+      {
+        "id": "e43-44",
+        "from": "n43",
+        "to": "n44",
+        "km": 0.4,
+        "oneway": false
+      },
+      {
+        "id": "e44-45",
+        "from": "n44",
+        "to": "n45",
+        "km": 0.2,
+        "oneway": false
+      },
+      {
+        "id": "e45-46",
+        "from": "n45",
+        "to": "n46",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e46-47",
+        "from": "n46",
+        "to": "n47",
+        "km": 0.6,
+        "oneway": false
+      },
+      {
+        "id": "e47-48",
+        "from": "n47",
+        "to": "n48",
+        "km": 0.3,
+        "oneway": false
+      },
+      {
+        "id": "e48-49",
+        "from": "n48",
+        "to": "n49",
+        "km": 0.7,
+        "oneway": false
+      }
+    ]
+  },
+  "request": {
+    "schemaVersion": "1.0",
+    "networkId": "benchmark-v43",
+    "networkVersion": "grid-719-v1",
+    "networkHash": "109218839f211770d9e787af284f84662e47abdc5e4568488004f9e4a4c4cff9",
+    "scenario": {
+      "id": "bench-20x30",
+      "mode": "scenario_only",
+      "horizon": {
+        "type": "event",
+        "label": "synthetic seed 719"
+      },
+      "demands": [
+        {
+          "id": "D0",
+          "nodeId": "n0",
+          "volumeM3": 12,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D1",
+          "nodeId": "n1",
+          "volumeM3": 1,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D2",
+          "nodeId": "n2",
+          "volumeM3": 6,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D3",
+          "nodeId": "n3",
+          "volumeM3": 11,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D4",
+          "nodeId": "n4",
+          "volumeM3": 8,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D5",
+          "nodeId": "n5",
+          "volumeM3": 17,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D6",
+          "nodeId": "n6",
+          "volumeM3": 12,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D7",
+          "nodeId": "n7",
+          "volumeM3": 1,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D8",
+          "nodeId": "n8",
+          "volumeM3": 18,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D9",
+          "nodeId": "n9",
+          "volumeM3": 3,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D10",
+          "nodeId": "n10",
+          "volumeM3": 14,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D11",
+          "nodeId": "n11",
+          "volumeM3": 3,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D12",
+          "nodeId": "n12",
+          "volumeM3": 4,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D13",
+          "nodeId": "n13",
+          "volumeM3": 15,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D14",
+          "nodeId": "n14",
+          "volumeM3": 2,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D15",
+          "nodeId": "n15",
+          "volumeM3": 9,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D16",
+          "nodeId": "n16",
+          "volumeM3": 10,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D17",
+          "nodeId": "n17",
+          "volumeM3": 1,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D18",
+          "nodeId": "n18",
+          "volumeM3": 16,
+          "sourceStatus": "synthetic"
+        },
+        {
+          "id": "D19",
+          "nodeId": "n19",
+          "volumeM3": 5,
+          "sourceStatus": "synthetic"
+        }
+      ],
+      "sites": [
+        {
+          "id": "S00",
+          "accessNodeId": "n20",
+          "availableCapacityM3": 79,
+          "origin": "existing",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S01",
+          "accessNodeId": "n21",
+          "availableCapacityM3": 78,
+          "origin": "existing",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S02",
+          "accessNodeId": "n22",
+          "availableCapacityM3": 50,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S03",
+          "accessNodeId": "n23",
+          "availableCapacityM3": 71,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S04",
+          "accessNodeId": "n24",
+          "availableCapacityM3": 43,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S05",
+          "accessNodeId": "n25",
+          "availableCapacityM3": 60,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S06",
+          "accessNodeId": "n26",
+          "availableCapacityM3": 46,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S07",
+          "accessNodeId": "n27",
+          "availableCapacityM3": 56,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S08",
+          "accessNodeId": "n28",
+          "availableCapacityM3": 66,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S09",
+          "accessNodeId": "n29",
+          "availableCapacityM3": 58,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S10",
+          "accessNodeId": "n30",
+          "availableCapacityM3": 50,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S11",
+          "accessNodeId": "n31",
+          "availableCapacityM3": 60,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S12",
+          "accessNodeId": "n32",
+          "availableCapacityM3": 69,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S13",
+          "accessNodeId": "n33",
+          "availableCapacityM3": 80,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S14",
+          "accessNodeId": "n34",
+          "availableCapacityM3": 40,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S15",
+          "accessNodeId": "n35",
+          "availableCapacityM3": 74,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S16",
+          "accessNodeId": "n36",
+          "availableCapacityM3": 74,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S17",
+          "accessNodeId": "n37",
+          "availableCapacityM3": 42,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S18",
+          "accessNodeId": "n38",
+          "availableCapacityM3": 54,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S19",
+          "accessNodeId": "n39",
+          "availableCapacityM3": 79,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S20",
+          "accessNodeId": "n40",
+          "availableCapacityM3": 53,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S21",
+          "accessNodeId": "n41",
+          "availableCapacityM3": 59,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S22",
+          "accessNodeId": "n42",
+          "availableCapacityM3": 70,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S23",
+          "accessNodeId": "n43",
+          "availableCapacityM3": 43,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S24",
+          "accessNodeId": "n44",
+          "availableCapacityM3": 52,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S25",
+          "accessNodeId": "n45",
+          "availableCapacityM3": 43,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S26",
+          "accessNodeId": "n46",
+          "availableCapacityM3": 64,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S27",
+          "accessNodeId": "n47",
+          "availableCapacityM3": 43,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S28",
+          "accessNodeId": "n48",
+          "availableCapacityM3": 49,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        },
+        {
+          "id": "S29",
+          "accessNodeId": "n49",
+          "availableCapacityM3": 69,
+          "origin": "candidate",
+          "role": "optional",
+          "screening": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "truck": {
+        "bodyM3": 10,
+        "driveKmh": 20
+      }
+    },
+    "policy": {
+      "mode": "add",
+      "exactNewSites": 2,
+      "topK": 5,
+      "objective": "min_unserved_then_distance",
+      "screeningPolicy": "exploratory",
+      "timeLimitMs": 5000,
+      "preset": "preserve_existing"
+    }
+  }
+}

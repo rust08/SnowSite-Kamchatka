@@ -1,0 +1,261 @@
+
+> snowsite-kamchatka@0.1.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: local HTTP server health, UI, compare and invalid data
+ok 1 - local HTTP server health, UI, compare and invalid data
+  ---
+  duration_ms: 325.193568
+  type: 'test'
+  ...
+# Subtest: BUG-02: ids stay unique after deleting a middle point (sources)
+ok 2 - BUG-02: ids stay unique after deleting a middle point (sources)
+  ---
+  duration_ms: 1.293166
+  type: 'test'
+  ...
+# Subtest: BUG-02: ids stay unique for candidates and imported custom ids
+ok 3 - BUG-02: ids stay unique for candidates and imported custom ids
+  ---
+  duration_ms: 0.188734
+  type: 'test'
+  ...
+# Subtest: BUG-03: stale response is rejected after the scenario changes
+ok 4 - BUG-03: stale response is rejected after the scenario changes
+  ---
+  duration_ms: 0.336907
+  type: 'test'
+  ...
+# Subtest: BUG-03: a newer request supersedes an older one even with no edit between
+ok 5 - BUG-03: a newer request supersedes an older one even with no edit between
+  ---
+  duration_ms: 0.286541
+  type: 'test'
+  ...
+# Subtest: BUG-03: edit after the last request finished invalidates its result
+ok 6 - BUG-03: edit after the last request finished invalidates its result
+  ---
+  duration_ms: 0.176345
+  type: 'test'
+  ...
+# Subtest: BUG-03 end-to-end shape: slow first fetch cannot overwrite second result
+ok 7 - BUG-03 end-to-end shape: slow first fetch cannot overwrite second result
+  ---
+  duration_ms: 60.104522
+  type: 'test'
+  ...
+# Subtest: BUG-01: truck field validation keeps valid values and rejects bad ones
+ok 8 - BUG-01: truck field validation keeps valid values and rejects bad ones
+  ---
+  duration_ms: 1.086295
+  type: 'test'
+  ...
+# Subtest: fmtDuration formats hours and minutes
+ok 9 - fmtDuration formats hours and minutes
+  ---
+  duration_ms: 0.141924
+  type: 'test'
+  ...
+# Subtest: aggregateTrips merges identical source->site trips
+ok 10 - aggregateTrips merges identical source->site trips
+  ---
+  duration_ms: 7.306786
+  type: 'test'
+  ...
+# Subtest: isComparable only for equal served volume
+ok 11 - isComparable only for equal served volume
+  ---
+  duration_ms: 1.223972
+  type: 'test'
+  ...
+# Subtest: headline: deficit is a warning, never a success
+ok 12 - headline: deficit is a warning, never a success
+  ---
+  duration_ms: 0.49149
+  type: 'test'
+  ...
+# Subtest: headline: comparable variant reports km difference with % and no savings claim
+ok 13 - headline: comparable variant reports km difference with % and no savings claim
+  ---
+  duration_ms: 10.991321
+  type: 'test'
+  ...
+# Subtest: headline: different served volume is not presented as km saving
+ok 14 - headline: different served volume is not presented as km saving
+  ---
+  duration_ms: 0.163285
+  type: 'test'
+  ...
+# Subtest: headline: zero baseline km gives no NaN/Infinity
+ok 15 - headline: zero baseline km gives no NaN/Infinity
+  ---
+  duration_ms: 0.243277
+  type: 'test'
+  ...
+# Subtest: shortSiteName and reasonsSummary
+ok 16 - shortSiteName and reasonsSummary
+  ---
+  duration_ms: 0.263367
+  type: 'test'
+  ...
+# Subtest: A01: network snapshot version, size and sha256 are pinned
+ok 17 - A01: network snapshot version, size and sha256 are pinned
+  ---
+  duration_ms: 7.110701
+  type: 'test'
+  ...
+# Subtest: A05/A06/A07/A08 invariants on the real-graph demo scenario
+ok 18 - A05/A06/A07/A08 invariants on the real-graph demo scenario
+  ---
+  duration_ms: 289.760164
+  type: 'test'
+  ...
+# Subtest: A09: solver does not mutate its input; A15: repeated runs are identical
+ok 19 - A09: solver does not mutate its input; A15: repeated runs are identical
+  ---
+  duration_ms: 340.287804
+  type: 'test'
+  ...
+# Subtest: A10: capacity deficit is reported and ranks by least unserved
+ok 20 - A10: capacity deficit is reported and ranks by least unserved
+  ---
+  duration_ms: 0.510558
+  type: 'test'
+  ...
+# Subtest: A11: zero baseline km gives null percent, never NaN/Infinity
+ok 21 - A11: zero baseline km gives null percent, never NaN/Infinity
+  ---
+  duration_ms: 0.258469
+  type: 'test'
+  ...
+# Subtest: A10b: unreachable site (closed road) leaves demand unserved with explanation fields
+ok 22 - A10b: unreachable site (closed road) leaves demand unserved with explanation fields
+  ---
+  duration_ms: 0.18548
+  type: 'test'
+  ...
+# Subtest: A19: client never writes user strings through innerHTML
+ok 23 - A19: client never writes user strings through innerHTML
+  ---
+  duration_ms: 0.493112
+  type: 'test'
+  ...
+# Subtest: A20: server binds to 127.0.0.1 only
+ok 24 - A20: server binds to 127.0.0.1 only
+  ---
+  duration_ms: 0.220822
+  type: 'test'
+  ...
+# Subtest: unserved reasons: no round-trip route vs exhausted capacity
+ok 25 - unserved reasons: no round-trip route vs exhausted capacity
+  ---
+  duration_ms: 0.482676
+  type: 'test'
+  ...
+# Subtest: METHOD-01: demo scenario has distinct nodes and no zero-km trips
+ok 26 - METHOD-01: demo scenario has distinct nodes and no zero-km trips
+  ---
+  duration_ms: 94.54416
+  type: 'test'
+  ...
+# Subtest: candidate reduces modeled roundtrip when closer
+ok 27 - candidate reduces modeled roundtrip when closer
+  ---
+  duration_ms: 11.061777
+  type: 'test'
+  ...
+# Subtest: site capacity is respected, unmet demand exposed
+ok 28 - site capacity is respected, unmet demand exposed
+  ---
+  duration_ms: 0.896709
+  type: 'test'
+  ...
+# Subtest: payload density controls trip volume
+ok 29 - payload density controls trip volume
+  ---
+  duration_ms: 0.830791
+  type: 'test'
+  ...
+# Subtest: unverified sites never become approved
+ok 30 - unverified sites never become approved
+  ---
+  duration_ms: 0.660233
+  type: 'test'
+  ...
+# Subtest: invalid graph node and capacity rejected
+ok 31 - invalid graph node and capacity rejected
+  ---
+  duration_ms: 0.460122
+  type: 'test'
+  ...
+# Subtest: user-supplied legal status cannot create legal approval
+ok 32 - user-supplied legal status cannot create legal approval
+  ---
+  duration_ms: 0.48502
+  type: 'test'
+  ...
+# greedy suboptimal: 123 /300; with local search: 0 /300
+# Subtest: A16: exact oracle beats greedy on a frozen counterexample (same unserved, fewer km)
+ok 33 - A16: exact oracle beats greedy on a frozen counterexample (same unserved, fewer km)
+  ---
+  duration_ms: 10.706893
+  type: 'test'
+  ...
+# Subtest: oracle never worse than greedy on 300 seeded random small graphs (sanity of both)
+ok 34 - oracle never worse than greedy on 300 seeded random small graphs (sanity of both)
+  ---
+  duration_ms: 74.803833
+  type: 'test'
+  ...
+# Subtest: local search fixes the frozen counterexample and never worsens greedy
+ok 35 - local search fixes the frozen counterexample and never worsens greedy
+  ---
+  duration_ms: 65.953695
+  type: 'test'
+  ...
+# Subtest: directed paths and reverse route are different
+ok 36 - directed paths and reverse route are different
+  ---
+  duration_ms: 1.788882
+  type: 'test'
+  ...
+# Subtest: explicit unroutable road cannot be used
+ok 37 - explicit unroutable road cannot be used
+  ---
+  duration_ms: 1.662192
+  type: 'test'
+  ...
+# Subtest: closures affect both directions
+ok 38 - closures affect both directions
+  ---
+  duration_ms: 0.70395
+  type: 'test'
+  ...
+# Subtest: same-node path zero and unknown node rejected
+ok 39 - same-node path zero and unknown node rejected
+  ---
+  duration_ms: 0.284568
+  type: 'test'
+  ...
+# Subtest: S0 F01–04 reject invalid or excessive legacy input
+ok 40 - S0 F01–04 reject invalid or excessive legacy input
+  ---
+  duration_ms: 3.079224
+  type: 'test'
+  ...
+# Subtest: S0 malformed graph rejected
+ok 41 - S0 malformed graph rejected
+  ---
+  duration_ms: 0.344138
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 912.63031

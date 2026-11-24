@@ -1,0 +1,10 @@
+import {writeFileSync} from 'node:fs';import {createHash} from 'node:crypto';import {safeRequest} from '../src/core/request.mjs';
+const root=new URL('../examples/v43/',import.meta.url),write=(name,v)=>writeFileSync(new URL(name,root),JSON.stringify(v,null,2)+'\n');
+const graph={id:'synthetic-v43',version:'synthetic-v43.1',nodes:Object.fromEntries(Array.from({length:10},(_,i)=>['n'+i,[i,0]])),edges:Array.from({length:9},(_,i)=>({id:'e'+i,from:'n'+i,to:'n'+(i+1),km:i+1,oneway:false}))};write('network.json',graph);
+const networkHash=createHash('sha256').update(JSON.stringify(graph,null,2)+'\n').digest('hex');
+const site=(id,i,origin)=>({id,accessNodeId:'n'+i,availableCapacityM3:3,role:'optional',origin,screening:{status:'unknown'}});
+const make=existing=>safeRequest({schemaVersion:'1.0',networkId:graph.id,networkVersion:graph.version,networkHash,scenario:{id:'synthetic-only',mode:'scenario_only',horizon:{type:'event',label:'synthetic event'},demands:[{id:'d',nodeId:'n0',volumeM3:9,sourceStatus:'synthetic'}],sites:[...Array.from({length:existing},(_,i)=>site('E'+(i+1),i+1,'existing')),...Array.from({length:6},(_,i)=>site('C'+(i+1),i+4,'candidate'))],truck:{bodyM3:2,driveKmh:20},closedEdgeIds:[]},policy:{mode:'add',exactNewSites:2,topK:3,objective:'min_unserved_then_distance',screeningPolicy:'exploratory',timeLimitMs:30000}});
+const add=make(2);write('add-2-plus-2.json',add);const three=make(3);three.policy.exactNewSites=1;write('add-3-plus-1.json',three);
+const relocate=make(2);relocate.policy.mode='relocate';relocate.policy.exactNewSites=1;relocate.policy.exactActiveSites=3;relocate.policy.replacementGroups=[{id:'R1',siteIds:['E1','C1','C2'],lower:1,upper:1}];write('relocate.json',relocate);
+const green=make(0);green.policy.mode='greenfield';delete green.policy.exactNewSites;green.policy.exactActiveSites=2;write('greenfield.json',green);
+const frontier=make(2);frontier.policy.mode='frontier';delete frontier.policy.exactNewSites;frontier.policy.newSiteCounts=[0,1,2];write('frontier.json',frontier);

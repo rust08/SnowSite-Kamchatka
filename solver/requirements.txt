@@ -1,0 +1,2 @@
+# Compatibility path. Canonical dependency pins:
+-r ../workers/milp-python/requirements.txt

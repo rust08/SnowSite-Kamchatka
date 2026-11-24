@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/snowsite/scenario.schema.json",
+  "title": "SnowSite scenario v0.1 (contract for future validators)",
+  "type": "object",
+  "required": ["demands", "sites", "truck"],
+  "properties": {
+    "id": {"type":"string"},
+    "mode": {"const":"scenario_only"},
+    "demands": {"type":"array","minItems":1,"maxItems":50,"items":{"type":"object","required":["id","nodeId","volumeM3"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"nodeId":{"type":"string"},"volumeM3":{"type":"integer","minimum":1,"maximum":1000000}}}},
+    "sites": {"type":"array","minItems":1,"maxItems":30,"items":{"type":"object","required":["id","nodeId","capacityM3","kind"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"nodeId":{"type":"string"},"capacityM3":{"type":"integer","minimum":0,"maximum":1000000},"kind":{"enum":["existing","candidate"]},"legalStatus":{"type":"string","description":"Untrusted input, never legal verification"}}}},
+    "truck": {"type":"object","required":["bodyM3","driveKmh"],"properties":{"bodyM3":{"type":"integer","minimum":1},"payloadKg":{"type":["integer","null"],"minimum":1},"driveKmh":{"type":"number","exclusiveMinimum":0},"rateRubPerHour":{"type":["number","null"],"minimum":0}}},
+    "snowDensityKgM3":{"type":["integer","null"],"minimum":1},
+    "closedEdgeIds":{"type":"array","items":{"type":"string"}}
+  }
+}

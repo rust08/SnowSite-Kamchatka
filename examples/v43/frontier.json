@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0",
+  "networkId": "synthetic-v43",
+  "networkVersion": "synthetic-v43.1",
+  "networkHash": "95069828541211729dca12b0343650e068b086a9820b3a14b5135ba3a3af1fac",
+  "scenario": {
+    "id": "synthetic-only",
+    "mode": "scenario_only",
+    "horizon": {
+      "type": "event",
+      "label": "synthetic event"
+    },
+    "demands": [
+      {
+        "id": "d",
+        "nodeId": "n0",
+        "volumeM3": 9,
+        "sourceStatus": "synthetic"
+      }
+    ],
+    "sites": [
+      {
+        "id": "E1",
+        "accessNodeId": "n1",
+        "availableCapacityM3": 3,
+        "role": "optional",
+        "origin": "existing",
+        "screening": {
+          "status": "unknown"
+        }
+      },
+      {
+        "id": "E2",
+        "accessNodeId": "n2",
+        "availableCapacityM3": 3,
+        "role": "optional",
+        "origin": "existing",
+        "screening": {
+          "status": "unknown"
+        }
+      },
+      {
+        "id": "C1",
+        "accessNodeId": "n4",
+        "availableCapacityM3": 3,
+        "role": "optional",
+        "origin": "candidate",
+        "screening": {
+          "status": "unknown"
+        }
+      },
+      {
+        "id": "C2",
+        "accessNodeId": "n5",
+        "availableCapacityM3": 3,
+        "role": "optional",
+        "origin": "candidate",
+        "screening": {
+          "status": "unknown"
+        }
+      },
+      {
+        "id": "C3",
+        "accessNodeId": "n6",
+        "availableCapacityM3": 3,
+        "role": "optional",
+        "origin": "candidate",
+        "screening": {
+          "status": "unknown"
+        }
+      },
+      {
+        "id": "C4",
+        "accessNodeId": "n7",
+        "availableCapacityM3": 3,
+        "role": "optional",
+        "origin": "candidate",
+        "screening": {
+          "status": "unknown"
+        }
+      },
+      {
+        "id": "C5",
+        "accessNodeId": "n8",
+        "availableCapacityM3": 3,
+        "role": "optional",
+        "origin": "candidate",
+        "screening": {
+          "status": "unknown"
+        }
+      },
+      {
+        "id": "C6",
+        "accessNodeId": "n9",
+        "availableCapacityM3": 3,
+        "role": "optional",
+        "origin": "candidate",
+        "screening": {
+          "status": "unknown"
+        }
+      }
+    ],
+    "truck": {
+      "bodyM3": 2,
+      "driveKmh": 20
+    },
+    "closedEdgeIds": []
+  },
+  "policy": {
+    "mode": "frontier",
+    "topK": 3,
+    "objective": "min_unserved_then_distance",
+    "screeningPolicy": "exploratory",
+    "timeLimitMs": 30000,
+    "preset": "preserve_existing",
+    "newSiteCounts": [
+      0,
+      1,
+      2
+    ]
+  }
+}

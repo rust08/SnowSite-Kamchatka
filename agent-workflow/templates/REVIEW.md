@@ -1,0 +1,2 @@
+# Independent review
+Task ID, base SHA, candidate SHA, manifest and members, authorized paths vs actual, replay result, commands/logs/exit/environment, semantic oracle and independent adversarial cases, regression and UX/security scope, finding IDs with severity/repro/expected/actual, limitations, verdict (ACCEPTED / CHANGES_REQUIRED / BLOCKED), next proposal + STOP. Owner approval separate. Do not conflate developer logs with fresh independent tests.

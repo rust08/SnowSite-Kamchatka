@@ -1,0 +1,9 @@
+PASS examples/v44/add-2-plus-2.json
+PASS examples/v44/registry.json
+PASS docs/benchmarks/v44/city-enumeration.json
+PASS docs/benchmarks/v44/city-unified_milp.json
+PASS docs/benchmarks/v44/large-enumeration.json
+PASS docs/benchmarks/v44/large-unified_milp.json
+PASS docs/benchmarks/v44/small-enumeration.json
+PASS docs/benchmarks/v44/small-unified_milp.json
+PASS examples/v44/intrasite.json and actual result

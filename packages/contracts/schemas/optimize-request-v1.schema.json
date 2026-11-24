@@ -1,0 +1,1114 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "networkId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "networkVersion": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "networkHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "parentScenarioHash": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "scenario": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "mode": {
+          "enum": [
+            "scenario_only"
+          ]
+        },
+        "horizon": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          },
+          "required": [
+            "type",
+            "label"
+          ]
+        },
+        "demands": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "nodeId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "volumeM3": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "sourceStatus": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "snowType": {
+                "enum": [
+                  "clean",
+                  "with_reagents",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "nodeId",
+              "volumeM3",
+              "sourceStatus"
+            ]
+          },
+          "maxItems": 50,
+          "minItems": 1
+        },
+        "sites": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "accessNodeId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "availableCapacityM3": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1000000
+              },
+              "role": {
+                "enum": [
+                  "fixed",
+                  "optional",
+                  "excluded"
+                ]
+              },
+              "origin": {
+                "enum": [
+                  "existing",
+                  "candidate"
+                ]
+              },
+              "screening": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unknown",
+                      "needs_review",
+                      "documented",
+                      "conflict",
+                      "inapplicable",
+                      "prohibited"
+                    ]
+                  },
+                  "decision": {
+                    "enum": [
+                      "allowed",
+                      "prohibited"
+                    ]
+                  },
+                  "sourceRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "reviewedBy": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "reviewedAt": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200,
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+                  }
+                },
+                "required": [
+                  "status"
+                ]
+              },
+              "geometryRef": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "location": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number",
+                        "minimum": -180,
+                        "maximum": 180
+                      },
+                      {
+                        "type": "number",
+                        "minimum": -90,
+                        "maximum": 90
+                      }
+                    ],
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "sharedAccessJustification": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "replacementGroup": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "maxTripsDuringHorizon": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "tripLimitEvidence": {
+                "type": "object",
+                "properties": {
+                  "sourceRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "observedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+                  },
+                  "horizon": {
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "sourceRef",
+                  "observedAt",
+                  "horizon"
+                ]
+              },
+              "acceptedSnowTypes": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "enum": [
+                        "clean",
+                        "with_reagents"
+                      ]
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "snowTypeEvidence": {
+                "type": "object",
+                "properties": {
+                  "sourceRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "observedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+                  },
+                  "horizon": {
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "sourceRef",
+                  "observedAt",
+                  "horizon"
+                ]
+              },
+              "intraSiteRoundtripMm": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 1000000000
+              },
+              "intraSiteDistanceEvidence": {
+                "type": "object",
+                "required": [
+                  "basis",
+                  "sourceRef",
+                  "observedAt",
+                  "horizon",
+                  "networkHash",
+                  "truckHash",
+                  "accessProfileHash",
+                  "valueMm"
+                ],
+                "properties": {
+                  "basis": {
+                    "const": "roundtrip"
+                  },
+                  "sourceRef": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "observedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+                  },
+                  "horizon": {
+                    "type": "object"
+                  },
+                  "networkHash": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "truckHash": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "accessProfileHash": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "valueMm": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000000
+                  }
+                }
+              }
+            },
+            "required": [
+              "id",
+              "accessNodeId",
+              "availableCapacityM3",
+              "role",
+              "origin",
+              "screening"
+            ],
+            "allOf": [
+              {
+                "if": {
+                  "required": [
+                    "maxTripsDuringHorizon"
+                  ],
+                  "properties": {
+                    "maxTripsDuringHorizon": {
+                      "not": {
+                        "type": "null"
+                      }
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "tripLimitEvidence"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "acceptedSnowTypes"
+                  ],
+                  "properties": {
+                    "acceptedSnowTypes": {
+                      "not": {
+                        "type": "null"
+                      }
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "snowTypeEvidence"
+                  ]
+                }
+              }
+            ]
+          },
+          "maxItems": 30
+        },
+        "truck": {
+          "type": "object",
+          "properties": {
+            "bodyM3": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000000
+            },
+            "payloadKg": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 1000000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "snowDensityKgM3": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 1000000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "driveKmh": {
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 200
+            },
+            "rateRubPerHour": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 10000000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "bodyM3",
+            "driveKmh"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "required": [
+                  "payloadKg"
+                ],
+                "properties": {
+                  "payloadKg": {
+                    "not": {
+                      "type": "null"
+                    }
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "snowDensityKgM3"
+                ],
+                "properties": {
+                  "snowDensityKgM3": {
+                    "not": {
+                      "type": "null"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "required": [
+                  "snowDensityKgM3"
+                ],
+                "properties": {
+                  "snowDensityKgM3": {
+                    "not": {
+                      "type": "null"
+                    }
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "payloadKg"
+                ],
+                "properties": {
+                  "payloadKg": {
+                    "not": {
+                      "type": "null"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "closedEdgeIds": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "maxItems": 250000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "accessProfiles": {
+          "type": "object",
+          "properties": {
+            "loaded": {
+              "type": "object",
+              "properties": {
+                "grossKg": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 1000000
+                },
+                "widthMm": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 20000
+                },
+                "blockedEdgeIds": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  }
+                },
+                "evidence": {
+                  "type": "object",
+                  "properties": {
+                    "sourceRef": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    },
+                    "observedAt": {
+                      "type": "string",
+                      "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+                    },
+                    "horizon": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "sourceRef",
+                    "observedAt",
+                    "horizon"
+                  ]
+                }
+              },
+              "required": [
+                "grossKg",
+                "widthMm",
+                "blockedEdgeIds",
+                "evidence"
+              ]
+            },
+            "empty": {
+              "type": "object",
+              "properties": {
+                "grossKg": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 1000000
+                },
+                "widthMm": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 20000
+                },
+                "blockedEdgeIds": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  }
+                },
+                "evidence": {
+                  "type": "object",
+                  "properties": {
+                    "sourceRef": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    },
+                    "observedAt": {
+                      "type": "string",
+                      "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+                    },
+                    "horizon": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "sourceRef",
+                    "observedAt",
+                    "horizon"
+                  ]
+                }
+              },
+              "required": [
+                "grossKg",
+                "widthMm",
+                "blockedEdgeIds",
+                "evidence"
+              ]
+            },
+            "edgeLimits": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "edgeId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "evidence": {
+                    "type": "object",
+                    "properties": {
+                      "sourceRef": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      },
+                      "observedAt": {
+                        "type": "string",
+                        "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+                      },
+                      "horizon": {
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "sourceRef",
+                      "observedAt",
+                      "horizon"
+                    ]
+                  },
+                  "maxGrossKg": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 1000000
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "maxWidthMm": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 20000
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "edgeId",
+                  "evidence"
+                ],
+                "anyOf": [
+                  {
+                    "required": [
+                      "maxGrossKg"
+                    ],
+                    "properties": {
+                      "maxGrossKg": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 1000000
+                      }
+                    }
+                  },
+                  {
+                    "required": [
+                      "maxWidthMm"
+                    ],
+                    "properties": {
+                      "maxWidthMm": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 20000
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "loaded",
+            "empty",
+            "edgeLimits"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "mode",
+        "horizon",
+        "demands",
+        "sites",
+        "truck"
+      ]
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "add",
+            "relocate",
+            "greenfield",
+            "evaluate",
+            "frontier"
+          ]
+        },
+        "objective": {
+          "enum": [
+            "min_unserved_then_distance"
+          ]
+        },
+        "screeningPolicy": {
+          "enum": [
+            "exploratory",
+            "strict"
+          ]
+        },
+        "topK": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "timeLimitMs": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 120000
+        },
+        "exactNewSites": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 30
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "exactActiveSites": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 30
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "newSiteCounts": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 30
+              },
+              "maxItems": 10,
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fixedSiteIds": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "maxItems": 30
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "includeSiteIds": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "maxItems": 30
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "excludedSiteIds": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      },
+                      "reason": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "reason"
+                    ]
+                  }
+                ]
+              },
+              "maxItems": 30
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "excludedConfigurations": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    },
+                    "maxItems": 30
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "siteIds": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 200
+                        },
+                        "maxItems": 30
+                      },
+                      "reason": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      }
+                    },
+                    "required": [
+                      "siteIds",
+                      "reason"
+                    ]
+                  }
+                ]
+              },
+              "maxItems": 1000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "replacementGroups": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "siteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    },
+                    "maxItems": 30,
+                    "minItems": 2
+                  },
+                  "lower": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "upper": {
+                    "const": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "siteIds",
+                  "lower",
+                  "upper"
+                ]
+              },
+              "maxItems": 30
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "requireAllServed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "preset": {
+          "const": "preserve_existing"
+        },
+        "searchStrategy": {
+          "enum": [
+            "enumeration",
+            "unified_milp",
+            "bounded_enumeration"
+          ]
+        }
+      },
+      "required": [
+        "mode",
+        "objective",
+        "screeningPolicy",
+        "topK",
+        "timeLimitMs"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "add"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "exactNewSites"
+            ],
+            "properties": {
+              "exactNewSites": {
+                "not": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "greenfield"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "exactActiveSites"
+            ],
+            "properties": {
+              "exactActiveSites": {
+                "not": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "relocate"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "replacementGroups"
+            ],
+            "properties": {
+              "replacementGroups": {
+                "not": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "frontier"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "newSiteCounts"
+            ],
+            "properties": {
+              "newSiteCounts": {
+                "not": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "networkId",
+    "networkVersion",
+    "networkHash",
+    "scenario",
+    "policy"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

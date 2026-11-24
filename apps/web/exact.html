@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SnowSite — точный JSON-расчёт</title><link rel="stylesheet" href="/style.css"><script type="module" src="/exact.js"></script></head><body>
+<header class="top"><div class="brand"><div class="logo" aria-hidden="true">❄</div><div><h1>SnowSite</h1><span>Расширенный интерфейс · API v1</span></div></div><nav class="top-actions" aria-label="Действия"><a href="/">← Вернуться к карте</a></nav></header>
+<main class="json-workspace">
+  <section class="json-panel"><span class="eyebrow">01 / Входные данные</span><h2>Точный расчёт MILP</h2><p>Загрузите JSON запроса v1.0 с полным набором ограничений. При add, relocate и frontier применяется безопасный preset. Точность относится только к заданному каталогу и модели; правовой статус площадок не подтверждается.</p>
+    <label for="input">JSON запроса</label><input type="file" id="input" accept=".json,application/json">
+    <div class="json-actions"><button class="primary" id="run" type="button" disabled>Рассчитать</button></div>
+    <p id="status" class="status" role="status" aria-live="polite">Выберите файл запроса размером до 1 МБ.</p>
+  </section>
+  <section class="json-panel" aria-labelledby="output-title"><span class="eyebrow">02 / Результат</span><h2 id="output-title">Ответ API</h2><p class="helper">Проверьте rankingStatus и solver.status перед использованием результата. Вы можете скачать исходный JSON без преобразований.</p><div class="json-actions"><button id="download-result" type="button" class="secondary" disabled>Скачать JSON</button></div><pre id="output" class="json-output">Результат появится после расчёта.</pre></section>
+</main><footer>Сценарный инструмент оценки логистики. Не подтверждает правовую, санитарную или экологическую пригодность площадок.</footer></body></html>

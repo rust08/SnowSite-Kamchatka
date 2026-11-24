@@ -1,0 +1,37 @@
+
+> snowsite-kamchatka@0.3.0 test:contracts
+> python tools/check-contracts.py
+
+PASS schema network-registry-v1.schema.json
+PASS schema optimize-request-v1.schema.json
+PASS schema optimize-response-v1.schema.json
+PASS schema scenario.schema.json
+PASS schema site-evidence-v1.schema.json
+PASS schema site-record-v1.schema.json
+PASS instance examples/demo-v1.json
+PASS instance examples/v43/add-2-plus-2.json
+PASS instance examples/v43/add-3-plus-1.json
+PASS instance examples/v43/frontier.json
+PASS instance examples/v43/greenfield.json
+PASS instance examples/v43/relocate.json
+PASS instance examples/v44/add-2-plus-2.json
+PASS instance examples/v44/intrasite.json
+PASS instance examples/v47/demo-bounded.json
+PASS instance legacy v1 stored response
+PASS instance legacy scenario
+PASS instance registry
+PASS instance historical leads
+PASS instance unlocated synthetic record
+PASS reject negative capacity
+PASS instance examples/demo-v1.json default request
+PASS instance examples/demo-v1.json default live response
+PASS instance examples/demo-v1.json bounded_enumeration request
+PASS instance examples/demo-v1.json bounded_enumeration live response
+PASS reject negative pruned counter
+PASS instance examples/v43/add-2-plus-2.json unified_milp request
+PASS instance examples/v43/add-2-plus-2.json unified_milp live response
+PASS instance examples/v43/add-2-plus-2.json bounded_enumeration request
+PASS instance examples/v43/add-2-plus-2.json bounded_enumeration live response
+PASS reject negative pruned counter
+PASS reject unknown search strategy
+PASS 6 schema definitions and 26 instance checks

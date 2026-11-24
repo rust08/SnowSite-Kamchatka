@@ -1,0 +1,2 @@
+PASS: extended city fixture exact_top_k, 15 configurations, 228 m3, baseline 159.425990 km, expected ordered Top5 and IDs; all 228 m3
+Observed solved/proven 5 pruned 10

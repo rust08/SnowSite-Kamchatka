@@ -1,0 +1,6 @@
+# Development/CI only, not required for optimization or the UI.
+jsonschema==4.26.0
+attrs==26.1.0
+referencing==0.37.0
+jsonschema-specifications==2025.9.1
+rpds-py==2026.5.1

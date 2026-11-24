@@ -1,0 +1,1 @@
+Инструкции актуальной версии: docs/10_GITHUB_SETUP.md. Не выполняйте git init поверх ZIP, если доступен SnowSite-v4.6-history.bundle. Владелец создаёт свой пустой private repository и публикует проверенную историю самостоятельно. Структура: apps/, packages/, workers/, data/, docs/, tests/, AGENTS.md.

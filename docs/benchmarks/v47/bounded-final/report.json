@@ -1,0 +1,232 @@
+{
+  "seed": 719,
+  "graphHash": "109218839f211770d9e787af284f84662e47abdc5e4568488004f9e4a4c4cff9",
+  "originalInputHash": "6d645dc7f842020658359df71b39ddf9e8eeafe27b8e2f8e166bca07eb073893",
+  "node": "v22.16.0",
+  "platform": "linux",
+  "release": "6.18.57",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "logicalCpus": 5,
+  "totalMemoryBytes": 6236844032,
+  "runs": [
+    {
+      "strategy": "bounded_enumeration",
+      "label": "cold",
+      "timeLimitMs": 5000,
+      "wallMs": 1962.173084,
+      "matrixMs": 5.156492,
+      "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+      "scenarioHash": "98107c5d16698b72b97e5d0a362594ee45322a801c62927271b9ef62bdde054e",
+      "solverVersion": "1.17.0",
+      "search": {
+        "catalogSize": 30,
+        "eligibleSize": 30,
+        "configurationsTotal": 378,
+        "enumerated": 378,
+        "evaluated": 16,
+        "proven": 16,
+        "prunedByBound": 362,
+        "strategy": "bounded_enumeration",
+        "requestedStrategy": "bounded_enumeration",
+        "counterScope": "configurations",
+        "topKRequested": 5,
+        "topKReturned": 5,
+        "rankingStatus": "exact_top_k",
+        "coverage": "finite_catalogue",
+        "reason": null
+      },
+      "stages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 81800000,
+          "value": 81800000,
+          "gap": 0
+        }
+      ],
+      "scores": [
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S09\"]",
+          0,
+          74200000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S08\"]",
+          0,
+          79600000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S09\",\"S13\"]",
+          0,
+          80600000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S07\"]",
+          0,
+          81800000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S06\",\"S09\"]",
+          0,
+          81800000
+        ]
+      ],
+      "nodeRssBeforeBytes": 33796096,
+      "nodeRssAfterBytes": 41193472,
+      "responseBytes": 34633
+    },
+    {
+      "strategy": "bounded_enumeration",
+      "label": "warm",
+      "timeLimitMs": 5000,
+      "wallMs": 1960.4153169999997,
+      "matrixMs": 0.6246599999999489,
+      "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+      "scenarioHash": "98107c5d16698b72b97e5d0a362594ee45322a801c62927271b9ef62bdde054e",
+      "solverVersion": "1.17.0",
+      "search": {
+        "catalogSize": 30,
+        "eligibleSize": 30,
+        "configurationsTotal": 378,
+        "enumerated": 378,
+        "evaluated": 16,
+        "proven": 16,
+        "prunedByBound": 362,
+        "strategy": "bounded_enumeration",
+        "requestedStrategy": "bounded_enumeration",
+        "counterScope": "configurations",
+        "topKRequested": 5,
+        "topKReturned": 5,
+        "rankingStatus": "exact_top_k",
+        "coverage": "finite_catalogue",
+        "reason": null
+      },
+      "stages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 81800000,
+          "value": 81800000,
+          "gap": 0
+        }
+      ],
+      "scores": [
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S09\"]",
+          0,
+          74200000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S08\"]",
+          0,
+          79600000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S09\",\"S13\"]",
+          0,
+          80600000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S07\"]",
+          0,
+          81800000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S06\",\"S09\"]",
+          0,
+          81800000
+        ]
+      ],
+      "nodeRssBeforeBytes": 41193472,
+      "nodeRssAfterBytes": 42115072,
+      "responseBytes": 34626
+    },
+    {
+      "strategy": "bounded_enumeration",
+      "label": "long",
+      "timeLimitMs": 15000,
+      "wallMs": 1833.6652999999997,
+      "matrixMs": 0.8357780000001185,
+      "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+      "scenarioHash": "75df87e7b3481b647c0e1fa2f3c4aff93a24e52576bdba7e9e1dc42e6c4af71e",
+      "solverVersion": "1.17.0",
+      "search": {
+        "catalogSize": 30,
+        "eligibleSize": 30,
+        "configurationsTotal": 378,
+        "enumerated": 378,
+        "evaluated": 16,
+        "proven": 16,
+        "prunedByBound": 362,
+        "strategy": "bounded_enumeration",
+        "requestedStrategy": "bounded_enumeration",
+        "counterScope": "configurations",
+        "topKRequested": 5,
+        "topKReturned": 5,
+        "rankingStatus": "exact_top_k",
+        "coverage": "finite_catalogue",
+        "reason": null
+      },
+      "stages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "optimal",
+          "bound": 81800000,
+          "value": 81800000,
+          "gap": 0
+        }
+      ],
+      "scores": [
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S09\"]",
+          0,
+          74200000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S08\"]",
+          0,
+          79600000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S09\",\"S13\"]",
+          0,
+          80600000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S07\"]",
+          0,
+          81800000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S06\",\"S09\"]",
+          0,
+          81800000
+        ]
+      ],
+      "nodeRssBeforeBytes": 42127360,
+      "nodeRssAfterBytes": 41639936,
+      "responseBytes": 34620
+    }
+  ]
+}

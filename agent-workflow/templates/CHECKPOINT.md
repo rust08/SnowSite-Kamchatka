@@ -1,0 +1,2 @@
+# Checkpoint
+Role / generation / state revision / exact base & candidate hash / active task & owner GO reference / completed / incomplete / blocked / exact changed paths / actual tests (command, exit, log) / decisions and open risks / next action / stop / archive index. Mark speculative, reported and verified separately. If no task authorized, report NO_GO. Do not stash private transcript or secrets here.

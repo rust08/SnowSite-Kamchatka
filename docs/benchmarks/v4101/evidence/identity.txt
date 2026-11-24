@@ -1,0 +1,12 @@
+474ab2d08c9d4604bb51851da9e634c87cbe2ee953eae81dc52f6f8c3ebbd9b1  /mnt/data/files/SnowSite-v4.10(2).zip
+Parent HEAD: 7fbf0de40b6d874b411e7cf2dba201b26ff49d03
+7fbf0de40b6d874b411e7cf2dba201b26ff49d03 v4.10 refine exact map workspace and demo UX
+PASS: original archive and restored parent tree byte parity
+
+> snowsite-kamchatka@0.3.0 check:manifest
+> node tools/check-manifest.mjs
+
+PASS 355 release files (SHA-256)
+v22.16.0
+Python 3.13.5
+NumPy 2.3.5 SciPy 1.17.0

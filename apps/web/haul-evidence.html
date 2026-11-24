@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Snow Haul Evidence — синтетическая сверка</title>
+<link rel="stylesheet" href="/haul-evidence.css">
+<script type="module" src="/haul-evidence.js"></script>
+</head><body>
+<header><nav aria-label="Навигация"><a href="/">← SnowSite — карта и оптимизация</a></nav><p class="eyebrow">Snow Control / H01 Alpha</p><h1>Snow Haul Evidence</h1><p>Локальная сверка двух реестров</p></header>
+<main>
+<section class="warning" aria-label="Ограничения"><strong>Только синтетические данные · полнота не подтверждена.</strong><p>Это учебный инструмент, не подтверждение физического вывоза, не официальный документ и не основание для бухгалтерских или юридических решений. Не загружайте реальные муниципальные талоны. Файлы обрабатываются в памяти на этом устройстве, без отправки содержимого на сервер.</p></section>
+<section class="panel" aria-labelledby="input-title"><h2 id="input-title">1. Входные данные</h2>
+<div class="inputs"><div><label for="carrier-file">Перевозчик / carrier (JSON, до 2 МиБ)</label><input id="carrier-file" type="file" accept=".json,application/json"></div><div><label for="receiver-file">Принимающая сторона / receiver (JSON, до 2 МиБ)</label><input id="receiver-file" type="file" accept=".json,application/json"></div></div>
+<label for="as-of">Момент сверки (as-of, UTC)</label><input id="as-of" type="text" maxlength="24" placeholder="2026-01-05T00:00:00Z" spellcheck="false" autocomplete="off" aria-describedby="cutoff-help"><p id="cutoff-help" class="hint">Явное UTC-время с Z. Роли определяются полем source внутри проверенных файлов; соответствие слотов будет показано. Демо загружает два фиксированных примера и устанавливает 2026-01-05T00:00:00Z.</p>
+<div class="actions"><button id="run" type="button">Сверить файлы</button><button id="demo" type="button" class="secondary">Загрузить и сверить демо</button><button id="reset" type="button" class="secondary">Сбросить</button><button id="export" type="button" disabled>Скачать JSON</button></div>
+<p id="status" role="status" aria-live="polite">Выберите два файла и задайте UTC as-of или запустите демо.</p></section>
+<section id="result" class="panel" aria-labelledby="result-title" hidden><h2 id="result-title">2. Результат сверки</h2><div id="metadata"></div><div id="diagnostics"></div><div id="totals"></div><h3>Документы и статусы</h3><p class="hint">Отсутствие записи в источнике не доказывает отсутствие рейса. Разность сопоставимых пар — не оценка потерь.</p><div id="pairs"></div><h3>Строки без корректной идентичности</h3><div id="unusable"></div></section>
+<section id="inspection" class="panel" aria-labelledby="inspect-title" hidden><h2 id="inspect-title">3. Инспекция строки</h2><p>Декодированное представление: экранирование и написание чисел нормализованы, невалидная revision может быть null. Точное лексическое доказательство остаётся в исходном файле, определённом SHA-256 и индексом строки. Не является исходным байтовым представлением.</p><p id="inspect-ref"></p><pre id="inspect-row" tabindex="0"></pre><button id="close-inspect" type="button" class="secondary">Закрыть инспекцию</button></section>
+</main></body></html>

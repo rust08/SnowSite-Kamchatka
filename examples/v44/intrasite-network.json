@@ -1,0 +1,34 @@
+{
+  "id": "intrasite-v44",
+  "version": "1",
+  "nodes": {
+    "D": [
+      0,
+      0
+    ],
+    "N": [
+      1,
+      0
+    ],
+    "F": [
+      2,
+      0
+    ]
+  },
+  "edges": [
+    {
+      "id": "n",
+      "from": "D",
+      "to": "N",
+      "km": 1,
+      "oneway": false
+    },
+    {
+      "id": "f",
+      "from": "D",
+      "to": "F",
+      "km": 2,
+      "oneway": false
+    }
+  ]
+}

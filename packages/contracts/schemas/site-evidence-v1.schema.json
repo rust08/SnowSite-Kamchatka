@@ -1,0 +1,221 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "site-evidence-1.0"
+    },
+    "siteCatalogId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "kind": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "checkedAt": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^https?://"
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "checkedAt",
+          "scope",
+          "urls"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "leads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "locality": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "historicalDescription": {
+            "type": "string",
+            "minLength": 1
+          },
+          "document": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "historicalStatus": {
+            "enum": [
+              "listed_2017",
+              "removed_2019",
+              "map_hint"
+            ]
+          },
+          "operationalStatus": {
+            "const": "unknown"
+          },
+          "legalStatus": {
+            "const": "needs_review"
+          },
+          "geometryStatus": {
+            "enum": [
+              "unlocated",
+              "poi_hint_not_entrance"
+            ]
+          },
+          "location": {
+            "anyOf": [
+              {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "prefixItems": [
+                  {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180
+                  },
+                  {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90
+                  }
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "accessNodeId": {
+            "type": "null"
+          },
+          "availableCapacityM3": {
+            "type": "null"
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "eligibleForOptimization": {
+            "const": false
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "locality",
+          "historicalDescription",
+          "document",
+          "historicalStatus",
+          "operationalStatus",
+          "legalStatus",
+          "geometryStatus",
+          "location",
+          "accessNodeId",
+          "availableCapacityM3",
+          "sourceIds",
+          "eligibleForOptimization",
+          "notes"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "geometryStatus": {
+                  "const": "unlocated"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "location": {
+                  "type": "null"
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "location": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "prefixItems": [
+                    {
+                      "type": "number",
+                      "minimum": -180,
+                      "maximum": 180
+                    },
+                    {
+                      "type": "number",
+                      "minimum": -90,
+                      "maximum": 90
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "siteCatalogId",
+    "version",
+    "hash",
+    "evidence",
+    "leads"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

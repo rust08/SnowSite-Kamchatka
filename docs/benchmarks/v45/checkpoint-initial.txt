@@ -1,0 +1,44 @@
+TAP version 13
+# Subtest: hard deadline recovers latest completed phase, never ranks it optimal
+not ok 1 - hard deadline recovers latest completed phase, never ranks it optimal
+  ---
+  duration_ms: 759.343814
+  type: 'test'
+  location: '/mnt/data/v45work/repo/tests/v45-checkpoint.test.mjs:8:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'name')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/v45work/repo/tests/v45-checkpoint.test.mjs:11:68)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: checkpoints do not complete a request and cannot leak to next request
+ok 2 - checkpoints do not complete a request and cannot leak to next request
+  ---
+  duration_ms: 1250.289386
+  type: 'test'
+  ...
+# Subtest: malformed checkpoint fails rather than reporting optimum
+ok 3 - malformed checkpoint fails rather than reporting optimum
+  ---
+  duration_ms: 481.138132
+  type: 'test'
+  ...
+# Subtest: caller cancellation still aborts without replaying partial work
+ok 4 - caller cancellation still aborts without replaying partial work
+  ---
+  duration_ms: 303.349222
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 3
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2865.750053

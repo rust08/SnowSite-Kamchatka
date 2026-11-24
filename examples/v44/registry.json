@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "networks": [
+    {
+      "id": "synthetic-v43",
+      "version": "synthetic-v43.1",
+      "sha256": "95069828541211729dca12b0343650e068b086a9820b3a14b5135ba3a3af1fac",
+      "file": "../v43/network.json"
+    }
+  ]
+}

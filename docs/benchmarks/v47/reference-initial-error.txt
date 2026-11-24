@@ -1,0 +1,11 @@
+file:///mnt/data/v47work/repo/packages/optimization/allocate.mjs:15
+  const stage=r.stages[i];if(stage?.status==='optimal'&&(!Number.isFinite(stage.value)||stage.name!==expected[i]||Math.abs(stage.value-value)>1e-5))throw Error('Solver objective verification failed');
+                                                                                                                                                          ^
+
+Error: Solver objective verification failed
+    at decodeAllocation (file:///mnt/data/v47work/repo/packages/optimization/allocate.mjs:15:155)
+    at allocateExact (file:///mnt/data/v47work/repo/packages/optimization/allocate.mjs:24:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///mnt/data/v47work/repo/tools/verify-v47-benchmark.mjs:20:15
+
+Node.js v22.16.0

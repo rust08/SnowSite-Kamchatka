@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: v4.9 served app event wiring with real API and DOM/Leaflet harness (not browser E2E)
+ok 1 - v4.9 served app event wiring with real API and DOM/Leaflet harness (not browser E2E)
+  ---
+  duration_ms: 6723.586014
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7872.809686

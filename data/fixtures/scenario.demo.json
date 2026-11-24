@@ -1,0 +1,22 @@
+{
+  "id":"demo-2026-11-20",
+  "name":"Учебный сценарий — логистика снеговывоза (НЕ реальные полигоны)",
+  "mode":"scenario_only",
+  "provenance":"Синтетические точки и объёмы; узлы привязаны к OSM-графу 2026-11-19. Ни один объект не подтверждён как снегоприёмная площадка.",
+  "truck":{"bodyM3":10,"payloadKg":5000,"driveKmh":20,"rateRubPerHour":2100},
+  "snowDensityKgM3":500,
+  "closedEdgeIds":[],
+  "demands":[
+    {"id":"D1","name":"Учебный источник снега 1","nodeId":"12829246567","volumeM3":46},
+    {"id":"D2","name":"Учебный источник снега 2","nodeId":"12816085894","volumeM3":43},
+    {"id":"D3","name":"Учебный источник снега 3","nodeId":"5830714828","volumeM3":50},
+    {"id":"D4","name":"Учебный источник снега 4","nodeId":"5517236826","volumeM3":54},
+    {"id":"D5","name":"Учебный источник снега 5","nodeId":"346952107","volumeM3":35}
+  ],
+  "sites":[
+    {"id":"S0","name":"Базовая площадка A — сценарий","nodeId":"2415413202","capacityM3":150,"kind":"existing","legalStatus":"unverified"},
+    {"id":"S1","name":"Базовая площадка B — сценарий","nodeId":"2024634569","capacityM3":130,"kind":"existing","legalStatus":"unverified"},
+    {"id":"C1","name":"Кандидат C — сценарий","nodeId":"13610177839","capacityM3":100,"kind":"candidate","legalStatus":"unverified"},
+    {"id":"C2","name":"Кандидат D — сценарий","nodeId":"5883116640","capacityM3":100,"kind":"candidate","legalStatus":"unverified"}
+  ]
+}

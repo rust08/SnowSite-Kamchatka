@@ -1,0 +1,476 @@
+
+> snowsite-kamchatka@0.2.0 check
+> node tools/check-data.mjs
+
+PASS 9983 nodes, 12354 edges, version=pkgo-27233df581c6, sha256=0e0a464f7d92057fa5bbad634c083ad0c1923294597d989ead386b393acf7ad2
+
+> snowsite-kamchatka@0.2.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: local HTTP server health, UI, compare and invalid data
+ok 1 - local HTTP server health, UI, compare and invalid data
+  ---
+  duration_ms: 217.924181
+  type: 'test'
+  ...
+# Subtest: BUG-02: ids stay unique after deleting a middle point (sources)
+ok 2 - BUG-02: ids stay unique after deleting a middle point (sources)
+  ---
+  duration_ms: 3.978799
+  type: 'test'
+  ...
+# Subtest: BUG-02: ids stay unique for candidates and imported custom ids
+ok 3 - BUG-02: ids stay unique for candidates and imported custom ids
+  ---
+  duration_ms: 0.207882
+  type: 'test'
+  ...
+# Subtest: BUG-03: stale response is rejected after the scenario changes
+ok 4 - BUG-03: stale response is rejected after the scenario changes
+  ---
+  duration_ms: 0.377968
+  type: 'test'
+  ...
+# Subtest: BUG-03: a newer request supersedes an older one even with no edit between
+ok 5 - BUG-03: a newer request supersedes an older one even with no edit between
+  ---
+  duration_ms: 0.213611
+  type: 'test'
+  ...
+# Subtest: BUG-03: edit after the last request finished invalidates its result
+ok 6 - BUG-03: edit after the last request finished invalidates its result
+  ---
+  duration_ms: 0.220521
+  type: 'test'
+  ...
+# Subtest: BUG-03 end-to-end shape: slow first fetch cannot overwrite second result
+ok 7 - BUG-03 end-to-end shape: slow first fetch cannot overwrite second result
+  ---
+  duration_ms: 60.268236
+  type: 'test'
+  ...
+# Subtest: BUG-01: truck field validation keeps valid values and rejects bad ones
+ok 8 - BUG-01: truck field validation keeps valid values and rejects bad ones
+  ---
+  duration_ms: 1.192853
+  type: 'test'
+  ...
+# Subtest: fmtDuration formats hours and minutes
+ok 9 - fmtDuration formats hours and minutes
+  ---
+  duration_ms: 0.210096
+  type: 'test'
+  ...
+# Subtest: aggregateTrips merges identical source->site trips
+ok 10 - aggregateTrips merges identical source->site trips
+  ---
+  duration_ms: 9.591805
+  type: 'test'
+  ...
+# Subtest: isComparable only for equal served volume
+ok 11 - isComparable only for equal served volume
+  ---
+  duration_ms: 0.935475
+  type: 'test'
+  ...
+# Subtest: headline: deficit is a warning, never a success
+ok 12 - headline: deficit is a warning, never a success
+  ---
+  duration_ms: 0.534574
+  type: 'test'
+  ...
+# Subtest: headline: comparable variant reports km difference with % and no savings claim
+ok 13 - headline: comparable variant reports km difference with % and no savings claim
+  ---
+  duration_ms: 14.337135
+  type: 'test'
+  ...
+# Subtest: headline: different served volume is not presented as km saving
+ok 14 - headline: different served volume is not presented as km saving
+  ---
+  duration_ms: 0.218879
+  type: 'test'
+  ...
+# Subtest: headline: zero baseline km gives no NaN/Infinity
+ok 15 - headline: zero baseline km gives no NaN/Infinity
+  ---
+  duration_ms: 0.363666
+  type: 'test'
+  ...
+# Subtest: shortSiteName and reasonsSummary
+ok 16 - shortSiteName and reasonsSummary
+  ---
+  duration_ms: 0.418028
+  type: 'test'
+  ...
+# Subtest: B03–B05 exact audit fixtures and original city demo
+ok 17 - B03–B05 exact audit fixtures and original city demo
+  ---
+  duration_ms: 1617.372532
+  type: 'test'
+  ...
+# Subtest: B06 oracle 60 arbitrary integer problems, seed 719
+ok 18 - B06 oracle 60 arbitrary integer problems, seed 719
+  ---
+  duration_ms: 1155.226009
+  type: 'test'
+  ...
+# Subtest: B07 hard timeout is never optimal
+ok 19 - B07 hard timeout is never optimal
+  ---
+  duration_ms: 8.11232
+  type: 'test'
+  ...
+# Subtest: B20 checker rejects modified allocations
+ok 20 - B20 checker rejects modified allocations
+  ---
+  duration_ms: 0.655515
+  type: 'test'
+  ...
+# Subtest: B10 exact matrix excludes one-way/no-return and explicitly closed or unroutable roads
+ok 21 - B10 exact matrix excludes one-way/no-return and explicitly closed or unroutable roads
+  ---
+  duration_ms: 0.630057
+  type: 'test'
+  ...
+# Subtest: A01: network snapshot version, size and sha256 are pinned
+ok 22 - A01: network snapshot version, size and sha256 are pinned
+  ---
+  duration_ms: 6.317303
+  type: 'test'
+  ...
+# Subtest: A05/A06/A07/A08 invariants on the real-graph demo scenario
+ok 23 - A05/A06/A07/A08 invariants on the real-graph demo scenario
+  ---
+  duration_ms: 196.72508
+  type: 'test'
+  ...
+# Subtest: A09: solver does not mutate its input; A15: repeated runs are identical
+ok 24 - A09: solver does not mutate its input; A15: repeated runs are identical
+  ---
+  duration_ms: 442.450049
+  type: 'test'
+  ...
+# Subtest: A10: capacity deficit is reported and ranks by least unserved
+ok 25 - A10: capacity deficit is reported and ranks by least unserved
+  ---
+  duration_ms: 0.660633
+  type: 'test'
+  ...
+# Subtest: A11: zero baseline km gives null percent, never NaN/Infinity
+ok 26 - A11: zero baseline km gives null percent, never NaN/Infinity
+  ---
+  duration_ms: 0.363076
+  type: 'test'
+  ...
+# Subtest: A10b: unreachable site (closed road) leaves demand unserved with explanation fields
+ok 27 - A10b: unreachable site (closed road) leaves demand unserved with explanation fields
+  ---
+  duration_ms: 0.190957
+  type: 'test'
+  ...
+# Subtest: A19: client never writes user strings through innerHTML
+ok 28 - A19: client never writes user strings through innerHTML
+  ---
+  duration_ms: 0.888495
+  type: 'test'
+  ...
+# Subtest: A20: server binds to 127.0.0.1 only
+ok 29 - A20: server binds to 127.0.0.1 only
+  ---
+  duration_ms: 0.228003
+  type: 'test'
+  ...
+# Subtest: unserved reasons: no round-trip route vs exhausted capacity
+ok 30 - unserved reasons: no round-trip route vs exhausted capacity
+  ---
+  duration_ms: 0.696947
+  type: 'test'
+  ...
+# Subtest: METHOD-01: demo scenario has distinct nodes and no zero-km trips
+ok 31 - METHOD-01: demo scenario has distinct nodes and no zero-km trips
+  ---
+  duration_ms: 116.716414
+  type: 'test'
+  ...
+# Subtest: candidate reduces modeled roundtrip when closer
+ok 32 - candidate reduces modeled roundtrip when closer
+  ---
+  duration_ms: 8.808036
+  type: 'test'
+  ...
+# Subtest: site capacity is respected, unmet demand exposed
+ok 33 - site capacity is respected, unmet demand exposed
+  ---
+  duration_ms: 0.663927
+  type: 'test'
+  ...
+# Subtest: payload density controls trip volume
+ok 34 - payload density controls trip volume
+  ---
+  duration_ms: 0.566792
+  type: 'test'
+  ...
+# Subtest: unverified sites never become approved
+ok 35 - unverified sites never become approved
+  ---
+  duration_ms: 0.340281
+  type: 'test'
+  ...
+# Subtest: invalid graph node and capacity rejected
+ok 36 - invalid graph node and capacity rejected
+  ---
+  duration_ms: 0.305069
+  type: 'test'
+  ...
+# Subtest: user-supplied legal status cannot create legal approval
+ok 37 - user-supplied legal status cannot create legal approval
+  ---
+  duration_ms: 0.317346
+  type: 'test'
+  ...
+# greedy suboptimal: 123 /300; with local search: 0 /300
+# Subtest: A16: exact oracle beats greedy on a frozen counterexample (same unserved, fewer km)
+ok 38 - A16: exact oracle beats greedy on a frozen counterexample (same unserved, fewer km)
+  ---
+  duration_ms: 11.203316
+  type: 'test'
+  ...
+# Subtest: oracle never worse than greedy on 300 seeded random small graphs (sanity of both)
+ok 39 - oracle never worse than greedy on 300 seeded random small graphs (sanity of both)
+  ---
+  duration_ms: 48.288565
+  type: 'test'
+  ...
+# Subtest: local search fixes the frozen counterexample and never worsens greedy
+ok 40 - local search fixes the frozen counterexample and never worsens greedy
+  ---
+  duration_ms: 71.225884
+  type: 'test'
+  ...
+# Subtest: directed paths and reverse route are different
+ok 41 - directed paths and reverse route are different
+  ---
+  duration_ms: 1.07087
+  type: 'test'
+  ...
+# Subtest: explicit unroutable road cannot be used
+ok 42 - explicit unroutable road cannot be used
+  ---
+  duration_ms: 0.284388
+  type: 'test'
+  ...
+# Subtest: closures affect both directions
+ok 43 - closures affect both directions
+  ---
+  duration_ms: 0.340762
+  type: 'test'
+  ...
+# Subtest: same-node path zero and unknown node rejected
+ok 44 - same-node path zero and unknown node rejected
+  ---
+  duration_ms: 0.286331
+  type: 'test'
+  ...
+# Subtest: B11/B12 six 2+2 configurations, independent enumeration and unique topK
+ok 45 - B11/B12 six 2+2 configurations, independent enumeration and unique topK
+  ---
+  duration_ms: 987.109106
+  type: 'test'
+  ...
+# Subtest: B13/B14 exclusions preserve baseline, exclude exact set only and record parent hash
+ok 46 - B13/B14 exclusions preserve baseline, exclude exact set only and record parent hash
+  ---
+  duration_ms: 2535.799951
+  type: 'test'
+  ...
+# Subtest: B15 relocation plus B16 greenfield
+ok 47 - B15 relocation plus B16 greenfield
+  ---
+  duration_ms: 1556.837229
+  type: 'test'
+  ...
+# Subtest: B17 frontier, B18 screening and conflict
+ok 48 - B17 frontier, B18 screening and conflict
+  ---
+  duration_ms: 1543.933658
+  type: 'test'
+  ...
+# Subtest: B08/B09 invalid v1 policy and resource cap
+ok 49 - B08/B09 invalid v1 policy and resource cap
+  ---
+  duration_ms: 13.388355
+  type: 'test'
+  ...
+# Subtest: B07 bounded search incomplete
+ok 50 - B07 bounded search incomplete
+  ---
+  duration_ms: 5.865041
+  type: 'test'
+  ...
+# Subtest: B20 independent checker rejects tampered solution and invalid selected set
+ok 51 - B20 independent checker rejects tampered solution and invalid selected set
+  ---
+  duration_ms: 882.200019
+  type: 'test'
+  ...
+# Subtest: B19/B21 API module CLI parity, errors, health while solving
+ok 52 - B19/B21 API module CLI parity, errors, health while solving
+  ---
+  duration_ms: 4349.094487
+  type: 'test'
+  ...
+# Subtest: A07 historical catalogue JSON/CSV parity, rejected promotions, no guessed capacities or access
+ok 53 - A07 historical catalogue JSON/CSV parity, rejected promotions, no guessed capacities or access
+  ---
+  duration_ms: 5.066694
+  type: 'test'
+  ...
+# Subtest: A06/A08 adapter cannot promote lead or historical evidence; explicit capacity/access/profile only
+ok 54 - A06/A08 adapter cannot promote lead or historical evidence; explicit capacity/access/profile only
+  ---
+  duration_ms: 1.63064
+  type: 'test'
+  ...
+# Subtest: A01 2+2 out of six, independent exhaustive volumes and configuration ranking
+ok 55 - A01 2+2 out of six, independent exhaustive volumes and configuration ranking
+  ---
+  duration_ms: 856.329749
+  type: 'test'
+  ...
+# Subtest: A02/A05 example 3+1, relocate, greenfield, frontier return exact unique rankings
+ok 56 - A02/A05 example 3+1, relocate, greenfield, frontier return exact unique rankings
+  ---
+  duration_ms: 3225.985971
+  type: 'test'
+  ...
+# Subtest: strict adapter ties operational/access/capacity/allow evidence to exact claims, rejects tampering
+ok 57 - strict adapter ties operational/access/capacity/allow evidence to exact claims, rejects tampering
+  ---
+  duration_ms: 2.286055
+  type: 'test'
+  ...
+# Subtest: A09 receiving trip limit independent of storage; counterfactual and checker
+ok 58 - A09 receiving trip limit independent of storage; counterfactual and checker
+  ---
+  duration_ms: 1424.466826
+  type: 'test'
+  ...
+# Subtest: A10 full load detour, distinct measured return, validated closures and width
+ok 59 - A10 full load detour, distinct measured return, validated closures and width
+  ---
+  duration_ms: 2673.584378
+  type: 'test'
+  ...
+# Subtest: snow compatibility excludes known mismatch and leaves unknown explicit
+ok 60 - snow compatibility excludes known mismatch and leaves unknown explicit
+  ---
+  duration_ms: 1531.180984
+  type: 'test'
+  ...
+# Subtest: constraint evidence and trip values required and same horizon
+ok 61 - constraint evidence and trip values required and same horizon
+  ---
+  duration_ms: 5.610365
+  type: 'test'
+  ...
+# Subtest: A10 city forward/reverse parity with original arcs, both start sides and cache
+ok 62 - A10 city forward/reverse parity with original arcs, both start sides and cache
+  ---
+  duration_ms: 1477.685437
+  type: 'test'
+  ...
+# Subtest: A10 directed profiles, reverse distances and cache invalidation
+ok 63 - A10 directed profiles, reverse distances and cache invalidation
+  ---
+  duration_ms: 0.71754
+  type: 'test'
+  ...
+# Subtest: safe preset preserves existing and requires explicit relocation cardinality; legacy unchanged
+ok 64 - safe preset preserves existing and requires explicit relocation cardinality; legacy unchanged
+  ---
+  duration_ms: 97.438298
+  type: 'test'
+  ...
+# Subtest: screening enum/date and metadata runtime validation
+ok 65 - screening enum/date and metadata runtime validation
+  ---
+  duration_ms: 91.05547
+  type: 'test'
+  ...
+# Subtest: exclusion rerun fingerprints stable but parent and changed scenario rejected
+ok 66 - exclusion rerun fingerprints stable but parent and changed scenario rejected
+  ---
+  duration_ms: 1843.462978
+  type: 'test'
+  ...
+# Subtest: A06/A13 bad dates and enum rejected on HTTP and CLI, explicit exact UI page accessible
+ok 67 - A06/A13 bad dates and enum rejected on HTTP and CLI, explicit exact UI page accessible
+  ---
+  duration_ms: 733.15556
+  type: 'test'
+  ...
+# Subtest: unified all 15 ranks and exhaustion agree with fixed solver and independent integer oracle
+ok 68 - unified all 15 ranks and exhaustion agree with fixed solver and independent integer oracle
+  ---
+  duration_ms: 1824.886998
+  type: 'test'
+  ...
+# Subtest: unified parity: 3+1, relocate, greenfield, frontier, exclusions, full service infeasible and evaluate
+ok 69 - unified parity: 3+1, relocate, greenfield, frontier, exclusions, full service infeasible and evaluate
+  ---
+  duration_ms: 10413.456237
+  type: 'test'
+  ...
+# Subtest: unified independent oracle, 24 random catalogues, seed 440719 (integer leftovers, trip caps, unreachable, zero and ties)
+ok 70 - unified independent oracle, 24 random catalogues, seed 440719 (integer leftovers, trip caps, unreachable, zero and ties)
+  ---
+  duration_ms: 1060.148351
+  type: 'test'
+  ...
+# Subtest: zero-demand ties, exact no-good cuts for subsets/supersets and empty set
+ok 71 - zero-demand ties, exact no-good cuts for subsets/supersets and empty set
+  ---
+  duration_ms: 829.091742
+  type: 'test'
+  ...
+# Subtest: tie fallback for JSON escapes, strategy validation and time limit
+ok 72 - tie fallback for JSON escapes, strategy validation and time limit
+  ---
+  duration_ms: 728.026229
+  type: 'test'
+  ...
+# Subtest: unified preserves receiving, compatibility and independent loaded/empty constraints
+ok 73 - unified preserves receiving, compatibility and independent loaded/empty constraints
+  ---
+  duration_ms: 1552.310201
+  type: 'test'
+  ...
+# Subtest: unified independent result verification rejects inactive assignments and forged proof
+ok 74 - unified independent result verification rejects inactive assignments and forged proof
+  ---
+  duration_ms: 0.965459
+  type: 'test'
+  ...
+# Subtest: S0 F01–04 reject invalid or excessive legacy input
+ok 75 - S0 F01–04 reject invalid or excessive legacy input
+  ---
+  duration_ms: 1.903866
+  type: 'test'
+  ...
+# Subtest: S0 malformed graph rejected
+ok 76 - S0 malformed graph rejected
+  ---
+  duration_ms: 0.273832
+  type: 'test'
+  ...
+1..76
+# tests 76
+# suites 0
+# pass 76
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 25054.187565

@@ -1,0 +1,17 @@
+?? docs/backend-review-v42/
+?? docs/benchmarks/v43/
+?? tests/reproduce-v42.mjs
+dd769fb S3: versioned API CLI and verified release handoff
+74dc432 S2: finite catalogue configuration search
+a2fcc1b S1: exact integer allocation and independent oracle
+f514aab S0: reproduce audit and guard inputs
+1175b17 Import original v4.1.1 archive
+v22.16.0
+Python 3.13.5
+1.17.0 2.3.5
+cbea40937cd4dc064e8eb4f3b0958306dd6a53c744c84842a18a4f3a2845a61c  /mnt/data/SnowSite-v4.2.zip
+
+> snowsite-kamchatka@0.2.0 check
+> node tools/check-data.mjs
+
+PASS 9983 nodes, 12354 edges, version=pkgo-27233df581c6, sha256=0e0a464f7d92057fa5bbad634c083ad0c1923294597d989ead386b393acf7ad2

@@ -1,0 +1,311 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "validFrom": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "validUntil": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "operationalStatus": {
+      "enum": [
+        "unknown",
+        "historical",
+        "active",
+        "planned",
+        "closed"
+      ]
+    },
+    "geometryStatus": {
+      "enum": [
+        "unlocated",
+        "approximate",
+        "verified"
+      ]
+    },
+    "location": {
+      "anyOf": [
+        {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "accessNodeId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "availableCapacityM3": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "snowTypes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "clean",
+          "with_reagents",
+          "unknown"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "screening": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "unknown",
+            "needs_review",
+            "documented",
+            "conflict",
+            "inapplicable",
+            "prohibited"
+          ]
+        },
+        "decision": {
+          "enum": [
+            "allowed",
+            "prohibited"
+          ]
+        },
+        "sourceRef": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "reviewedBy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "reviewedAt": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z)?$"
+        },
+        "ruleId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "accessVerification": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "networkId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "networkVersion": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "networkHash": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "sourceRef": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "intraSiteDistanceMm": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000000
+            },
+            "intraSiteDistanceBasis": {
+              "const": "roundtrip"
+            }
+          },
+          "required": [
+            "networkId",
+            "networkVersion",
+            "networkHash",
+            "sourceRef",
+            "intraSiteDistanceMm"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "capacityEvidence": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "sourceRef": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "horizon": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "sourceRef",
+            "horizon"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "operationalEvidenceRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "geometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "const": "Polygon"
+        },
+        "coordinates": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "items": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 512,
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number",
+                  "minimum": -180,
+                  "maximum": 180
+                },
+                {
+                  "type": "number",
+                  "exclusiveMinimum": -90,
+                  "exclusiveMaximum": 90
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "geometryEvidenceRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    }
+  },
+  "required": [
+    "id",
+    "sourceRefs",
+    "validFrom",
+    "validUntil",
+    "operationalStatus",
+    "geometryStatus",
+    "location",
+    "accessNodeId",
+    "availableCapacityM3",
+    "snowTypes",
+    "screening",
+    "accessVerification",
+    "capacityEvidence"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "dependentRequired": {
+    "geometry": [
+      "geometryEvidenceRef"
+    ],
+    "geometryEvidenceRef": [
+      "geometry"
+    ]
+  }
+}

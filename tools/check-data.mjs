@@ -1,0 +1,10 @@
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const b=readFileSync(new URL('../data/snapshots/pkgo-27233df581c6/city-network.json',import.meta.url));
+const n=JSON.parse(b),scenario=JSON.parse(readFileSync(new URL('../data/fixtures/scenario.demo.json',import.meta.url)));
+const expected='0e0a464f7d92057fa5bbad634c083ad0c1923294597d989ead386b393acf7ad2';
+const actual=createHash('sha256').update(b).digest('hex');
+if(actual!==expected)throw Error('OSM snapshot changed; update provenance and tests first: '+actual);
+if(n.edges.length!==12354||Object.keys(n.nodes).length!==9983)throw Error('Unexpected network shape');
+for(const x of [...scenario.demands,...scenario.sites])if(!n.nodes[x.nodeId])throw Error('Invalid node '+x.nodeId);
+console.log(`PASS ${n.nodes?Object.keys(n.nodes).length:0} nodes, ${n.edges.length} edges, version=${n.version}, sha256=${actual}`);

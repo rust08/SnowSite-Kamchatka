@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "scope": "browser",
+  "startedAt": "2026-11-21T07:41:46.620825+00:00",
+  "platform": {
+    "system": "Linux",
+    "release": "6.18.57",
+    "machine": "x86_64",
+    "python": "3.13.5",
+    "node": "v22.16.0",
+    "scipy": "1.17.0",
+    "numpy": "2.3.5",
+    "jsonschema": "4.26.0",
+    "playwright": "1.57.0"
+  },
+  "gitHead": "e45bb8ebd2143707dcfc909bf2ab5ac4909dbb13",
+  "gates": [
+    {
+      "name": "manifest",
+      "status": "not_run"
+    },
+    {
+      "name": "graph",
+      "status": "not_run"
+    },
+    {
+      "name": "tests",
+      "status": "not_run"
+    },
+    {
+      "name": "contracts",
+      "status": "not_run"
+    },
+    {
+      "name": "browser",
+      "status": "fail",
+      "exitCode": 1,
+      "log": "browser.txt",
+      "elapsedSeconds": 2.386
+    }
+  ],
+  "status": "fail",
+  "finishedAt": "2026-11-21T07:41:49.020899+00:00"
+}

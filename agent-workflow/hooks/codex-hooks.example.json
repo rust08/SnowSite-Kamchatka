@@ -1,0 +1,42 @@
+{
+  "description": "Optional advisory Snow Control hooks; run from module root after trust review",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|compact|fork|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python agent-workflow/hooks/lifecycle.py",
+            "commandWindows": "python agent-workflow/hooks/lifecycle.py",
+            "statusMessage": "Snow Control checkpoint reminder"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python agent-workflow/hooks/lifecycle.py",
+            "commandWindows": "python agent-workflow/hooks/lifecycle.py",
+            "statusMessage": "Snow Control checkpoint reminder"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python agent-workflow/hooks/lifecycle.py",
+            "commandWindows": "python agent-workflow/hooks/lifecycle.py",
+            "statusMessage": "Snow Control checkpoint reminder"
+          }
+        ]
+      }
+    ]
+  }
+}

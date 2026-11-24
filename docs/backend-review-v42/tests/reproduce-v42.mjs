@@ -1,0 +1,9 @@
+import {optimize} from '../src/core/optimize.mjs';
+import {hash,validateRequest} from '../src/core/request.mjs';
+const n={id:'audit',version:'v1',nodes:{a:[0,0],b:[1,0],c:[2,0],d:[3,0]},edges:[{id:'ab',from:'a',to:'b',km:1,oneway:false},{id:'bc',from:'b',to:'c',km:1,oneway:false},{id:'cd',from:'c',to:'d',km:1,oneway:false}]};
+const s=(id,node,origin,role)=>({id,accessNodeId:node,availableCapacityM3:10,origin,role,screening:{status:'unknown'}});
+const req={schemaVersion:'1.0',networkId:'audit',networkVersion:'v1',networkHash:hash(n),scenario:{id:'audit',mode:'scenario_only',horizon:{type:'event',label:'audit'},demands:[{id:'demand',nodeId:'a',volumeM3:10,sourceStatus:'synthetic'}],sites:[s('old','d','existing','optional'),s('new','b','candidate','optional')],truck:{bodyM3:10,driveKmh:20}},policy:{mode:'add',exactNewSites:1,topK:5,objective:'min_unserved_then_distance',screeningPolicy:'exploratory',timeLimitMs:10000}};
+const r=await optimize(n,req); console.log('ADD optional old:',r.alternatives.map(x=>({ids:x.activeSiteIds,km:x.transportKm,unserved:x.unservedM3})));
+const q=structuredClone(req);q.scenario.sites=[s('old','d','existing','fixed'),s('next','b','candidate','optional'),s('zero','a','candidate','optional')]; const z=await optimize(n,q); console.log('ZERO:',z.alternatives.map(x=>({ids:x.activeSiteIds,km:x.transportKm,sameNode:x.assignments.some(a=>a.sameNode)})));
+const t=structuredClone(req);t.policy.screeningPolicy='strict';t.scenario.sites.forEach(site=>site.screening={status:'documented',decision:'allowed',sourceRef:'placeholder',reviewedBy:'placeholder',reviewedAt:'not-a-date'}); const v=validateRequest(n,t); console.log('STRICT invalid review date accepted:',v.exclusions.size===0);
+const bad=structuredClone(req);bad.scenario.sites[1].screening.decision='banana';console.log('Invalid decision runtime accepted:',validateRequest(n,bad).exclusions.size===0);

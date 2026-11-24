@@ -1,0 +1,404 @@
+{
+  "seed": 719,
+  "graphHash": "109218839f211770d9e787af284f84662e47abdc5e4568488004f9e4a4c4cff9",
+  "originalInputHash": "6d645dc7f842020658359df71b39ddf9e8eeafe27b8e2f8e166bca07eb073893",
+  "node": "v22.16.0",
+  "platform": "linux",
+  "release": "6.18.57",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "logicalCpus": 5,
+  "totalMemoryBytes": 6236844032,
+  "runs": [
+    {
+      "strategy": "enumeration",
+      "label": "cold",
+      "timeLimitMs": 5000,
+      "wallMs": 4979.931708,
+      "matrixMs": 5.484953000000004,
+      "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+      "matrixMetrics": {
+        "cacheHit": false,
+        "routeStarts": 40,
+        "startSide": "demands"
+      },
+      "scenarioHash": "05eaa2f0ca320cb5f6d200a84a4644ffbc5792c11ecf8e2e7e95f63a4126720b",
+      "solverVersion": "1.17.0",
+      "search": {
+        "catalogSize": 30,
+        "eligibleSize": 30,
+        "configurationsTotal": 378,
+        "enumerated": 378,
+        "evaluated": 17,
+        "proven": 16,
+        "strategy": "enumeration",
+        "requestedStrategy": "enumeration",
+        "counterScope": "configurations",
+        "topKRequested": 5,
+        "topKReturned": 5,
+        "rankingStatus": "provisional",
+        "coverage": "finite_catalogue",
+        "reason": null
+      },
+      "stages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "time_limit",
+          "bound": 125199999.99999999,
+          "value": 128600000,
+          "gap": 0.02643856920684304
+        }
+      ],
+      "scores": [
+        [
+          "[\"S00\",\"S01\",\"S25\",\"S26\"]",
+          0,
+          119000000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S24\",\"S26\"]",
+          0,
+          119200000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S26\",\"S27\"]",
+          0,
+          120200000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S26\",\"S28\"]",
+          0,
+          120400000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S24\",\"S28\"]",
+          0,
+          120600000
+        ]
+      ],
+      "responseBytes": 35108
+    },
+    {
+      "strategy": "enumeration",
+      "label": "warm",
+      "timeLimitMs": 5000,
+      "wallMs": 4979.499562000001,
+      "matrixMs": 0.4511789999996836,
+      "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+      "matrixMetrics": {
+        "cacheHit": true,
+        "routeStarts": 0
+      },
+      "scenarioHash": "05eaa2f0ca320cb5f6d200a84a4644ffbc5792c11ecf8e2e7e95f63a4126720b",
+      "solverVersion": "1.17.0",
+      "search": {
+        "catalogSize": 30,
+        "eligibleSize": 30,
+        "configurationsTotal": 378,
+        "enumerated": 378,
+        "evaluated": 17,
+        "proven": 16,
+        "strategy": "enumeration",
+        "requestedStrategy": "enumeration",
+        "counterScope": "configurations",
+        "topKRequested": 5,
+        "topKReturned": 5,
+        "rankingStatus": "provisional",
+        "coverage": "finite_catalogue",
+        "reason": null
+      },
+      "stages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "time_limit",
+          "bound": 125199999.99999999,
+          "value": 126800000,
+          "gap": 0.012618296529968572
+        }
+      ],
+      "scores": [
+        [
+          "[\"S00\",\"S01\",\"S25\",\"S26\"]",
+          0,
+          119000000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S24\",\"S26\"]",
+          0,
+          119200000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S26\",\"S27\"]",
+          0,
+          120200000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S26\",\"S28\"]",
+          0,
+          120400000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S24\",\"S28\"]",
+          0,
+          120600000
+        ]
+      ],
+      "responseBytes": 35086
+    },
+    {
+      "strategy": "enumeration",
+      "label": "long",
+      "timeLimitMs": 15000,
+      "wallMs": 14980.560243,
+      "matrixMs": 0.6371890000009444,
+      "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+      "matrixMetrics": {
+        "cacheHit": true,
+        "routeStarts": 0
+      },
+      "scenarioHash": "41113176180a115fbdc8a3d508c8535f714eb4bb5931a296940f7b579b87be93",
+      "solverVersion": "1.17.0",
+      "search": {
+        "catalogSize": 30,
+        "eligibleSize": 30,
+        "configurationsTotal": 378,
+        "enumerated": 378,
+        "evaluated": 47,
+        "proven": 46,
+        "strategy": "enumeration",
+        "requestedStrategy": "enumeration",
+        "counterScope": "configurations",
+        "topKRequested": 5,
+        "topKReturned": 5,
+        "rankingStatus": "provisional",
+        "coverage": "finite_catalogue",
+        "reason": null
+      },
+      "stages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "time_limit",
+          "bound": 118799999.99999999,
+          "value": 121400000,
+          "gap": 0.021416803953871622
+        }
+      ],
+      "scores": [
+        [
+          "[\"S00\",\"S01\",\"S25\",\"S26\"]",
+          0,
+          119000000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S24\",\"S26\"]",
+          0,
+          119200000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S26\",\"S27\"]",
+          0,
+          120200000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S26\",\"S28\"]",
+          0,
+          120400000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S24\",\"S28\"]",
+          0,
+          120600000
+        ]
+      ],
+      "responseBytes": 35094
+    },
+    {
+      "strategy": "unified_milp",
+      "label": "cold",
+      "timeLimitMs": 5000,
+      "wallMs": 4861.272692000002,
+      "matrixMs": 3.1423590000013064,
+      "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+      "matrixMetrics": {
+        "cacheHit": false,
+        "routeStarts": 40,
+        "startSide": "demands"
+      },
+      "scenarioHash": "d5381456eb8c8888b4153fca6cc3f88f19af7aba610ff87fd8bec1cf392f1ae0",
+      "solverVersion": "1.17.0",
+      "search": {
+        "catalogSize": 30,
+        "eligibleSize": 30,
+        "configurationsTotal": null,
+        "enumerated": 0,
+        "evaluated": 1,
+        "proven": 0,
+        "strategy": "unified_milp",
+        "requestedStrategy": "unified_milp",
+        "counterScope": "rank_attempts_and_proven_ranks",
+        "topKRequested": 5,
+        "topKReturned": 1,
+        "rankingStatus": "provisional",
+        "coverage": "finite_catalogue",
+        "reason": "time_or_catalogue_limit"
+      },
+      "stages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "time_limit",
+          "bound": 67400000,
+          "value": 74199999.99999999,
+          "gap": 0.09164420485175188
+        }
+      ],
+      "scores": [
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S09\"]",
+          0,
+          74200000
+        ]
+      ],
+      "responseBytes": 12051
+    },
+    {
+      "strategy": "unified_milp",
+      "label": "warm",
+      "timeLimitMs": 5000,
+      "wallMs": 4859.226998999999,
+      "matrixMs": 0.5794720000012603,
+      "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+      "matrixMetrics": {
+        "cacheHit": true,
+        "routeStarts": 0
+      },
+      "scenarioHash": "d5381456eb8c8888b4153fca6cc3f88f19af7aba610ff87fd8bec1cf392f1ae0",
+      "solverVersion": "1.17.0",
+      "search": {
+        "catalogSize": 30,
+        "eligibleSize": 30,
+        "configurationsTotal": null,
+        "enumerated": 0,
+        "evaluated": 1,
+        "proven": 0,
+        "strategy": "unified_milp",
+        "requestedStrategy": "unified_milp",
+        "counterScope": "rank_attempts_and_proven_ranks",
+        "topKRequested": 5,
+        "topKReturned": 1,
+        "rankingStatus": "provisional",
+        "coverage": "finite_catalogue",
+        "reason": "time_or_catalogue_limit"
+      },
+      "stages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "time_limit",
+          "bound": 67400000,
+          "value": 74199999.99999999,
+          "gap": 0.09164420485175188
+        }
+      ],
+      "scores": [
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S09\"]",
+          0,
+          74200000
+        ]
+      ],
+      "responseBytes": 12028
+    },
+    {
+      "strategy": "unified_milp",
+      "label": "long",
+      "timeLimitMs": 15000,
+      "wallMs": 14861.180582999994,
+      "matrixMs": 0.4095060000036028,
+      "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+      "matrixMetrics": {
+        "cacheHit": true,
+        "routeStarts": 0
+      },
+      "scenarioHash": "d03ca58760cc6862a2d82696058f244a95a2a4155538377bb84e86850f1018e4",
+      "solverVersion": "1.17.0",
+      "search": {
+        "catalogSize": 30,
+        "eligibleSize": 30,
+        "configurationsTotal": null,
+        "enumerated": 0,
+        "evaluated": 2,
+        "proven": 1,
+        "strategy": "unified_milp",
+        "requestedStrategy": "unified_milp",
+        "counterScope": "rank_attempts_and_proven_ranks",
+        "topKRequested": 5,
+        "topKReturned": 2,
+        "rankingStatus": "provisional",
+        "coverage": "finite_catalogue",
+        "reason": "time_or_catalogue_limit"
+      },
+      "stages": [
+        {
+          "name": "unservedM3",
+          "status": "optimal",
+          "bound": 0,
+          "value": 0,
+          "gap": 0
+        },
+        {
+          "name": "transportDistanceMm",
+          "status": "time_limit",
+          "bound": 70200000,
+          "value": 79600000,
+          "gap": 0.11809045226130653
+        }
+      ],
+      "scores": [
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S09\"]",
+          0,
+          74200000
+        ],
+        [
+          "[\"S00\",\"S01\",\"S05\",\"S08\"]",
+          0,
+          79600000
+        ]
+      ],
+      "responseBytes": 17521
+    }
+  ]
+}

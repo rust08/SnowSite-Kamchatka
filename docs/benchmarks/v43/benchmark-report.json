@@ -1,0 +1,185 @@
+{
+  "seed": 719,
+  "node": "v22.16.0",
+  "platform": "linux",
+  "release": "6.18.57",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "logicalCpus": 5,
+  "totalMemoryBytes": 6236844032,
+  "cases": [
+    {
+      "name": "city",
+      "networkHash": "0e0a464f7d92057fa5bbad634c083ad0c1923294597d989ead386b393acf7ad2",
+      "inputHash": "47085091891c85c0c36fe1772cd76220ce24d427adcd5b1f5eab6bc3a539119b",
+      "matrixParity": true,
+      "originalMatrixMs": 155.717696,
+      "newMatrixMs": 92.58331800000002,
+      "routeStarts": 8,
+      "first": {
+        "status": "optimal",
+        "ranking": "exact_top_k",
+        "evaluated": 1,
+        "proven": 1,
+        "total": 1,
+        "topK": 1,
+        "solverVersion": "1.17.0",
+        "scenarioHash": "47085091891c85c0c36fe1772cd76220ce24d427adcd5b1f5eab6bc3a539119b",
+        "matrixHash": "0778d5b5fcd5f6096523e344930cceade71e4992c3eaf8309f52a9f807d8bdf4",
+        "matrixMs": 71.54536000000002,
+        "matrixMetrics": {
+          "cacheHit": false,
+          "routeStarts": 8,
+          "startSide": "sites"
+        },
+        "responseBytes": 6451,
+        "best": {
+          "unserved": 0,
+          "transportKm": 92.22877
+        },
+        "wallMs": 1031.077512,
+        "nodeRssBeforeBytes": 114679808,
+        "nodeRssAfterBytes": 123559936
+      },
+      "second": {
+        "status": "optimal",
+        "ranking": "exact_top_k",
+        "evaluated": 1,
+        "proven": 1,
+        "total": 1,
+        "topK": 1,
+        "solverVersion": "1.17.0",
+        "scenarioHash": "47085091891c85c0c36fe1772cd76220ce24d427adcd5b1f5eab6bc3a539119b",
+        "matrixHash": "0778d5b5fcd5f6096523e344930cceade71e4992c3eaf8309f52a9f807d8bdf4",
+        "matrixMs": 0.11037600000008752,
+        "matrixMetrics": {
+          "cacheHit": true,
+          "routeStarts": 0
+        },
+        "responseBytes": 6438,
+        "best": {
+          "unserved": 0,
+          "transportKm": 92.22877
+        },
+        "wallMs": 822.9166750000002,
+        "nodeRssBeforeBytes": 123559936,
+        "nodeRssAfterBytes": 124870656
+      }
+    },
+    {
+      "name": "small",
+      "networkHash": "95069828541211729dca12b0343650e068b086a9820b3a14b5135ba3a3af1fac",
+      "inputHash": "af8baf5f7562acc21b1df4f1582380a183a14485779e3e198d2a8f907956f391",
+      "matrixParity": true,
+      "originalMatrixMs": 0.18555900000001202,
+      "newMatrixMs": 0.1264499999997497,
+      "routeStarts": 2,
+      "first": {
+        "status": "optimal",
+        "ranking": "exact_top_k",
+        "evaluated": 15,
+        "proven": 15,
+        "total": 15,
+        "topK": 3,
+        "solverVersion": "1.17.0",
+        "scenarioHash": "af8baf5f7562acc21b1df4f1582380a183a14485779e3e198d2a8f907956f391",
+        "matrixHash": "493ef6980452d5f885350578ae25fcee99315c15da067cb9ecb44daae5d37d7b",
+        "matrixMs": 0.1163050000000112,
+        "matrixMetrics": {
+          "cacheHit": false,
+          "routeStarts": 2,
+          "startSide": "demands"
+        },
+        "responseBytes": 8705,
+        "best": {
+          "unserved": 0,
+          "transportKm": 56
+        },
+        "wallMs": 795.2161860000001,
+        "nodeRssBeforeBytes": 124870656,
+        "nodeRssAfterBytes": 124870656
+      },
+      "second": {
+        "status": "optimal",
+        "ranking": "exact_top_k",
+        "evaluated": 15,
+        "proven": 15,
+        "total": 15,
+        "topK": 3,
+        "solverVersion": "1.17.0",
+        "scenarioHash": "af8baf5f7562acc21b1df4f1582380a183a14485779e3e198d2a8f907956f391",
+        "matrixHash": "493ef6980452d5f885350578ae25fcee99315c15da067cb9ecb44daae5d37d7b",
+        "matrixMs": 0.05442200000015873,
+        "matrixMetrics": {
+          "cacheHit": true,
+          "routeStarts": 0
+        },
+        "responseBytes": 8690,
+        "best": {
+          "unserved": 0,
+          "transportKm": 56
+        },
+        "wallMs": 832.1967380000001,
+        "nodeRssBeforeBytes": 124870656,
+        "nodeRssAfterBytes": 125001728
+      }
+    },
+    {
+      "name": "large",
+      "networkHash": "109218839f211770d9e787af284f84662e47abdc5e4568488004f9e4a4c4cff9",
+      "inputHash": "6d645dc7f842020658359df71b39ddf9e8eeafe27b8e2f8e166bca07eb073893",
+      "matrixParity": true,
+      "originalMatrixMs": 2.1824759999999515,
+      "newMatrixMs": 1.3822410000002492,
+      "routeStarts": 40,
+      "first": {
+        "status": "time_limit",
+        "ranking": "provisional",
+        "evaluated": 17,
+        "proven": 16,
+        "total": 378,
+        "topK": 5,
+        "solverVersion": "1.17.0",
+        "scenarioHash": "6d645dc7f842020658359df71b39ddf9e8eeafe27b8e2f8e166bca07eb073893",
+        "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+        "matrixMs": 1.708270999999968,
+        "matrixMetrics": {
+          "cacheHit": false,
+          "routeStarts": 40,
+          "startSide": "demands"
+        },
+        "responseBytes": 35018,
+        "best": {
+          "unserved": 0,
+          "transportKm": 119
+        },
+        "wallMs": 4979.116467,
+        "nodeRssBeforeBytes": 125132800,
+        "nodeRssAfterBytes": 127000576
+      },
+      "second": {
+        "status": "time_limit",
+        "ranking": "provisional",
+        "evaluated": 17,
+        "proven": 16,
+        "total": 378,
+        "topK": 5,
+        "solverVersion": "1.17.0",
+        "scenarioHash": "6d645dc7f842020658359df71b39ddf9e8eeafe27b8e2f8e166bca07eb073893",
+        "matrixHash": "c559c139de390d08935a91ace555f9ef08288018673e8587f88cbf8f5d073fda",
+        "matrixMs": 0.7370300000002317,
+        "matrixMetrics": {
+          "cacheHit": true,
+          "routeStarts": 0
+        },
+        "responseBytes": 35002,
+        "best": {
+          "unserved": 0,
+          "transportKm": 119
+        },
+        "wallMs": 4979.442659,
+        "nodeRssBeforeBytes": 127000576,
+        "nodeRssAfterBytes": 127131648
+      }
+    }
+  ]
+}

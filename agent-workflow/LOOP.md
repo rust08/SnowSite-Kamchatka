@@ -1,0 +1,11 @@
+# Two-agent loop, human in the middle
+
+States: DISCOVERY → PROPOSED → WAIT_GO → IMPLEMENTING → WAIT_REVIEW → ACCEPTED or CHANGES_REQUIRED / BLOCKED → WAIT_GO or CLOSED. No transition to IMPLEMENTING without explicit owner GO naming task, exact baseline, path allowlist, acceptance and stop. A review recommendation is not authorization. CHANGES_REQUIRED needs a fresh bounded fix ticket. Acceptance does not authorize the next ticket. CLOSED → fresh Discovery only.
+
+Architect & QA loop: establish primary problem → evidence (verified / reported / assumption / unknown) → hypotheses with falsifier → cheapest baseline including no-build → bounded experiment → task proposal (scope, contract, oracle, acceptance, risks) → WAIT_GO. On review intake verify pack manifest and actual diff, replay patch in fresh base, independently reproduce gates, adversarial checks and UX boundary, verdict + findings by severity + next proposal. Do not implement product changes; independent test scripts outside candidate tree are allowed. No auto-acceptance based on test count. If no evidence, say blocked; don't drift into repetitive research.
+
+Engineering loop: preflight → confirm exact GO and base → read relevant skill/spec → small plan → implement minimum slice → run targeted tests → inspect actual failures → repair in scope → repeat until gate passes, genuine blocker, or 3 consecutive repair attempts with no progress (then report). Run agreed regression and scope check → pack source/patch/logs/checkpoint → STOP WAIT_REVIEW. No infinite loop, no broad refactors, no silent heuristics/fallback, no tests weakened. If gate fails outside approved scope, stop instead of modifying it. If context limit approaches, save checkpoint early; interrupted tests are NOT RUN/INCOMPLETE, not PASS. No time or background promises.
+
+Owner loop: transfer ONE archive + short instruction each way; approve GO only on explicit scope; save accepted artifacts. No requirement to transport historical archives every turn. Prefer same task ID and unique artifact SHA; agent never merges or pushes without owner GO.
+
+Mandatory checkpoints: restore/read-only, pre-task, post-test, pre-handoff, pre-context-transfer. See HOOKS.md for executable checks and optional native integration. Workflow is manual coordination in ChatGPT, not an autonomous service.

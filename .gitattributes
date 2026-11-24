@@ -1,0 +1,6 @@
+# Release manifests and snapshots are hashes of bytes. Preserve tracked bytes
+# on checkout regardless of core.autocrlf (including historical CRLF CSV/bat).
+* -text
+*.json text eol=lf
+*.md text eol=lf
+*.webp binary

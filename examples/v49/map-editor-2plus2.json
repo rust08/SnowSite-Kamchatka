@@ -1,0 +1,125 @@
+{
+  "id": "map-demo-2plus2-of6",
+  "name": "Учебный расширенный каталог 2+2 из 6 (НЕ реальные площадки)",
+  "mode": "scenario_only",
+  "provenance": "Исходное синтетическое демо + четыре искусственных кандидата на разных дорожных узлах на 400–800 м по прямой от источников. Это не земельные участки, не реальные полигоны и не рекомендации по размещению.",
+  "truck": {
+    "bodyM3": 10,
+    "payloadKg": 5000,
+    "driveKmh": 20,
+    "rateRubPerHour": 2100
+  },
+  "snowDensityKgM3": 500,
+  "closedEdgeIds": [],
+  "demands": [
+    {
+      "id": "D1",
+      "name": "Учебный источник снега 1",
+      "nodeId": "12829246567",
+      "volumeM3": 46
+    },
+    {
+      "id": "D2",
+      "name": "Учебный источник снега 2",
+      "nodeId": "12816085894",
+      "volumeM3": 43
+    },
+    {
+      "id": "D3",
+      "name": "Учебный источник снега 3",
+      "nodeId": "5830714828",
+      "volumeM3": 50
+    },
+    {
+      "id": "D4",
+      "name": "Учебный источник снега 4",
+      "nodeId": "5517236826",
+      "volumeM3": 54
+    },
+    {
+      "id": "D5",
+      "name": "Учебный источник снега 5",
+      "nodeId": "346952107",
+      "volumeM3": 35
+    }
+  ],
+  "sites": [
+    {
+      "id": "S0",
+      "name": "Базовая площадка A — сценарий",
+      "nodeId": "2415413202",
+      "capacityM3": 150,
+      "kind": "existing",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "S1",
+      "name": "Базовая площадка B — сценарий",
+      "nodeId": "2024634569",
+      "capacityM3": 130,
+      "kind": "existing",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "C1",
+      "name": "Кандидат C — сценарий",
+      "nodeId": "13610177839",
+      "capacityM3": 100,
+      "kind": "candidate",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "C2",
+      "name": "Кандидат D — сценарий",
+      "nodeId": "5883116640",
+      "capacityM3": 100,
+      "kind": "candidate",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "C3",
+      "name": "Кандидат E — сценарий",
+      "nodeId": "1170909541",
+      "capacityM3": 100,
+      "kind": "candidate",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "C4",
+      "name": "Кандидат F — сценарий",
+      "nodeId": "1361077743",
+      "capacityM3": 100,
+      "kind": "candidate",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "C5",
+      "name": "Кандидат G — сценарий",
+      "nodeId": "4439846961",
+      "capacityM3": 100,
+      "kind": "candidate",
+      "legalStatus": "unverified"
+    },
+    {
+      "id": "C6",
+      "name": "Кандидат H — сценарий",
+      "nodeId": "3882720863",
+      "capacityM3": 100,
+      "kind": "candidate",
+      "legalStatus": "unverified"
+    }
+  ],
+  "mapSettings": {
+    "count": 2,
+    "topK": 5,
+    "timeLimitMs": 15000,
+    "replacements": [],
+    "excludedSiteIds": [],
+    "excludedConfigurations": []
+  },
+  "meta": {
+    "networkVersion": "pkgo-27233df581c6",
+    "networkHash": "0e0a464f7d92057fa5bbad634c083ad0c1923294597d989ead386b393acf7ad2",
+    "note": "Только сценарий. Импорт в основной интерфейс карты."
+  }
+}

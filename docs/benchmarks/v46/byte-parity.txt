@@ -1,0 +1,25 @@
+PASS 10258b1ab5907b3b0ee57e2bf0924ec3b07fc6b5e9f8289a01e9713ff406cbe4 data/CITY_SOURCES.md -> data/snapshots/pkgo-27233df581c6/CITY_SOURCES.md
+PASS 0e0a464f7d92057fa5bbad634c083ad0c1923294597d989ead386b393acf7ad2 data/city-network.json -> data/snapshots/pkgo-27233df581c6/city-network.json
+PASS 53ab72fda223fba6b34d1a1905ca6aa1ce04d1ad5b5f02822666f1ef5d682e1c data/scenario.demo.json -> data/fixtures/scenario.demo.json
+PASS ad9dc21739b2e36c611757a68b9e11a3f1328b8f67dfe32dbadfda5f9fcdf56a data/scenario.schema.json -> packages/contracts/schemas/scenario.schema.json
+PASS cf235ce8f48db91ee482946a4c8cb90f4e42fb8d5c91d749a4817da594aa93f5 data/site-evidence/pkgo-history.json -> data/evidence/pkgo-history.json
+PASS e47240d274868a0c1216f7627aff447e443911206eeed36fee01e83476457f25 data/site-evidence/sources-v1.json -> data/evidence/sources-v1.json
+PASS 05f219a4c1d1c41c9feddc9c7ad1490a1a2df8b6deb003d07dcea330d6e8712c public/app.js -> apps/web/app.js
+PASS ce6c174c78261a62936949675780651d0b689c11f21278c99cfd2c9005672746 public/city-context.js -> apps/web/city-context.js
+PASS 7b92ef8955152225f9ab3ec8ca0994aed201db471a5cc80a172da468fa0d9bf4 public/exact.html -> apps/web/exact.html
+PASS 08c43f2f9f6220a1ecc2ee0d731ec408c802cf92e5a4e6f8232e2b5879b924cc public/exact.js -> apps/web/exact.js
+PASS eed053367491ddb75f218088969e568782119f05a86300ed6bacd366c4e1628b public/index.html -> apps/web/index.html
+PASS 311c53c63915103065e817d26566042d5fa977f0cc287d443d15c478d13d6681 public/lib/core.js -> apps/web/lib/core.js
+PASS 3f63c053cfed001c7b1993ca9b9d942731ca8ddfb0272fe437d49b8b0209f21b public/style.css -> apps/web/style.css
+PASS 901099622dca7eab5d803b5b204e9eb2245ca1d96528330507af4b1e353cc5a9 public/terrain-map.webp -> apps/web/terrain-map.webp
+PASS bbc959aaef7488b38942e7f05cfd1244351f8bce54261951ea17dd7cf60f894b public/vendor/leaflet-LICENSE.txt -> apps/web/vendor/leaflet-LICENSE.txt
+PASS 337bfca5cabd03b39815b2700febe2b3b7edf55921c59cd49f88ecb328212303 public/vendor/leaflet.css -> apps/web/vendor/leaflet.css
+PASS db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a public/vendor/leaflet.js -> apps/web/vendor/leaflet.js
+PASS 5902163e6be7a9e86f7465c544437b3a99bde154ef7627c4df4b9e147010196f schemas/network-registry-v1.schema.json -> packages/contracts/schemas/network-registry-v1.schema.json
+PASS daa27e342c6675e474d41fcea58f3003500f2400b09b526116f020d73437166f schemas/optimize-request-v1.schema.json -> packages/contracts/schemas/optimize-request-v1.schema.json
+PASS d2e24b06de29c93732e60bdec7ad56661e40353d6623979250aedc3dff6f0c31 schemas/optimize-response-v1.schema.json -> packages/contracts/schemas/optimize-response-v1.schema.json
+PASS d416e2879f3568e8eaafb93db08cb0e3b117ad47564b99e8cac62a7cfaf61009 schemas/site-evidence-v1.schema.json -> packages/contracts/schemas/site-evidence-v1.schema.json
+PASS 34535ffb86d79d88fc560a4b5cb781b9a5ff825136759393b82c1091b935874d schemas/site-record-v1.schema.json -> packages/contracts/schemas/site-record-v1.schema.json
+PASS 1668a3152e33680d94637b13421c15e68bd97cd8701f7f555c691f5bc5c0b9f3 solver/requirements.txt -> workers/milp-python/requirements.txt
+PASS 9fb8ef7df5a6b12a8529e14630f8b294c4e1135f3bd6b8e9f01a579962e9f40f solver/worker.py -> workers/milp-python/worker.py
+TOTAL 24

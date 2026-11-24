@@ -1,0 +1,820 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "scenarioHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "networkId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "networkVersion": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "networkHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "solver": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "optimal",
+            "infeasible",
+            "time_limit"
+          ]
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "status": {
+                "enum": [
+                  "optimal",
+                  "time_limit",
+                  "infeasible",
+                  "error"
+                ]
+              },
+              "value": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "bound": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "gap": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "status",
+              "value",
+              "bound",
+              "gap"
+            ]
+          },
+          "maxItems": 3
+        },
+        "timeMs": {
+          "type": "number"
+        },
+        "limits": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "status",
+        "stages",
+        "timeMs",
+        "limits"
+      ]
+    },
+    "baseline": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "configurationId": {
+              "type": "string"
+            },
+            "activeSiteIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "maxItems": 30
+            },
+            "newSiteIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "maxItems": 30
+            },
+            "status": {
+              "enum": [
+                "optimal",
+                "time_limit"
+              ]
+            },
+            "servedM3": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unservedM3": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "transportDistanceMm": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "transportKm": {
+              "type": "number"
+            },
+            "trips": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "assignments": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "demandId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "siteId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "volumeM3": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1000000
+                  },
+                  "trips": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1000000
+                  },
+                  "tripCapacityM3": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1000000
+                  },
+                  "roundtripMm": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "sameNode": {
+                    "type": "boolean"
+                  },
+                  "routeRef": {
+                    "type": "object",
+                    "properties": {
+                      "from": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      },
+                      "to": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 200
+                      }
+                    },
+                    "required": [
+                      "from",
+                      "to"
+                    ]
+                  },
+                  "loadedDistanceMm": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "emptyDistanceMm": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "intraSiteRoundtripMm": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1000000000
+                  }
+                },
+                "required": [
+                  "demandId",
+                  "siteId",
+                  "volumeM3",
+                  "trips",
+                  "tripCapacityM3",
+                  "roundtripMm",
+                  "sameNode",
+                  "routeRef"
+                ]
+              },
+              "maxItems": 1500
+            },
+            "siteUtilization": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "siteId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "capacityM3": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "usedM3": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "usedTrips": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "maxTripsDuringHorizon": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 1000000
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "tripLimitBinding": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "siteId",
+                  "capacityM3",
+                  "usedM3"
+                ]
+              },
+              "maxItems": 30
+            },
+            "estimatedDriveMinutes": {
+              "type": "number"
+            },
+            "estimatedDriveCostRub": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "screeningStatus": {
+              "const": "not_assessed"
+            },
+            "solverStages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "status": {
+                    "enum": [
+                      "optimal",
+                      "time_limit",
+                      "infeasible",
+                      "error"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "bound": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "gap": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "status",
+                  "value",
+                  "bound",
+                  "gap"
+                ]
+              },
+              "maxItems": 3
+            }
+          },
+          "required": [
+            "configurationId",
+            "activeSiteIds",
+            "newSiteIds",
+            "status",
+            "servedM3",
+            "unservedM3",
+            "transportDistanceMm",
+            "transportKm",
+            "trips",
+            "assignments",
+            "siteUtilization",
+            "estimatedDriveMinutes",
+            "estimatedDriveCostRub",
+            "screeningStatus",
+            "solverStages"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "search": {
+      "type": "object",
+      "properties": {
+        "catalogSize": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "eligibleSize": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "configurationsTotal": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "enumerated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evaluated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "proven": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "prunedByBound": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "topKRequested": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "topKReturned": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rankingStatus": {
+          "enum": [
+            "exact_top_k",
+            "provisional",
+            "incomplete",
+            "infeasible"
+          ]
+        },
+        "coverage": {
+          "enum": [
+            "finite_catalogue",
+            "restricted_catalogue"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "strategy": {
+          "enum": [
+            "enumeration",
+            "unified_milp",
+            "bounded_enumeration"
+          ]
+        },
+        "requestedStrategy": {
+          "enum": [
+            "enumeration",
+            "unified_milp",
+            "bounded_enumeration"
+          ]
+        },
+        "counterScope": {
+          "enum": [
+            "configurations",
+            "rank_attempts_and_proven_ranks"
+          ]
+        }
+      },
+      "required": [
+        "catalogSize",
+        "eligibleSize",
+        "configurationsTotal",
+        "enumerated",
+        "evaluated",
+        "proven",
+        "topKRequested",
+        "topKReturned",
+        "rankingStatus",
+        "coverage",
+        "reason"
+      ]
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "configurationId": {
+            "type": "string"
+          },
+          "activeSiteIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "maxItems": 30
+          },
+          "newSiteIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "maxItems": 30
+          },
+          "status": {
+            "enum": [
+              "optimal",
+              "time_limit"
+            ]
+          },
+          "servedM3": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "unservedM3": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "transportDistanceMm": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "transportKm": {
+            "type": "number"
+          },
+          "trips": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "assignments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "demandId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "siteId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "volumeM3": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 1000000
+                },
+                "trips": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 1000000
+                },
+                "tripCapacityM3": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 1000000
+                },
+                "roundtripMm": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "sameNode": {
+                  "type": "boolean"
+                },
+                "routeRef": {
+                  "type": "object",
+                  "properties": {
+                    "from": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    },
+                    "to": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    }
+                  },
+                  "required": [
+                    "from",
+                    "to"
+                  ]
+                },
+                "loadedDistanceMm": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "emptyDistanceMm": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "intraSiteRoundtripMm": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 1000000000
+                }
+              },
+              "required": [
+                "demandId",
+                "siteId",
+                "volumeM3",
+                "trips",
+                "tripCapacityM3",
+                "roundtripMm",
+                "sameNode",
+                "routeRef"
+              ]
+            },
+            "maxItems": 1500
+          },
+          "siteUtilization": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "siteId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "capacityM3": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "usedM3": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "usedTrips": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "maxTripsDuringHorizon": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 1000000
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "tripLimitBinding": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "siteId",
+                "capacityM3",
+                "usedM3"
+              ]
+            },
+            "maxItems": 30
+          },
+          "estimatedDriveMinutes": {
+            "type": "number"
+          },
+          "estimatedDriveCostRub": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "screeningStatus": {
+            "const": "not_assessed"
+          },
+          "solverStages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "status": {
+                  "enum": [
+                    "optimal",
+                    "time_limit",
+                    "infeasible",
+                    "error"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "bound": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "gap": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "status",
+                "value",
+                "bound",
+                "gap"
+              ]
+            },
+            "maxItems": 3
+          }
+        },
+        "required": [
+          "configurationId",
+          "activeSiteIds",
+          "newSiteIds",
+          "status",
+          "servedM3",
+          "unservedM3",
+          "transportDistanceMm",
+          "transportKm",
+          "trips",
+          "assignments",
+          "siteUtilization",
+          "estimatedDriveMinutes",
+          "estimatedDriveCostRub",
+          "screeningStatus",
+          "solverStages"
+        ]
+      },
+      "maxItems": 50
+    },
+    "excludedSites": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "maxItems": 30
+    },
+    "excludedConfigurations": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "maxItems": 1000
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "maxItems": 30
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "maxItems": 30
+    },
+    "inputFingerprint": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "lineageStatus": {
+      "enum": [
+        "root",
+        "caller_supplied_unverified"
+      ]
+    },
+    "matrixHash": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "matrixMetrics": {
+      "type": "object",
+      "properties": {
+        "cacheHit": {
+          "type": "boolean"
+        },
+        "routeStarts": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "startSide": {
+          "enum": [
+            "demands",
+            "sites"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "scenarioHash",
+    "networkId",
+    "networkVersion",
+    "networkHash",
+    "solver",
+    "baseline",
+    "search",
+    "alternatives",
+    "excludedSites",
+    "excludedConfigurations",
+    "assumptions",
+    "warnings"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

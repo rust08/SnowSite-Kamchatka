@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "evidence-0.1",
+  "asOf": "2026-11-21",
+  "warning": "Исследовательский каталог, НЕ optimize-request-v1; исключить из автоматической загрузки сценария до проверки геометрии, вместимости и решения о статусе.",
+  "sites": [
+    {
+      "id": "PKGO-H2017-01",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "За ТЦ «Славянский», проспект Победы",
+      "document": "Постановление 17.02.2017 №271, приложение, пункт 1",
+      "historicalStatus": "listed_2017",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "unlocated",
+      "location": null,
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S01"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Историческое упоминание; не подтверждает наличие, доступ, ёмкость или законность сегодня."
+    },
+    {
+      "id": "PKGO-H2017-02",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "Улица Индустриальная, за остановкой «ЖБФ»",
+      "document": "Постановление 17.02.2017 №271, приложение, пункт 2",
+      "historicalStatus": "removed_2019",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "unlocated",
+      "location": null,
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S01",
+        "S02"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Исключён п.1.5.2 постановления 30.04.2019 №921; не означает невозможность нового согласования."
+    },
+    {
+      "id": "PKGO-H2017-03",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "Район базы «ДЭУ-14», км 1+049 дороги по ул. Кирпичная",
+      "document": "Постановление 17.02.2017 №271, приложение, пункт 3",
+      "historicalStatus": "listed_2017",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "unlocated",
+      "location": null,
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S01"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Историческое упоминание; не подтверждает наличие, доступ, ёмкость или законность сегодня."
+    },
+    {
+      "id": "PKGO-H2017-04",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "Пересечение Восточного и Халактырского шоссе",
+      "document": "Постановление 17.02.2017 №271, приложение, пункт 4",
+      "historicalStatus": "listed_2017",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "unlocated",
+      "location": null,
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S01"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Историческое упоминание; не подтверждает наличие, доступ, ёмкость или законность сегодня."
+    },
+    {
+      "id": "PKGO-H2017-05",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "За автомойкой ГСК-45, улица Тундровая",
+      "document": "Постановление 17.02.2017 №271, приложение, пункт 5",
+      "historicalStatus": "listed_2017",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "unlocated",
+      "location": null,
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S01"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Историческое упоминание; не подтверждает наличие, доступ, ёмкость или законность сегодня."
+    },
+    {
+      "id": "PKGO-H2017-06",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "За домом № 22, улица Молчанова",
+      "document": "Постановление 17.02.2017 №271, приложение, пункт 6",
+      "historicalStatus": "listed_2017",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "unlocated",
+      "location": null,
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S01"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Историческое упоминание; не подтверждает наличие, доступ, ёмкость или законность сегодня."
+    },
+    {
+      "id": "PKGO-H2017-07",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "Ниже территории «Морстроя», улица Океанская",
+      "document": "Постановление 17.02.2017 №271, приложение, пункт 7",
+      "historicalStatus": "listed_2017",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "unlocated",
+      "location": null,
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S01"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Историческое упоминание; не подтверждает наличие, доступ, ёмкость или законность сегодня."
+    },
+    {
+      "id": "PKGO-H2017-08",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "Откос возле дома № 3, улица Геологическая",
+      "document": "Постановление 17.02.2017 №271, приложение, пункт 8",
+      "historicalStatus": "listed_2017",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "unlocated",
+      "location": null,
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S01"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Историческое упоминание; не подтверждает наличие, доступ, ёмкость или законность сегодня."
+    },
+    {
+      "id": "PKGO-H2017-09",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "Южнее АЗС «Камчатнефтепродукт», съезд с Северо-Восточного шоссе",
+      "document": "Постановление 17.02.2017 №271, приложение, пункт 9",
+      "historicalStatus": "listed_2017",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "unlocated",
+      "location": null,
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S01"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Историческое упоминание; не подтверждает наличие, доступ, ёмкость или законность сегодня."
+    },
+    {
+      "id": "PKGO-H2017-10",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "Торец ГСК-224, внутриквартальный проезд по улице Савченко, Северо-Восток",
+      "document": "Постановление 17.02.2017 №271, приложение, пункт 10",
+      "historicalStatus": "listed_2017",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "unlocated",
+      "location": null,
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S01"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Историческое упоминание; не подтверждает наличие, доступ, ёмкость или законность сегодня."
+    },
+    {
+      "id": "PKGO-L2026-TUNDRA-POI",
+      "locality": "Петропавловск-Камчатский",
+      "historicalDescription": "Картографическая метка полигона из PDF; район улицы Тундровой",
+      "document": "Алгоритмы Камчатки.pdf, стр.1, ссылка Яндекс.Карты",
+      "historicalStatus": "map_hint",
+      "operationalStatus": "unknown",
+      "legalStatus": "needs_review",
+      "geometryStatus": "poi_hint_not_entrance",
+      "location": [
+        158.682143,
+        53.040614
+      ],
+      "accessNodeId": null,
+      "availableCapacityM3": null,
+      "sourceIds": [
+        "S03",
+        "S04"
+      ],
+      "eligibleForOptimization": false,
+      "notes": "Метка не равна въезду. Ближайший routable узел 2073993323 находится примерно в 84 м по прямой; это подсказка для проверки, не назначение. Не объединять автоматически с H2017-05."
+    }
+  ]
+}

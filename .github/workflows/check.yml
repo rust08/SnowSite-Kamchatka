@@ -1,0 +1,54 @@
+name: Validate SnowSite
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  checks:
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r workers/milp-python/requirements.txt -r tools/contract-requirements.txt
+      - run: python tools/acceptance.py --mode core --output runtime/acceptance-core
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: acceptance-core-${{ matrix.os }}
+          path: runtime/acceptance-core/
+  browser-smoke:
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r workers/milp-python/requirements.txt -r tools/browser-requirements.txt
+      - if: runner.os == 'Linux'
+        run: python -m playwright install --with-deps chromium
+      - if: runner.os == 'Windows'
+        run: python -m playwright install chromium
+      - run: python tools/acceptance.py --mode browser --output runtime/acceptance-browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: acceptance-browser-${{ matrix.os }}
+          path: runtime/acceptance-browser/

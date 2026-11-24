@@ -1,0 +1,15 @@
+SnowSite: http://127.0.0.1:18793
+node:_http_server:351
+    throw new ERR_HTTP_HEADERS_SENT('write');
+          ^
+
+Error [ERR_HTTP_HEADERS_SENT]: Cannot write headers after they are sent to the client
+    at ServerResponse.writeHead (node:_http_server:351:11)
+    at Server.<anonymous> (file:///mnt/data/v48work/SnowSite/apps/api/server.mjs:57:43)
+    at Server.emit (node:events:518:28)
+    at parserOnIncoming (node:_http_server:1153:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17) {
+  code: 'ERR_HTTP_HEADERS_SENT'
+}
+
+Node.js v22.16.0

@@ -1,0 +1,28 @@
+TAP version 13
+# Subtest: A12b lower bound and strengthened fixed solver versus independent oracle, 72 cases seed 470719
+ok 1 - A12b lower bound and strengthened fixed solver versus independent oracle, 72 cases seed 470719
+  ---
+  duration_ms: 997.755174
+  type: 'test'
+  ...
+# Subtest: A12b all modes and ties, fixed/excluded memberships, full-service filter, and actual pruning
+ok 2 - A12b all modes and ties, fixed/excluded memberships, full-service filter, and actual pruning
+  ---
+  duration_ms: 15663.511879
+  type: 'test'
+  ...
+# Subtest: A12b incomplete enumeration/deadline cannot claim exactness
+ok 3 - A12b incomplete enumeration/deadline cannot claim exactness
+  ---
+  duration_ms: 4.88342
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 16743.854101

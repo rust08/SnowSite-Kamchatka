@@ -1,0 +1,23 @@
+{
+  "name": "snowsite-kamchatka",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node apps/api/server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node tools/check-data.mjs",
+    "optimize": "node apps/cli/cli.mjs",
+    "test:browser": "python tools/browser-smoke.py",
+    "check:manifest": "node tools/check-manifest.mjs",
+    "test:contracts": "python tools/check-contracts.py"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./packages/optimization/public.mjs",
+    "./catalog": "./packages/catalog/index.mjs",
+    "./network-file": "./packages/routing/network-file.mjs"
+  }
+}

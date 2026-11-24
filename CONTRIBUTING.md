@@ -1,0 +1,9 @@
+# Development workflow
+
+Read `AGENTS.md`, `docs/STATUS.md`, `docs/HANDOFF.md` and `docs/ARCHITECTURE.md`. Start from the existing Git history, check clean tree and branch, and create a local work branch. Do not start from a new git init or overwrite another agent's changes. No remote push/merge without owner permission.
+
+Implement one acceptance-tested task at a time. For math changes preserve previous fixtures, prove small exact results against independent oracle, run `npm run check && npm test` and applicable CLI/HTTP integration, and record real commands, versions, failed tests, timings and limits. Never map timeout to optimal or inferred data to confirmed. For refactors, demonstrate behavior/hash parity. For new geometry or access constraints, scope evidence and keep unknown explicit. Do not change «Север».
+
+After every completed atom update CHANGELOG, STATUS, HANDOFF, README if public usage changed, CODE_MAP and relevant technical docs; append historical session notes. Benchmark results are immutable by version/run label. Before release verify tracked manifest and fresh unpack, retain git bundle. Canonical modules now live in apps/, packages/ and workers/ (R1–R4 path migrations accepted). Keep src/ as wrapper-only compatibility. Do not add app imports into packages. Before release stage intended files, run `node tools/generate-manifest.mjs`, stage MANIFEST.sha256, run `npm run check:manifest`, commit and verify a fresh archive. Browser smoke: `python -m pip install -r tools/browser-requirements.txt`, `python -m playwright install chromium`, `npm run test:browser`.
+
+CI is defined for Ubuntu/Windows but local results are not evidence of remote CI. Do not add real data, tokens, private notes or unpublished source files; review data licensing before sharing. No cosmetic redesign in optimization tasks.

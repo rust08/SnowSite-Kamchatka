@@ -1,0 +1,6 @@
+{"case":"km","actual":[{"siteId":"baseline","servedM3":11,"unservedM3":0,"transportKm":16,"trips":4},{"siteId":"S3","servedM3":11,"unservedM3":0,"transportKm":16,"trips":4},{"siteId":"S2","servedM3":11,"unservedM3":0,"transportKm":18,"trips":5}],"exact":[{"id":"baseline","unservedM3":0,"transportKm":16},{"id":"S2","unservedM3":0,"transportKm":16},{"id":"S3","unservedM3":0,"transportKm":16}]}
+{"case":"rank_reversal","actual":[{"siteId":"baseline","servedM3":11,"unservedM3":1,"transportKm":128,"trips":6},{"siteId":"S3","servedM3":12,"unservedM3":0,"transportKm":144,"trips":7},{"siteId":"S2","servedM3":12,"unservedM3":0,"transportKm":148,"trips":7}],"exact":[{"id":"baseline","unservedM3":1,"transportKm":128},{"id":"S2","unservedM3":0,"transportKm":132},{"id":"S3","unservedM3":0,"transportKm":144}]}
+{"demo":[{"siteId":"baseline","servedM3":228,"unservedM3":0,"transportKm":167.098,"trips":26},{"siteId":"C1","servedM3":228,"unservedM3":0,"transportKm":108.556,"trips":25},{"siteId":"C2","servedM3":228,"unservedM3":0,"transportKm":122.648,"trips":25}]}
+{"label":"unknown_kind","accepted":true,"minutes":"501.3"}
+{"label":"unknown_closure","accepted":true,"minutes":"501.3"}
+{"label":"nonfinite_minutes","accepted":true,"minutes":"Infinity"}

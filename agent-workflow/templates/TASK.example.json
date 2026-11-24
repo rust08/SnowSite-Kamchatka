@@ -1,0 +1,14 @@
+{
+  "schema": "snowcontrol.task.v1",
+  "task_id": "EXAMPLE-NOT-ACTIVE",
+  "status": "PROPOSED",
+  "base_sha256": "104af1aac54a8ed971fc4a44bc4a45a46369f27abc74258268838708a9ae1265",
+  "owner_go_ref": null,
+  "allowed_changes": {
+    "docs/EXAMPLE.md": "ADD"
+  },
+  "required_checks": [
+    "explicit task-specific command"
+  ],
+  "stop": "WAIT_REVIEW"
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0",
+  "networkId": "intrasite-v44",
+  "networkVersion": "1",
+  "networkHash": "ea5363ed0c32b17fc8da7ed997f6f429cba652b9524fa4ed2064cfaefac27a1d",
+  "scenario": {
+    "id": "intrasite-example",
+    "mode": "scenario_only",
+    "horizon": {
+      "type": "event",
+      "label": "synthetic example"
+    },
+    "demands": [
+      {
+        "id": "d",
+        "nodeId": "D",
+        "volumeM3": 5,
+        "sourceStatus": "synthetic"
+      }
+    ],
+    "sites": [
+      {
+        "id": "near",
+        "accessNodeId": "N",
+        "availableCapacityM3": 5,
+        "origin": "candidate",
+        "role": "optional",
+        "screening": {
+          "status": "unknown"
+        },
+        "intraSiteRoundtripMm": 3000000,
+        "intraSiteDistanceEvidence": {
+          "basis": "roundtrip",
+          "valueMm": 3000000,
+          "sourceRef": "synthetic example, not a survey",
+          "observedAt": "2026-11-21",
+          "horizon": {
+            "type": "event",
+            "label": "synthetic example"
+          },
+          "networkHash": "ea5363ed0c32b17fc8da7ed997f6f429cba652b9524fa4ed2064cfaefac27a1d",
+          "truckHash": "87a6b7569fc5b63ec57330d260238b23a5cf79885b42463ccc71795db5d65577",
+          "accessProfileHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        }
+      },
+      {
+        "id": "far",
+        "accessNodeId": "F",
+        "availableCapacityM3": 5,
+        "origin": "candidate",
+        "role": "optional",
+        "screening": {
+          "status": "unknown"
+        },
+        "intraSiteRoundtripMm": 0,
+        "intraSiteDistanceEvidence": {
+          "basis": "roundtrip",
+          "valueMm": 0,
+          "sourceRef": "synthetic example, not a survey",
+          "observedAt": "2026-11-21",
+          "horizon": {
+            "type": "event",
+            "label": "synthetic example"
+          },
+          "networkHash": "ea5363ed0c32b17fc8da7ed997f6f429cba652b9524fa4ed2064cfaefac27a1d",
+          "truckHash": "87a6b7569fc5b63ec57330d260238b23a5cf79885b42463ccc71795db5d65577",
+          "accessProfileHash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        }
+      }
+    ],
+    "truck": {
+      "bodyM3": 2,
+      "driveKmh": 20
+    }
+  },
+  "policy": {
+    "mode": "greenfield",
+    "exactActiveSites": 1,
+    "topK": 2,
+    "objective": "min_unserved_then_distance",
+    "screeningPolicy": "exploratory",
+    "timeLimitMs": 10000,
+    "searchStrategy": "unified_milp"
+  }
+}

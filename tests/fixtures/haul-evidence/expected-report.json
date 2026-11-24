@@ -1,0 +1,1024 @@
+{
+  "reportVersion": "haul-evidence.report.v0.1",
+  "policyVersion": "synthetic-full-replacement.v0.1",
+  "mode": "synthetic",
+  "scopeId": "DEMO-C1-JAN",
+  "periodStart": "2026-01-01T00:00:00Z",
+  "periodEnd": "2026-02-01T00:00:00Z",
+  "asOf": "2026-01-05T00:00:00Z",
+  "coverage": "unverified",
+  "datasets": {
+    "carrier": {
+      "source": "carrier",
+      "datasetId": "carrier-demo",
+      "sha256": "d637b2adba3f8794ccc03e1b3c2848bcb5580428813d1045f36e98a5eff9ef97"
+    },
+    "receiver": {
+      "source": "receiver",
+      "datasetId": "receiver-demo",
+      "sha256": "0c8fe87601dff95bfa3c0c63c1ee8bd467f365f2d948aa1df93c92c384575ec3"
+    }
+  },
+  "sideCounts": {
+    "carrier": {
+      "rawCount": 16,
+      "visibleCount": 15,
+      "duplicateDeliveries": 1,
+      "invalidRows": 1,
+      "invalidIdentityRows": 0,
+      "effectiveStates": {
+        "active": 7,
+        "cancelled": 1,
+        "invalid": 1,
+        "history_conflict": 1,
+        "out_of_scope": 0
+      }
+    },
+    "receiver": {
+      "rawCount": 13,
+      "visibleCount": 13,
+      "duplicateDeliveries": 0,
+      "invalidRows": 0,
+      "invalidIdentityRows": 0,
+      "effectiveStates": {
+        "active": 9,
+        "cancelled": 1,
+        "invalid": 0,
+        "history_conflict": 0,
+        "out_of_scope": 0
+      }
+    }
+  },
+  "cutoffDiagnostics": {
+    "carrier": {
+      "lateReceiptCount": 1,
+      "unknownReceiptCount": 0
+    },
+    "receiver": {
+      "lateReceiptCount": 0,
+      "unknownReceiptCount": 0
+    }
+  },
+  "pairCounts": {
+    "matched_records": 4,
+    "quantity_mismatch": 1,
+    "scope_mismatch": 1,
+    "not_observed_in_source": 2,
+    "both_cancelled": 1,
+    "review_history": 2,
+    "out_of_scope": 0
+  },
+  "pairs": [
+    {
+      "key": [
+        "DEMO",
+        "A",
+        "T1"
+      ],
+      "carrier": {
+        "state": "active",
+        "quantity": "12",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 1
+          },
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 2
+          },
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 3
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 1
+              },
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 2
+              }
+            ]
+          },
+          {
+            "revision": 2,
+            "earliestReceipt": "2026-01-02T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 3
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "receiver": {
+        "state": "active",
+        "quantity": "12",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 1
+          },
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 2
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 1
+              }
+            ]
+          },
+          {
+            "revision": 2,
+            "earliestReceipt": "2026-01-02T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 2
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "status": "matched_records",
+      "matchedQuantity": "12",
+      "reasons": []
+    },
+    {
+      "key": [
+        "DEMO",
+        "A",
+        "T10"
+      ],
+      "carrier": {
+        "state": "not_observed",
+        "quantity": null,
+        "scope": null,
+        "refs": [],
+        "deliveries": [],
+        "reasons": [
+          {
+            "code": "not_observed",
+            "side": "carrier",
+            "rowIndices": []
+          }
+        ]
+      },
+      "receiver": {
+        "state": "active",
+        "quantity": "6",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 13
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 13
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "status": "not_observed_in_source",
+      "matchedQuantity": null,
+      "reasons": []
+    },
+    {
+      "key": [
+        "DEMO",
+        "A",
+        "T2"
+      ],
+      "carrier": {
+        "state": "active",
+        "quantity": "7",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 4
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 4
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "receiver": {
+        "state": "not_observed",
+        "quantity": null,
+        "scope": null,
+        "refs": [],
+        "deliveries": [],
+        "reasons": [
+          {
+            "code": "not_observed",
+            "side": "receiver",
+            "rowIndices": []
+          }
+        ]
+      },
+      "status": "not_observed_in_source",
+      "matchedQuantity": null,
+      "reasons": []
+    },
+    {
+      "key": [
+        "DEMO",
+        "A",
+        "T3"
+      ],
+      "carrier": {
+        "state": "active",
+        "quantity": "8",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 5
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 5
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "receiver": {
+        "state": "active",
+        "quantity": "9",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 3
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 3
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "status": "quantity_mismatch",
+      "matchedQuantity": null,
+      "reasons": [
+        {
+          "code": "quantity_mismatch",
+          "side": null,
+          "rowIndices": []
+        }
+      ]
+    },
+    {
+      "key": [
+        "DEMO",
+        "A",
+        "T4"
+      ],
+      "carrier": {
+        "state": "cancelled",
+        "quantity": null,
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 6
+          },
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 7
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 6
+              }
+            ]
+          },
+          {
+            "revision": 2,
+            "earliestReceipt": "2026-01-02T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 7
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "receiver": {
+        "state": "cancelled",
+        "quantity": null,
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 4
+          },
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 5
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 4
+              }
+            ]
+          },
+          {
+            "revision": 2,
+            "earliestReceipt": "2026-01-02T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 5
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "status": "both_cancelled",
+      "matchedQuantity": null,
+      "reasons": []
+    },
+    {
+      "key": [
+        "DEMO",
+        "A",
+        "T5"
+      ],
+      "carrier": {
+        "state": "history_conflict",
+        "quantity": null,
+        "scope": null,
+        "refs": [
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 8
+          },
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 9
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 8
+              }
+            ]
+          },
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 9
+              }
+            ]
+          }
+        ],
+        "reasons": [
+          {
+            "code": "revision_conflict",
+            "side": "carrier",
+            "rowIndices": [
+              8,
+              9
+            ],
+            "revision": 1
+          }
+        ]
+      },
+      "receiver": {
+        "state": "active",
+        "quantity": "10",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 6
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 6
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "status": "review_history",
+      "matchedQuantity": null,
+      "reasons": []
+    },
+    {
+      "key": [
+        "DEMO",
+        "A",
+        "T6"
+      ],
+      "carrier": {
+        "state": "active",
+        "quantity": "5",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 10
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 10
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "receiver": {
+        "state": "active",
+        "quantity": "5",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 7
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 7
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "status": "matched_records",
+      "matchedQuantity": "5",
+      "reasons": []
+    },
+    {
+      "key": [
+        "DEMO",
+        "A",
+        "T7"
+      ],
+      "carrier": {
+        "state": "active",
+        "quantity": "0",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 13
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 13
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "receiver": {
+        "state": "active",
+        "quantity": "0",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 9
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 9
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "status": "matched_records",
+      "matchedQuantity": "0",
+      "reasons": []
+    },
+    {
+      "key": [
+        "DEMO",
+        "A",
+        "T8"
+      ],
+      "carrier": {
+        "state": "active",
+        "quantity": "4",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 14
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 14
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "receiver": {
+        "state": "active",
+        "quantity": "4",
+        "scope": [
+          "C1",
+          "S2",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 10
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 10
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "status": "scope_mismatch",
+      "matchedQuantity": null,
+      "reasons": [
+        {
+          "code": "scope_mismatch",
+          "side": null,
+          "rowIndices": []
+        }
+      ]
+    },
+    {
+      "key": [
+        "DEMO",
+        "A",
+        "T9"
+      ],
+      "carrier": {
+        "state": "invalid",
+        "quantity": null,
+        "scope": null,
+        "refs": [
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 15
+          },
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 16
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 2,
+            "earliestReceipt": "2026-01-02T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 16
+              }
+            ]
+          }
+        ],
+        "reasons": [
+          {
+            "code": "invalid_field",
+            "side": "carrier",
+            "rowIndices": [
+              15
+            ],
+            "field": "quantity"
+          }
+        ]
+      },
+      "receiver": {
+        "state": "active",
+        "quantity": "2",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 11
+          },
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 12
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 11
+              }
+            ]
+          },
+          {
+            "revision": 2,
+            "earliestReceipt": "2026-01-02T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 12
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "status": "review_history",
+      "matchedQuantity": null,
+      "reasons": []
+    },
+    {
+      "key": [
+        "DEMO",
+        "B",
+        "T1"
+      ],
+      "carrier": {
+        "state": "active",
+        "quantity": "3",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "carrier",
+            "datasetId": "carrier-demo",
+            "rowIndex": 12
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "carrier",
+                "datasetId": "carrier-demo",
+                "rowIndex": 12
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "receiver": {
+        "state": "active",
+        "quantity": "3",
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "refs": [
+          {
+            "source": "receiver",
+            "datasetId": "receiver-demo",
+            "rowIndex": 8
+          }
+        ],
+        "deliveries": [
+          {
+            "revision": 1,
+            "earliestReceipt": "2026-01-01T09:00:00Z",
+            "refs": [
+              {
+                "source": "receiver",
+                "datasetId": "receiver-demo",
+                "rowIndex": 8
+              }
+            ]
+          }
+        ],
+        "reasons": []
+      },
+      "status": "matched_records",
+      "matchedQuantity": "3",
+      "reasons": []
+    }
+  ],
+  "unusableRows": {
+    "carrier": [],
+    "receiver": []
+  },
+  "totals": {
+    "knownActive": {
+      "carrier": [
+        {
+          "scope": [
+            "C1",
+            "S1",
+            "m3",
+            "nominal"
+          ],
+          "quantity": "39"
+        }
+      ],
+      "receiver": [
+        {
+          "scope": [
+            "C1",
+            "S1",
+            "m3",
+            "nominal"
+          ],
+          "quantity": "47"
+        },
+        {
+          "scope": [
+            "C1",
+            "S2",
+            "m3",
+            "nominal"
+          ],
+          "quantity": "4"
+        }
+      ]
+    },
+    "matched": [
+      {
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "quantity": "20"
+      }
+    ],
+    "comparableDifference": [
+      {
+        "scope": [
+          "C1",
+          "S1",
+          "m3",
+          "nominal"
+        ],
+        "quantity": "-1"
+      }
+    ]
+  }
+}
